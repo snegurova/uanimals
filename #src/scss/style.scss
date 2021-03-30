@@ -12,6 +12,10 @@
 @import "./module/header";
 @import "./module/label";
 
+body {
+	margin: 0;
+}
+
 .container {
 	max-width: 1284px;
 	margin: 0 auto;

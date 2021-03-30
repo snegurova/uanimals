@@ -1,18 +1,21 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
   font-weight: 500;
+  line-height: 1.2;
+  color: #000;
 }
 
 .header {
   border-bottom: solid 1px #d9d9d9;
-  padding-top: 27px;
   z-index: 10;
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
-  min-height: 90px;
+  align-items: center;
+  min-height: 127px;
 }
 
 .header__right {
@@ -31,7 +34,11 @@ body {
   display: block;
 }
 
-.header__nav ul {
+.header__nav {
+  padding-top: 7px;
+}
+
+.header .header__nav-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -40,7 +47,7 @@ body {
   padding: 0;
 }
 
-.header__nav a {
+.header .header__nav-list a {
   position: relative;
   text-decoration: none;
   color: #000;
@@ -48,12 +55,12 @@ body {
   transition: color 0.5s;
 }
 
-.header__nav a:hover {
+.header .header__nav-list a:hover {
   color: #949494;
   transition: color 0.5s;
 }
 
-.header__nav a.active {
+.header .header__nav-list a.active {
   color: #949494;
 }
 
@@ -79,7 +86,92 @@ body {
   background-color: #60CAE5;
 }
 
-.header .menu__icon {
+.header .burger-menu__body {
+  position: fixed;
+  top: 128px;
+  right: -120%;
+  width: 35%;
+  min-width: 440px;
+  max-width: 760px;
+  height: calc(100% - 200px);
+  background-color: #fff;
+  transition: right 0.5s ease 0s;
+  overflow: auto;
+  z-index: 2;
+  padding: 54px 0 54px 115px;
+}
+
+.header .burger-menu__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.header .burger-menu__list li:not(:first-child) {
+  margin-top: 24px;
+}
+
+.header .burger-menu__list a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 49px;
+  transition: color 0.5s;
+  letter-spacing: -0.830409px;
+}
+
+.header .burger-menu__list a:hover {
+  color: #60CAE5;
+  transition: color 0.5s;
+}
+
+.header .burger-menu__list a.active {
+  color: #60CAE5;
+}
+
+.header .burger-menu__social-list {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 123px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 47px;
+}
+
+.header .burger-menu__social-list a {
+  display: block;
+  font-size: 0px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #D7D7D7;
+  transition: background-color 0.5s;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header .burger-menu__social-list a:hover {
+  background-color: #60CAE5;
+}
+
+.header .burger-menu__social-list .facebook {
+  background-image: url("../../img/facebook-icon.svg");
+}
+
+.header .burger-menu__social-list .telegram {
+  background-image: url("../../img/telegram-icon.svg");
+}
+
+.header .burger-menu__social-list .instagram {
+  background-image: url("../../img/instagram-icon.svg");
+}
+
+.header .burger-menu__social-list .tiktok {
+  background-image: url("../../img/tiktok-icon.svg");
+}
+
+.header .burger-menu__icon {
   z-index: 5;
   display: block;
   position: relative;
@@ -89,9 +181,9 @@ body {
   margin-left: 52px;
 }
 
-.header .menu__icon span,
-.header .menu__icon::before,
-.header .menu__icon::after {
+.header .burger-menu__icon span,
+.header .burger-menu__icon::before,
+.header .burger-menu__icon::after {
   left: 0;
   position: absolute;
   height: 2px;
@@ -100,105 +192,95 @@ body {
   background-color: #000;
 }
 
-.header .menu__icon::before,
-.header .menu__icon::after {
+.header .burger-menu__icon::before,
+.header .burger-menu__icon::after {
   content: "";
 }
 
-.header .menu__icon::before {
+.header .burger-menu__icon::before {
   top: 0;
   width: 60%;
   left: 40%;
 }
 
-.header .menu__icon::after {
+.header .burger-menu__icon::after {
   bottom: 0;
 }
 
-.header .menu__icon span {
+.header .burger-menu__icon span {
   top: 50%;
   transform: scale(1) translate(0px, -50%);
 }
 
-.header .menu__icon._active span {
+.header .burger-menu__icon._active span {
   transform: scale(0) translate(0px, -50%);
 }
 
-.header .menu__icon._active::before {
+.header .burger-menu__icon._active::before {
   top: 50%;
   width: 100%;
   left: 0;
   transform: rotate(-45deg) translate(0px, -50%);
 }
 
-.header .menu__icon._active::after {
+.header .burger-menu__icon._active::after {
   bottom: 50%;
   transform: rotate(45deg) translate(0px, 50%);
 }
 
-.header .menu__body {
-  position: fixed;
-  top: 126px;
-  right: -120%;
-  width: 40%;
-  height: 100%;
-  background-color: #fff;
-  padding: 100px 30px 30px 30px;
-  transition: right 0.5s ease 0s;
-  overflow: auto;
-  z-index: 2;
-}
-
-.header .menu__body._active {
+.header .burger-menu__body._active {
   right: 0;
 }
 
-.header .menu__body._active ~ .menu__overlay {
+.header .burger-menu__body._active ~ .burger-menu__overlay {
   visibility: visible;
   opacity: 1;
   transition: opacity 1s;
 }
 
-.header .menu__overlay {
+.header .burger-menu__overlay {
   visibility: hidden;
   opacity: 0;
   transition: opacity 1s, visibility 0s 1s;
   position: absolute;
   width: 100%;
-  height: calc(100% - 127px);
-  top: 126px;
+  height: calc(100% - 128px);
+  top: 128px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.header .menu__list > li {
-  flex-wrap: wrap;
-  margin: 0px 0px 30px 0px;
+.header .persons {
+  margin-top: 82px;
 }
 
-.header .menu__list > li:last-child {
-  margin-bottom: 0;
+.header .person {
+  padding-top: 40px;
+  padding-bottom: 34px;
 }
 
-.header .menu__list > li._active .menu__sub-list {
-  display: block;
+.header .person:not(:last-child) {
+  border-bottom: solid 1px #D1D1D1;
 }
 
-.header .menu__link {
-  font-size: 24px;
+.header .person h2 {
+  font-weight: 600;
+  text-transform: uppercase;
 }
 
-.header .menu__sub-list {
-  position: relative;
-  background-color: #fff;
-  flex: 1 1 100%;
-  margin: 20px 0px 0px 0px;
-  display: none;
+.header .person p {
+  color: #727272;
 }
 
-.header .menu__sub-link {
-  font-size: 20px;
+.header .person a {
   color: #000;
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color 0.5s;
+}
+
+.header .person a:hover {
+  color: #727272;
 }
 
 .label {
@@ -220,6 +302,15 @@ body {
 .cart .label {
   right: -5px;
   top: -6px;
+}
+
+.burger-menu .label {
+  right: -30px;
+  top: -5px;
+}
+
+body {
+  margin: 0;
 }
 
 .container {
