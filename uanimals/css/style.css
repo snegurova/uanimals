@@ -1,0 +1,228 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.header {
+  border-bottom: solid 1px #d9d9d9;
+  padding-top: 27px;
+  z-index: 10;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-height: 90px;
+}
+
+.header__right {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 53px;
+}
+
+.header .logo {
+  display: block;
+}
+
+.header__nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  gap: 30px;
+  margin: 0 0 0 78px;
+  padding: 0;
+}
+
+.header__nav a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: color 0.5s;
+}
+
+.header__nav a:hover {
+  color: #949494;
+  transition: color 0.5s;
+}
+
+.header__nav a.active {
+  color: #949494;
+}
+
+.header .profile {
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-image: url("../../img/profile-icon.svg");
+  background-size: contain;
+}
+
+.header .cart {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../../img/cart-icon.svg");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 31px;
+  border-radius: 50px;
+  background-color: #60CAE5;
+}
+
+.header .menu__icon {
+  z-index: 5;
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 16px;
+  cursor: pointer;
+  margin-left: 52px;
+}
+
+.header .menu__icon span,
+.header .menu__icon::before,
+.header .menu__icon::after {
+  left: 0;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  transition: all 0.3s ease 0s;
+  background-color: #000;
+}
+
+.header .menu__icon::before,
+.header .menu__icon::after {
+  content: "";
+}
+
+.header .menu__icon::before {
+  top: 0;
+  width: 60%;
+  left: 40%;
+}
+
+.header .menu__icon::after {
+  bottom: 0;
+}
+
+.header .menu__icon span {
+  top: 50%;
+  transform: scale(1) translate(0px, -50%);
+}
+
+.header .menu__icon._active span {
+  transform: scale(0) translate(0px, -50%);
+}
+
+.header .menu__icon._active::before {
+  top: 50%;
+  width: 100%;
+  left: 0;
+  transform: rotate(-45deg) translate(0px, -50%);
+}
+
+.header .menu__icon._active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0px, 50%);
+}
+
+.header .menu__body {
+  position: fixed;
+  top: 126px;
+  right: -120%;
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  padding: 100px 30px 30px 30px;
+  transition: right 0.5s ease 0s;
+  overflow: auto;
+  z-index: 2;
+}
+
+.header .menu__body._active {
+  right: 0;
+}
+
+.header .menu__body._active ~ .menu__overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.header .menu__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 0s 1s;
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 127px);
+  top: 126px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.header .menu__list > li {
+  flex-wrap: wrap;
+  margin: 0px 0px 30px 0px;
+}
+
+.header .menu__list > li:last-child {
+  margin-bottom: 0;
+}
+
+.header .menu__list > li._active .menu__sub-list {
+  display: block;
+}
+
+.header .menu__link {
+  font-size: 24px;
+}
+
+.header .menu__sub-list {
+  position: relative;
+  background-color: #fff;
+  flex: 1 1 100%;
+  margin: 20px 0px 0px 0px;
+  display: none;
+}
+
+.header .menu__sub-link {
+  font-size: 20px;
+  color: #000;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50px;
+  width: 22px;
+  height: 22px;
+  color: #fff;
+  background-color: #F50C0C;
+  font-size: 12px;
+  font-weight: 700;
+  right: -15px;
+  top: -16px;
+}
+
+.cart .label {
+  right: -5px;
+  top: -6px;
+}
+
+.container {
+  max-width: 1284px;
+  margin: 0 auto;
+}

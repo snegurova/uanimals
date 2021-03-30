@@ -1,0 +1,20 @@
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  border-radius: 50px;
+  width: 22px;
+  height: 22px;
+  color: $label-color;
+  background-color: $label-bg-color;
+  font-size: 12px;
+  font-weight: 700;
+  right: -15px;
+  top: -16px;
+}
+
+.cart .label {
+  right: -5px;
+  top: -6px;
+}
