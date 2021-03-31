@@ -1,4 +1,5 @@
 @@include('menu.js', {})
+@@include('sliders.js', {})
 
 function testWebP(callback) {
 	var webP = new Image();
