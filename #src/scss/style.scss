@@ -7,10 +7,12 @@
 		font-style: #{$style};
 	}
 }
+
 @import "variables";
 @import "typography";
 @import "./module/header";
 @import "./module/label";
+@import "./pages/home";
 
 body {
 	margin: 0;

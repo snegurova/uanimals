@@ -5,3 +5,23 @@ body {
   line-height: 1.2;
   color: $main-font-color;
 }
+
+h1 {
+  font-size: 45px;
+  font-weight: 800;
+}
+
+.mark {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: -12px;
+    background-color: #60CAE5;
+    width: 116%;
+    height: 80%;
+    transform: rotate(11deg);
+    z-index: -1;
+  }
+}
