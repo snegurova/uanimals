@@ -505,6 +505,92 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.project__img-wrapper {
+  position: relative;
+}
+
+.project__img-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.project__img-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  opacity: 0.7;
+}
+
+.home-projects-button-next {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background-image: url("../img/arrow-right-icon-2.svg");
+  background-position: center;
+  background-size: 35%;
+  background-repeat: no-repeat;
+}
+
+.home-projects-button-next .progress-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Progress */
+.swiper-pagination-progressbar {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #60CAE5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top;
+}
+
+.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  transform-origin: right top;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.swiper-container-vertical > .swiper-pagination-progressbar,
+.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.swiper-pagination-white {
+  --swiper-pagination-color: #ffffff;
+}
+
+.swiper-pagination-black {
+  --swiper-pagination-color: #000000;
+}
+
+.swiper-pagination-lock {
+  display: none;
+}
+
 .label {
   display: flex;
   justify-content: center;
@@ -549,6 +635,43 @@ h1 {
   text-decoration: underline;
   font-size: 1.125rem;
   font-weight: 600;
+}
+
+.projects {
+  padding-top: 55px;
+}
+
+.projects__heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 33px;
+}
+
+.projects__heading {
+  font-size: 1.125rem;
+  color: #B8B8B8;
+  font-weight: 600;
+}
+
+.projects__heading-left-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__link {
+  color: #000;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s;
+  margin-right: 108px;
+}
+
+.projects__link:hover {
+  color: #949494;
+  transition: color 0.3s;
 }
 
 body {

@@ -14,3 +14,35 @@
     font-weight: 600;
   }
 }
+
+.projects {
+  padding-top: 55px;
+  &__heading-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 33px;
+  }
+  &__heading {
+    font-size: 1.125rem;
+    color: $slider-heading-color;
+    font-weight: 600;
+    &-left-col {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__link {
+    color: $main-font-color;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: color 0.3s;
+    margin-right: 108px;
+    &:hover {
+      color: $active-nav-color;
+      transition: color 0.3s;
+    }
+  }
+}
