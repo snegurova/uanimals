@@ -189,6 +189,9 @@
     min-width: 80px;
     gap: 30px;
     align-items: center;
+    @media screen and (max-width: 560px) {
+      justify-content: space-between;
+    }
   }
   .swiper-pagination-bullets {
     display: flex;

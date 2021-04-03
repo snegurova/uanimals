@@ -12,6 +12,11 @@
   font-weight: 700;
   right: -15px;
   top: -16px;
+  @media screen and (max-width: 560px) {
+    width: 14px;
+    height: 14px;
+    font-size: 10px;
+  }
 }
 
 .cart .label {

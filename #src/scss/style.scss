@@ -22,4 +22,12 @@ body {
 .container {
 	max-width: 1284px;
 	margin: 0 auto;
+	@media screen and (max-width: 1284px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@media screen and (max-width: 780px) {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
 }

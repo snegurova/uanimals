@@ -3,6 +3,7 @@
 const lastNewsSlider = new Swiper('.last-news__slider', {
     // Optional parameters
     loop: true,
+    slidesPerView: 1,
 
     // If we need pagination
     pagination: {
@@ -95,5 +96,25 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
     // Navigation arrows
     navigation: {
         nextEl: '.home-projects-button-next',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1
+        },
+        // when window width is >= 480px
+        680: {
+            slidesPerView: 2
+        },
+        // when window width is >= 640px
+        992: {
+            slidesPerView: 3
+        },
+        1366: {
+            slidesPerView: 4
+        },
+        1600: {
+            slidesPerView: 4.5
+        },
     },
 });

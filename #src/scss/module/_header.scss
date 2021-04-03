@@ -22,6 +22,19 @@
   }
   &__nav {
     padding-top: 7px;
+    @media screen and (max-width: 860px) {
+      display: none;
+    }
+  }
+  &__nav-mobile {
+    margin-top: 22px;
+    display: none;
+    @media screen and (max-width: 860px) {
+      display: block;
+    }
+    @media screen and (max-width: 680px) {
+      margin-top: 16px;
+    }
   }
   .header__nav-list {
     display: flex;
@@ -51,6 +64,10 @@
     height: 22px;
     background-image: url("../img/profile-icon.svg");
     background-size: contain;
+    @media screen and (max-width: 560px) {
+      width: 16px;
+      height: 16px;
+    }
   }
   .cart {
     position: relative;
@@ -64,6 +81,12 @@
     margin-left: 31px;
     border-radius: 50px;
     background-color: $accent-color;
+    @media screen and (max-width: 560px) {
+      width: 28px;
+      height: 28px;
+      margin-left: 17px;
+      background-size: 50%;
+    }
   }
 
   .burger-menu {
@@ -72,7 +95,7 @@
       top: 128px;
       right: -120%;
       width: 35%;
-      min-width: 440px;
+      min-width: 302px;
       max-width: 760px;
       height: calc(100% - 200px);
       background-color: $background-color;
@@ -80,18 +103,27 @@
       overflow: auto;
       z-index: 2;
       padding: 54px 0 54px 115px;
+      @media screen and (max-width: 680px) {
+        padding: 46px 0 39px 18px;
+      }
+      @media screen and (max-width: 560px) {
+        right: -160%;
+      }
     }
     &__list {
       list-style: none;
       padding-left: 0;
       li:not(:first-child) {
         margin-top: 24px;
+        @media screen and (max-width: 680px) {
+          margin-top: 16px;
+        }
       }
       a {
         position: relative;
         text-decoration: none;
         color: $main-font-color;
-        font-size: 40px;
+        font-size: 2.5rem;
         font-weight: 800;
         line-height: 49px;
         transition: color 0.5s;
@@ -103,6 +135,9 @@
         &.active {
           color: $accent-color;
         }
+        @media screen and (max-width: 680px) {
+          font-size: 1.5rem;
+        }
       }
     }
     &__social-list {
@@ -112,6 +147,9 @@
       display: flex;
       justify-content: flex-start;
       gap: 47px;
+      @media screen and (max-width: 680px) {
+        margin-top: 25px;
+      }
       a {
         display: block;
         font-size: 0px;
@@ -148,6 +186,11 @@
     height: 16px;
     cursor: pointer;
     margin-left: 52px;
+    @media screen and (max-width: 560px) {
+      width: 19px;
+      height: 12px;
+      margin-left: 21px;
+    }
   }
   .burger-menu__icon span,
   .burger-menu__icon::before,
@@ -210,6 +253,9 @@
   }
   .persons {
     margin-top: 82px;
+    @media screen and (max-width: 680px) {
+      margin-top: 0;
+    }
   }
   .person {
     padding-top: 40px;
