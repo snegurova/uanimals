@@ -452,6 +452,56 @@ h1 {
   scroll-snap-type: y mandatory;
 }
 
+/* Progress */
+.swiper-pagination-progressbar {
+  background: rgba(0, 0, 0, 0.25);
+  position: absolute;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #60CAE5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transform-origin: left top;
+}
+
+.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  transform-origin: right top;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar,
+.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 100%;
+  height: 4px;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.swiper-container-vertical > .swiper-pagination-progressbar,
+.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.swiper-pagination-white {
+  --swiper-pagination-color: #ffffff;
+}
+
+.swiper-pagination-black {
+  --swiper-pagination-color: #000000;
+}
+
+.swiper-pagination-lock {
+  display: none;
+}
+
 .last-news__slider {
   padding: 23px 0 40px 0;
 }
@@ -505,6 +555,10 @@ h1 {
   background-repeat: no-repeat;
 }
 
+.project__slide {
+  position: relative;
+}
+
 .project__img-wrapper {
   position: relative;
 }
@@ -525,6 +579,71 @@ h1 {
   opacity: 0.7;
 }
 
+.project__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px 36px 26px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 42px);
+}
+
+.project__date {
+  color: #BCBCBC;
+  font-size: 1rem;
+}
+
+.project__title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 14px;
+  line-height: 1.1;
+}
+
+.project__progress-numbers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project__amount {
+  color: #fff;
+  font-weight: 800;
+  margin: 0;
+}
+
+.project__relative {
+  color: #8A8A8A;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.project__progress-bar {
+  position: relative;
+  margin-top: 14px;
+}
+
+.project__progress-bar-full {
+  width: 100%;
+  height: 8px;
+  background-color: #E8E8E4;
+  border-radius: 4px;
+}
+
+.project__progress-bar-done {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 8px;
+  background-color: #60CAE5;
+  border-radius: 4px;
+}
+
 .home-projects-button-next {
   position: relative;
   width: 52px;
@@ -539,56 +658,6 @@ h1 {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-/* Progress */
-.swiper-pagination-progressbar {
-  background: rgba(0, 0, 0, 0.25);
-  position: absolute;
-}
-
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #60CAE5;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform: scale(0);
-  transform-origin: left top;
-}
-
-.swiper-container-rtl .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  transform-origin: right top;
-}
-
-.swiper-container-horizontal > .swiper-pagination-progressbar,
-.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
-  width: 100%;
-  height: 4px;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.swiper-container-vertical > .swiper-pagination-progressbar,
-.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
-  width: 4px;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.swiper-pagination-white {
-  --swiper-pagination-color: #ffffff;
-}
-
-.swiper-pagination-black {
-  --swiper-pagination-color: #000000;
-}
-
-.swiper-pagination-lock {
-  display: none;
 }
 
 .label {

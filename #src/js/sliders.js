@@ -89,7 +89,6 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
             options.nextPart = current / total;
 
             window.requestAnimationFrame(animateProgress);
-            console.log (current, total);
         }
     },
 
@@ -97,14 +96,4 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
     navigation: {
         nextEl: '.home-projects-button-next',
     },
-});
-projectsHomeSlider.on('slideChange', function () {
-    const progressEl = document.querySelector('.progress');
-    const progress = projectsHomeSlider.progress * 180;
-    progressEl.style.transform = 'rotate('+ progress +'deg)';
-});
-projectsHomeSlider.on('afterInit', function () {
-    const progressEl = document.querySelector('.progress');
-    const progress = projectsHomeSlider.progress * 360;
-    progressEl.style.transform = 'rotate('+ progress +'deg)';
 });
