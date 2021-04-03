@@ -89,7 +89,7 @@ h1 {
   display: block;
   width: 22px;
   height: 22px;
-  background-image: url("../../img/profile-icon.svg");
+  background-image: url("../img/profile-icon.svg");
   background-size: contain;
 }
 
@@ -98,7 +98,7 @@ h1 {
   display: block;
   width: 48px;
   height: 48px;
-  background-image: url("../../img/cart-icon.svg");
+  background-image: url("../img/cart-icon.svg");
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
@@ -177,19 +177,19 @@ h1 {
 }
 
 .header .burger-menu__social-list .facebook {
-  background-image: url("../../img/facebook-icon.svg");
+  background-image: url("../img/facebook-icon.svg");
 }
 
 .header .burger-menu__social-list .telegram {
-  background-image: url("../../img/telegram-icon.svg");
+  background-image: url("../img/telegram-icon.svg");
 }
 
 .header .burger-menu__social-list .instagram {
-  background-image: url("../../img/instagram-icon.svg");
+  background-image: url("../img/instagram-icon.svg");
 }
 
 .header .burger-menu__social-list .tiktok {
-  background-image: url("../../img/tiktok-icon.svg");
+  background-image: url("../img/tiktok-icon.svg");
 }
 
 .header .burger-menu__icon {
@@ -302,6 +302,10 @@ h1 {
 
 .header .person a:hover {
   color: #727272;
+}
+
+._lock {
+  overflow: hidden;
 }
 
 .swiper-container {
