@@ -639,7 +639,7 @@ h1 {
   height: 34px;
   border-radius: 50%;
   border: 1px solid #60CAE5;
-  background-image: url("../../img/arrow-right-icon.svg");
+  background-image: url("../img/arrow-right-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
 }
