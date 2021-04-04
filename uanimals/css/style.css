@@ -996,6 +996,24 @@ h1 {
   text-decoration: underline;
 }
 
+.projects-detailed .projects__controls {
+  position: absolute;
+  top: 236px;
+  right: 0;
+}
+
+.titles-slider {
+  position: relative;
+}
+
+.titles-slider::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #60CAE5;
+}
+
 .titles-slider__slide {
   padding-top: 27px;
   padding-bottom: 27px;
@@ -1041,4 +1059,8 @@ body {
     padding-left: 16px;
     padding-right: 16px;
   }
+}
+
+._relative {
+  position: relative;
 }

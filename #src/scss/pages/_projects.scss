@@ -21,9 +21,22 @@
       text-decoration: underline;
     }
   }
+  .projects__controls {
+    position: absolute;
+    top: 236px;
+    right: 0;
+  }
 }
 
 .titles-slider {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $accent-color;
+  }
   &__slide {
     padding-top: 27px;
     padding-bottom: 27px;
