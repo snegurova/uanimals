@@ -9693,7 +9693,9 @@ const lastNewsSlider = new Swiper('.last-news__slider', {
     },
 });
 
-//---------
+/*---------
+Circle slider progress
+---------*/
 
 const element = document.getElementById('tm');
 const canvas = document.createElement('canvas');
@@ -9707,7 +9709,7 @@ const options = {
     isPartToSet: true,
 }
 canvas.width = canvas.height = options.size;
-element.appendChild(canvas);
+element && element.appendChild(canvas);
 
 const radius = Math.trunc(options.size / 2 - options.lineWidth);
 const center = options.size / 2;
@@ -9741,7 +9743,9 @@ const animateProgress = () => {
     }
 }
 
-//------
+/*------
+ Sliders
+--------*/
 
 
 const projectsHomeSlider = new Swiper('.projects__slider', {
@@ -9795,6 +9799,68 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
         },
     },
 });
+
+const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-slider', {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 3.5,
+    mousewheel: true,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+
+const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    hashNavigation: {
+        watchState: true,
+    },
+    pagination: {
+        el: '.progects-detailed-scrollbar',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+
+            if (current === 1 && options.isPartToSet) {
+                options.part = 0;
+                options.isPartToSet = false;
+            }
+
+            if (current === 5) {
+                options.isPartToSet = true;
+            }
+
+            options.nextPart = current / total;
+
+            window.requestAnimationFrame(animateProgress);
+        }
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.projects-button-next',
+    },
+    thumbs: {
+        swiper: projectsControlsSlider,
+    }
+});
+
+const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    autoHeight: true,
+    hashNavigation: {
+        watchState: true,
+    },
+    thumbs: {
+        swiper: projectsControlsSlider,
+    }
+});
+
 
 
 function testWebP(callback) {
