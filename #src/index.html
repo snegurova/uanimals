@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="css/style.css">
-		<title>UAnimals</title>
-	</head>
+@@include('_head.html',{
+"title":"UAnimals"
+})
 	<body>
 		<div class="wrapper">
 		@@include('_header.html')
@@ -47,7 +40,7 @@
 				<div class="projects__heading-wrapper container">
 					<h2 class="projects__heading">Допомога тваринам</h2>
 					<div class="projects__heading-left-col">
-						<a class="projects__link" href="#">Усі проекти</a>
+						<a class="projects__link" href="/projects.html">Усі проекти</a>
 						<div class="projects__controls">
 							<!-- If we need navigation buttons -->
 							<div class="home-projects-button-next">
@@ -196,6 +189,6 @@
 			</section>
 		</main>
 		</div>
-		<script src="js/script.js"></script>
+		@@include('_js.html',{})
 	</body>
 </html>

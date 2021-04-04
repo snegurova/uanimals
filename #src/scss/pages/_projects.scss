@@ -1,0 +1,42 @@
+.projects-detailed {
+  padding-bottom: 125px;
+  background-color: $background-color;
+  &__title {
+    padding-top: 20px;
+    width: 412px;
+    background: linear-gradient(90deg, $background-color 91.26%, rgba(255, 255, 255, 0) 101.43%);
+  }
+  &__back {
+    font-size: .875rem;
+    display: flex;
+    align-items: center;
+    height: 34px;
+    color: #8F8F8F;
+    padding-left: 42px;
+    background-image: url("../img/arrow-left-circle-icon.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.titles-slider {
+  &__slide {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    min-height: 160px;
+    background-color: $background-color;
+    h2 {
+      font-size: 2.25rem;
+      line-height: 1.15;
+      font-weight: 800;
+      margin: 0;
+      @media screen and (max-width: 1919px) {
+        font-size: 1.875rem;
+      }
+    }
+  }
+}

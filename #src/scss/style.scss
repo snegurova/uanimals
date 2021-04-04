@@ -8,12 +8,17 @@
 	}
 }
 
-@import "variables";
+@import "variables_";
 @import "typography";
 @import "./module/header";
 @import "./module/sliders";
 @import "./module/label";
 @import "./pages/home";
+@import "./pages/projects";
+
+* {
+	box-sizing: border-box;
+}
 
 body {
 	margin: 0;
