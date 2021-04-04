@@ -9800,11 +9800,24 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
     },
 });
 
+const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-slider', {
+    // Optional parameters
+    // loop: true,
+    slidesPerView: 3.5,
+    mousewheel: true,
+    freeMode: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+
 const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
     // Optional parameters
     loop: true,
     slidesPerView: 1,
     effect: 'fade',
+    hashNavigation: {
+        watchState: true,
+    },
     pagination: {
         el: '.progects-detailed-scrollbar',
         type: 'custom',
@@ -9828,6 +9841,9 @@ const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
     // Navigation arrows
     navigation: {
         nextEl: '.projects-button-next',
+    },
+    thumbs: {
+        swiper: projectsControlsSlider,
     }
 });
 

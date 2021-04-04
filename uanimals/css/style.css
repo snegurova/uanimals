@@ -974,6 +974,8 @@ h1 {
 }
 
 .projects-detailed__title {
+  z-index: 2;
+  position: relative;
   padding-top: 20px;
   width: 412px;
   background: linear-gradient(90deg, #fff 91.26%, rgba(255, 255, 255, 0) 101.43%);
@@ -1031,6 +1033,43 @@ h1 {
 @media screen and (max-width: 1919px) {
   .titles-slider__slide h2 {
     font-size: 1.875rem;
+  }
+}
+
+.titles-control-slider {
+  position: fixed;
+  width: calc(50% + 228px);
+  top: 128px;
+  left: calc(50% - 220px);
+}
+
+.titles-control-slider__slide {
+  padding: 29px;
+  min-height: 214px;
+  background-color: #F2F3F5;
+  border: 1px solid #ECECEC;
+  border-top: none;
+}
+
+.titles-control-slider__slide.swiper-slide-thumb-active {
+  opacity: 0.7;
+}
+
+.titles-control-slider__slide-index {
+  font-weight: 600;
+  color: #9F9F9F;
+}
+
+.titles-control-slider__title {
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  margin-top: 56px;
+}
+
+@media screen and (max-width: 1919px) {
+  .titles-control-slider__title {
+    font-size: 0.936rem;
   }
 }
 
