@@ -41,3 +41,10 @@ body {
 ._relative {
 	position: relative;
 }
+
+.content-container {
+	max-width: 848px;
+	&_centered {
+		margin: 0 auto;
+	}
+}

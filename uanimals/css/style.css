@@ -11,6 +11,12 @@ h1 {
   font-weight: 800;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 2;
+  margin: 48px 0 0 0;
+}
+
 .mark {
   position: relative;
 }
@@ -969,6 +975,7 @@ h1 {
 }
 
 .projects-detailed {
+  position: relative;
   padding-bottom: 125px;
   background-color: #fff;
 }
@@ -1002,6 +1009,7 @@ h1 {
   position: absolute;
   top: 236px;
   right: 0;
+  z-index: 2;
 }
 
 .titles-slider {
@@ -1036,10 +1044,10 @@ h1 {
   }
 }
 
-.titles-control-slider {
-  position: fixed;
-  width: calc(50% + 228px);
-  top: 128px;
+.titles-control-slider-wrapper {
+  position: absolute;
+  width: calc(50% + 220px);
+  top: 0;
   left: calc(50% - 220px);
 }
 
@@ -1073,6 +1081,17 @@ h1 {
   }
 }
 
+.body-slider__slide {
+  padding-top: 53px;
+  background-color: #fff;
+}
+
+.body-slider__date {
+  font-weight: 600;
+  color: #9F9F9F;
+  font-size: .875rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1102,4 +1121,12 @@ body {
 
 ._relative {
   position: relative;
+}
+
+.content-container {
+  max-width: 848px;
+}
+
+.content-container_centered {
+  margin: 0 auto;
 }

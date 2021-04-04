@@ -11,6 +11,12 @@ h1 {
   font-weight: 800;
 }
 
+p {
+  font-size: 1rem;
+  line-height: 2;
+  margin: 48px 0 0 0;
+}
+
 .mark {
   position: relative;
   &::after {

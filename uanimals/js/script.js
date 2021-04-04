@@ -9847,6 +9847,19 @@ const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
     }
 });
 
+const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+    autoHeight: true,
+    hashNavigation: {
+        watchState: true,
+    },
+    thumbs: {
+        swiper: projectsControlsSlider,
+    }
+});
 
 
 
