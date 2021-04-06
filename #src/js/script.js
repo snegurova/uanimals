@@ -1,4 +1,4 @@
-@@include('menu.js', {})
+@@include('functions.js', {})
 @@include('sliders.js', {})
 
 function testWebP(callback) {

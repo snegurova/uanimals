@@ -95,10 +95,19 @@
   &__slide {
     padding-top: 53px;
     background-color: $background-color;
+    p, div, ul, li {
+      max-width: 848px;
+      margin: 24px auto;
+    }
+    img {
+      display: block;
+      margin: 24px auto;
+    }
   }
   &__date {
     font-weight: 600;
     color: $secondary-font-color-light;
     font-size: .875rem;
+    width: 848px;
   }
 }
