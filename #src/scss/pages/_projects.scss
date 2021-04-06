@@ -110,4 +110,24 @@
     font-size: .875rem;
     width: 848px;
   }
+  .share {
+    width: 307px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 19px;
+    margin: 0;
+    &-wrapper {
+      margin: 51px auto 0;
+    }
+    .social-list {
+      gap: 9px;
+      margin: 0;
+    }
+    p {
+      font-size: 0.875rem;
+      color: $secondary-font-color-light;
+    }
+  }
 }
+
