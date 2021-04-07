@@ -816,6 +816,11 @@ p {
   top: -16px;
 }
 
+.label_subscribe-form {
+  right: -20px;
+  top: -4px;
+}
+
 @media screen and (max-width: 560px) {
   .label {
     width: 14px;
@@ -1026,6 +1031,64 @@ p {
 
 .social-list .tiktok {
   background-image: url("../img/tiktok-icon.svg");
+}
+
+.subscribe {
+  padding: 33px 0;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 54px;
+}
+
+.subscribe-form__text {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.subscribe-form__inputs-wrapper {
+  display: flex;
+  justify-content: stretch;
+  gap: 24px;
+}
+
+.subscribe-form__input {
+  width: 400px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #8D8D8D;
+  padding: 10px;
+}
+
+.subscribe-form__input::placeholder {
+  color: #868686;
+  font-size: 0.875rem;
+}
+
+.btn {
+  border-radius: 50%;
+  background-color: #60CAE5;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_submit {
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/arrow-btn-submit.svg");
+  font-size: 0;
+  transition: background-position 0.3s ease-in;
+}
+
+.btn_submit:hover {
+  background-position: 26px;
 }
 
 .heading {

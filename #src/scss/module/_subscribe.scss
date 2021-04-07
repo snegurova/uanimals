@@ -1,0 +1,31 @@
+.subscribe {
+  padding: 33px 0;
+}
+.subscribe-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 54px;
+  &__text {
+    position: relative;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  &__inputs-wrapper {
+    display: flex;
+    justify-content: stretch;
+    gap: 24px;
+  }
+  &__input {
+    width: 400px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #8D8D8D;
+    padding: 10px;
+    &::placeholder {
+      color: #868686;
+      font-size: 0.875rem;
+    }
+  }
+}

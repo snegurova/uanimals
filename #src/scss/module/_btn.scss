@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 50%;
+  background-color: $accent-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  &_submit {
+    width: 48px;
+    height: 48px;
+    background-image: url("../img/arrow-btn-submit.svg");
+    font-size: 0;
+    transition: background-position 0.3s ease-in;
+    &:hover {
+      background-position: 26px;
+    }
+  }
+}
