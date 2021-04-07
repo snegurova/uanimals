@@ -355,3 +355,11 @@
   }
 }
 
+.projects__controls {
+  cursor: pointer;
+  transition: opacity 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+

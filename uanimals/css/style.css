@@ -800,6 +800,15 @@ p {
   left: 0;
 }
 
+.projects__controls {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.projects__controls:hover {
+  opacity: 0.8;
+}
+
 .label {
   display: flex;
   justify-content: center;
