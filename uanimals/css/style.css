@@ -1,6 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
   color: #000;
@@ -1002,7 +1002,9 @@ p {
 }
 
 .social-list a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 0px;
   width: 40px;
   height: 40px;
@@ -1017,20 +1019,24 @@ p {
   background-color: #60CAE5;
 }
 
-.social-list .facebook {
-  background-image: url("../img/facebook-icon.svg");
+.footer__social .social-list {
+  margin: 0;
+  gap: 22px;
 }
 
-.social-list .telegram {
-  background-image: url("../img/telegram-icon.svg");
+.footer__social .social-list a {
+  width: 22px;
+  height: 22px;
+  background: none;
 }
 
-.social-list .instagram {
-  background-image: url("../img/instagram-icon.svg");
+.footer__social .social-list a :hover path {
+  fill: #60CAE5;
 }
 
-.social-list .tiktok {
-  background-image: url("../img/tiktok-icon.svg");
+.footer__social .social-list a path {
+  fill: #737373;
+  transition: fill 0.3s;
 }
 
 .subscribe {
@@ -1089,6 +1095,69 @@ p {
 
 .btn_submit:hover {
   background-position: 26px;
+}
+
+.footer {
+  background-color: #222222;
+}
+
+.footer__top {
+  border-bottom: 1px solid #2F2F2F;
+}
+
+.footer__bottom {
+  padding: 20px 0;
+}
+
+.footer__top .container, .footer__bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__nav, .footer__hash-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  margin: 30px 0;
+  padding: 0;
+  gap: 35px;
+}
+
+.footer__nav-link, .footer__hash-link {
+  padding: 8px 0;
+  text-decoration: none;
+  transition: color 0.5s;
+}
+
+.footer__nav-link {
+  color: #fff;
+}
+
+.footer__nav-link:hover {
+  color: #60CAE5;
+}
+
+.footer__hash-link {
+  color: #60CAE5;
+}
+
+.footer__hash-link:hover {
+  color: #fff;
+}
+
+.footer__copywrite, .footer__developed-by {
+  color: #A8A8A8;
+}
+
+.footer__copywrite a, .footer__developed-by a {
+  color: #fff;
+  transition: color 0.5s;
+}
+
+.footer__copywrite a:hover, .footer__developed-by a:hover {
+  color: #60CAE5;
 }
 
 .heading {
