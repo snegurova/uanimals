@@ -30,6 +30,7 @@ const options = {
     lineWidth: 3,
     decrease: false,
     isPartToSet: true,
+    prevSlide: 0,
 }
 canvas.width = canvas.height = options.size;
 element && element.appendChild(canvas);
@@ -53,19 +54,47 @@ const animateProgress = () => {
     ctx.restore();
     drawCircle('rgba(255, 255, 255, 0.3)', options.lineWidth);
     drawCircle('#60CAE5', options.lineWidth, options.part);
+    // debugger;
     if (options.decrease) {
         if (options.part > options.nextPart) {
-            options.part *= 0.98;
+            options.part = options.part - 0.01;
+            if (options.part > -0.01 && options.part < 0.01) {
+                options.part = 0;
+                options.nextPart = 0;
+            }
             window.requestAnimationFrame(animateProgress);
         }
     } else {
         if (options.part < options.nextPart) {
             options.part = options.part + 0.01;
+            if (options.part > 1) {
+                options.part = 0;
+                options.nextPart = 0;
+            }
             window.requestAnimationFrame(animateProgress);
         }
     }
 }
 
+const runCircleProgress = (swiper, current, total) => {
+    if (options.prevSlide === total && current === 1) {
+        options.decrease = false;
+        options.nextPart = current / total;
+    } else if (options.prevSlide === 1 && current === total) {
+        options.decrease = true;
+        options.nextPart = 0;
+    } else if (options.prevSlide === total && current === total - 1) {
+        options.decrease = true;
+        options.nextPart = current / total;
+        options.part = 1;
+    } else {
+        options.decrease = current - options.prevSlide <= 0;
+        options.nextPart = current / total;
+    }
+
+    options.prevSlide = current;
+    window.requestAnimationFrame(animateProgress);
+};
 /*------
  Sliders
 --------*/
@@ -81,20 +110,8 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
         el: '.home-projects-scrollbar',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-
-            if (current === 1 && options.isPartToSet) {
-                options.part = 0;
-                options.isPartToSet = false;
-            }
-
-            if (current === 5) {
-                options.isPartToSet = true;
-            }
-
-            options.nextPart = current / total;
-
-            window.requestAnimationFrame(animateProgress);
-        }
+            runCircleProgress(swiper, current, total);
+        },
     },
 
     // Navigation arrows
@@ -145,19 +162,7 @@ const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
         el: '.progects-detailed-scrollbar',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-
-            if (current === 1 && options.isPartToSet) {
-                options.part = 0;
-                options.isPartToSet = false;
-            }
-
-            if (current === 5) {
-                options.isPartToSet = true;
-            }
-
-            options.nextPart = current / total;
-
-            window.requestAnimationFrame(animateProgress);
+            runCircleProgress(swiper, current, total);
         }
     },
 
