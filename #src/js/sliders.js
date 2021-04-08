@@ -31,6 +31,7 @@ const options = {
     decrease: false,
     isPartToSet: true,
     prevSlide: 0,
+    isFillCircle: false,
 }
 canvas.width = canvas.height = options.size;
 element && element.appendChild(canvas);
@@ -59,8 +60,14 @@ const animateProgress = () => {
         if (options.part > options.nextPart) {
             options.part = options.part - 0.01;
             if (options.part > -0.01 && options.part < 0.01) {
-                options.part = 0;
-                options.nextPart = 0;
+                if (options.isFillCircle) {
+                    options.part = 1;
+                    options.nextPart = 1;
+                    options.isFillCircle = false;
+                } else {
+                    options.part = 0;
+                    options.nextPart = 0;
+                }
             }
             window.requestAnimationFrame(animateProgress);
         }
@@ -68,8 +75,8 @@ const animateProgress = () => {
         if (options.part < options.nextPart) {
             options.part = options.part + 0.01;
             if (options.part > 1) {
-                options.part = 0;
-                options.nextPart = 0;
+                options.part = 1;
+                options.nextPart = 1;
             }
             window.requestAnimationFrame(animateProgress);
         }
@@ -79,10 +86,12 @@ const animateProgress = () => {
 const runCircleProgress = (swiper, current, total) => {
     if (options.prevSlide === total && current === 1) {
         options.decrease = false;
+        options.part = 0;
         options.nextPart = current / total;
     } else if (options.prevSlide === 1 && current === total) {
         options.decrease = true;
         options.nextPart = 0;
+        options.isFillCircle = true;
     } else if (options.prevSlide === total && current === total - 1) {
         options.decrease = true;
         options.nextPart = current / total;
