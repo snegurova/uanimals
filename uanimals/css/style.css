@@ -60,7 +60,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 127px;
+  min-height: 117px;
 }
 
 .header__right {
@@ -590,10 +590,6 @@ p {
   display: none;
 }
 
-.last-news__slider {
-  padding: 23px 0 40px 0;
-}
-
 .last-news__slide {
   padding-bottom: 30px;
 }
@@ -727,7 +723,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(100% - 42px);
+  height: 100%;
 }
 
 .project__date {
@@ -807,6 +803,15 @@ p {
 
 .projects__controls:hover {
   opacity: 0.8;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  cursor: pointer;
 }
 
 .label {
@@ -1169,24 +1174,71 @@ p {
   color: #60CAE5;
 }
 
+.home {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.home .wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home .header {
+  flex: 0 1 auto;
+}
+
+.home .main {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .heading {
-  padding: 53px 0 38px 0;
+  padding-top: 50px;
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 1919px) {
+  .heading {
+    padding-top: 0;
+  }
+}
+
+.heading__wrapper {
+  display: block;
+  max-width: 1059px;
 }
 
 .heading h1 {
   font-size: 4.5rem;
-  max-width: 1060px;
+  line-height: 1.2;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1919px) {
   .heading h1 {
     font-size: 3.5rem;
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 1600px) {
   .heading h1 {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .heading h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .heading h1 {
+    font-size: 1.8rem;
   }
 }
 
@@ -1194,10 +1246,6 @@ p {
   .heading h1 {
     font-size: 1.65rem;
   }
-}
-
-.last-news {
-  padding: 35px 0 45px 0;
 }
 
 @media screen and (max-width: 560px) {
@@ -1213,8 +1261,12 @@ p {
   font-weight: 600;
 }
 
-.projects {
-  padding-top: 55px;
+.last-news__slide {
+  background-color: #fff;
+}
+
+.last-news__slide-inner {
+  max-width: 413px;
 }
 
 @media screen and (max-width: 560px) {
@@ -1451,7 +1503,7 @@ body {
 }
 
 .container {
-  max-width: 1284px;
+  width: 1284px;
   margin: 0 auto;
 }
 
@@ -1459,6 +1511,7 @@ body {
   .container {
     padding-left: 30px;
     padding-right: 30px;
+    width: 100%;
   }
 }
 

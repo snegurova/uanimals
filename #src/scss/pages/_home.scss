@@ -1,13 +1,48 @@
+.home {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .header {
+    flex: 0 1 auto;
+  }
+  .main {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
 .heading {
-  padding: 53px 0 38px 0;
+  //padding: 50px 0 22px 0;
+  padding-top: 50px;
+  align-self: flex-start;
+  @media screen and (max-width: 1919px) {
+    padding-top: 0;
+  }
+  &__wrapper {
+    display: block;
+    max-width: 1059px;
+  }
   h1 {
     font-size: 4.5rem;
-    max-width: 1060px;
-    @media screen and (max-width: 1080px) {
+    line-height: 1.2;
+    @media screen and (max-width: 1919px) {
       font-size: 3.5rem;
     }
-    @media screen and (max-width: 780px) {
+    @media screen and (max-width: 1600px) {
       font-size: 2.5rem;
+    }
+    @media screen and (max-width: 1366px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 780px) {
+      font-size: 1.8rem;
     }
     @media screen and (max-width: 560px) {
       font-size: 1.65rem;
@@ -15,7 +50,7 @@
   }
 }
 .last-news {
-  padding: 35px 0 45px 0;
+  //padding: 22px 0 45px 0;
   @media screen and (max-width: 560px) {
     padding: 26px 0 0 0;
   }
@@ -25,10 +60,16 @@
     font-size: 1.125rem;
     font-weight: 600;
   }
+  &__slide {
+    background-color: $background-color;
+  }
+  &__slide-inner {
+    max-width: 413px;
+  }
 }
 
 .projects {
-  padding-top: 55px;
+  //padding-top: 55px;
   @media screen and (max-width: 560px) {
     padding-top: 30px;
   }

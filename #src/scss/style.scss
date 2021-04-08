@@ -31,11 +31,12 @@ body {
 }
 
 .container {
-	max-width: 1284px;
+	width: 1284px;
 	margin: 0 auto;
 	@media screen and (max-width: 1284px) {
 		padding-left: 30px;
 		padding-right: 30px;
+		width: 100%;
 	}
 	@media screen and (max-width: 780px) {
 		padding-left: 16px;
