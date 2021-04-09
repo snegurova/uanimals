@@ -156,9 +156,21 @@ const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-sl
     // loop: true,
     slidesPerView: 3.5,
     mousewheel: true,
-    freeMode: true,
+    freeMode: false,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+
+    hashNavigation: {
+        watchState: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+        },
+        993: {
+            slidesPerView: 3.5,
+        }
+    }
 });
 
 const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
@@ -169,21 +181,21 @@ const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
     hashNavigation: {
         watchState: true,
     },
-    pagination: {
-        el: '.progects-detailed-scrollbar',
-        type: 'custom',
-        renderCustom: function (swiper, current, total) {
-            runCircleProgress(swiper, current, total);
-        }
-    },
-
-    // Navigation arrows
-    navigation: {
-        nextEl: '.projects-button-next',
-    },
-    thumbs: {
-        swiper: projectsControlsSlider,
-    }
+    // pagination: {
+    //     el: '.progects-detailed-scrollbar',
+    //     type: 'custom',
+    //     renderCustom: function (swiper, current, total) {
+    //         runCircleProgress(swiper, current, total);
+    //     }
+    // },
+    //
+    // // Navigation arrows
+    // navigation: {
+    //     nextEl: '.projects-button-next',
+    // },
+    // thumbs: {
+    //     swiper: projectsControlsSlider,
+    // }
 });
 
 const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
@@ -197,6 +209,18 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
     },
     thumbs: {
         swiper: projectsControlsSlider,
-    }
+    },
+    pagination: {
+        el: '.progects-detailed-scrollbar',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            runCircleProgress(swiper, current, total);
+        }
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.projects-button-next',
+    },
 });
 
