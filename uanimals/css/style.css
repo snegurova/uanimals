@@ -944,6 +944,12 @@ p {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .popup__body {
+    width: 90%;
+  }
+}
+
 .popup__body iframe {
   width: 1280px;
   height: 720px;
@@ -954,6 +960,13 @@ p {
   .popup__body iframe {
     width: 1120px;
     height: 630px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .popup__body iframe {
+    width: 100%;
+    height: 49.7vw;
   }
 }
 
@@ -992,6 +1005,15 @@ p {
   border: 1px solid #fff;
 }
 
+@media screen and (max-width: 992px) {
+  .video-popup-link ::before {
+    top: calc(50% - 22px);
+    left: calc(50% - 22px);
+    width: 44px;
+    height: 44px;
+  }
+}
+
 .video-popup-link ::after {
   position: absolute;
   top: calc(50% - 64px);
@@ -1005,6 +1027,16 @@ p {
   background-image: url("../img/play-icon.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 992px) {
+  .video-popup-link ::after {
+    top: calc(50% - 19px);
+    left: calc(50% - 19px);
+    width: 40px;
+    height: 40px;
+    background-size: 17%;
+  }
 }
 
 .social-list {

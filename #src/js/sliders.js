@@ -168,6 +168,9 @@ const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-sl
             slidesPerView: 2,
         },
         993: {
+            slidesPerView: 2.5,
+        },
+        1281: {
             slidesPerView: 3.5,
         }
     }
