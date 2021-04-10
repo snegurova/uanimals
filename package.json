@@ -28,5 +28,8 @@
 		"gulp-ttf2woff": "latest",
 		"gulp-ttf2woff2": "latest",
 		"gulp-svg-sprite": "latest"
+	},
+	"dependencies": {
+		"gulp-sourcemaps": "^3.0.0"
 	}
 }

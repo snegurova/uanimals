@@ -47,7 +47,8 @@ let { src, dest } = require('gulp'),
 	ttf2woff = require('gulp-ttf2woff'),
 	ttf2woff2 = require('gulp-ttf2woff2'),
 	fonter = require('gulp-fonter'),
-	newer = require('gulp-newer');
+	newer = require('gulp-newer'),
+	sourcemaps = require('gulp-sourcemaps');
 
 function browserSync(params) {
 	browsersync.init({
@@ -67,6 +68,7 @@ function html() {
 }
 function css() {
 	return src(path.src.css)
+		.pipe(sourcemaps.init())
 		.pipe(
 			scss({
 				outputStyle: "expanded"
@@ -87,6 +89,7 @@ function css() {
 				noWebpClass: "._no-webp"
 			}
 		))
+		.pipe(sourcemaps.write('../maps'))
 		.pipe(dest(path.build.css))
 		/*.pipe(clean_css())
 		.pipe(
@@ -99,7 +102,9 @@ function css() {
 }
 function js() {
 	return src(path.src.js)
+		.pipe(sourcemaps.init())
 		.pipe(fileinclude())
+		.pipe(sourcemaps.write('../maps'))
 		.pipe(dest(path.build.js))
 		/*.pipe(
 			uglify()
