@@ -1131,7 +1131,7 @@ button:hover {
   height: 15px;
   top: 59px;
   right: 108px;
-  background: url(../../img/popup-form-close.svg) 0 0 no-repeat;
+  background: url(../img/popup-form-close.svg) 0 0 no-repeat;
 }
 
 @media screen and (max-width: 560px) {
@@ -1348,7 +1348,7 @@ button:hover {
 }
 
 .contact-us__form .btn_submit {
-  background-image: url("../../img/carbon_send.svg");
+  background-image: url("../img/carbon_send.svg");
 }
 
 .contact-us__form .btn_submit:hover {
