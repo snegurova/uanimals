@@ -12,6 +12,11 @@ h1 {
   margin: 45px 0 70px;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .banner-heading {
   font-size: 2.8rem;
   font-weight: 800;
@@ -1249,6 +1254,12 @@ p {
   background-position: 26px;
 }
 
+.contacts .btn_submit {
+  width: 58px;
+  height: 58px;
+  background-size: 30%;
+}
+
 .footer {
   background-color: #222222;
 }
@@ -1771,6 +1782,55 @@ p {
 .contact-social-links__wrapper p {
   margin: 0;
   color: #7B7B7B;
+}
+
+.team-cards {
+  display: flex;
+  gap: 9px;
+}
+
+@media screen and (max-width: 1280px) {
+  .team-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  border: 1px solid #D9D9D9;
+  padding: 39px 28px;
+}
+
+.team-card img {
+  border-radius: 50%;
+}
+
+.team-card h3 {
+  font-weight: 700;
+  font-size: 0.825rem;
+  margin: 26px 0 0;
+  text-transform: uppercase;
+}
+
+.team-card p {
+  color: #727272;
+  font-size: 0.825rem;
+  margin: 20px 0 0;
+}
+
+.team-card a {
+  color: #000;
+  margin-top: 24px;
+}
+
+.team-card a:hover {
+  opacity: 0.8;
 }
 
 * {
