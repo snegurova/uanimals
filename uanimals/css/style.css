@@ -7,7 +7,18 @@ body {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 45px 0 70px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.banner-heading {
+  font-size: 2.8rem;
   font-weight: 800;
 }
 
@@ -15,6 +26,18 @@ p {
   font-size: 1rem;
   line-height: 2;
   margin: 24px 0 24px 0;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #000;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 .mark {
@@ -407,6 +430,58 @@ p {
 
 ._lock {
   overflow: hidden;
+}
+
+.secondary-navigation {
+  display: flex;
+  gap: 59px;
+  align-items: center;
+}
+
+@media screen and (max-width: 560px) {
+  .secondary-navigation {
+    flex-wrap: wrap;
+    gap: 36px;
+  }
+}
+
+.back-btn {
+  font-size: .875rem;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  color: #8F8F8F;
+  padding-left: 42px;
+  background-image: url("../img/arrow-left-circle-icon.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  font-size: 0.825rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs li:not(:last-child) a, .breadcrumbs li:not(:last-child) {
+  color: #8F8F8F;
 }
 
 .swiper-container {
@@ -933,7 +1008,7 @@ p {
 .popup__body {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-  background-color: #666;
+  background-color: #fff;
   width: 100%;
   max-width: 1280px;
 }
@@ -1039,6 +1114,33 @@ p {
   }
 }
 
+.popup-form .popup__body {
+  max-width: 750px;
+  border-radius: 5px;
+  padding: 59px 108px;
+}
+
+@media screen and (max-width: 560px) {
+  .popup-form .popup__body {
+    padding: 36px 24px;
+  }
+}
+
+.popup-form .popup__close {
+  width: 15px;
+  height: 15px;
+  top: 59px;
+  right: 108px;
+  background: url(../../img/popup-form-close.svg) 0 0 no-repeat;
+}
+
+@media screen and (max-width: 560px) {
+  .popup-form .popup__close {
+    top: 36px;
+    right: 24px;
+  }
+}
+
 .social-list {
   padding-left: 0;
   list-style: none;
@@ -1098,6 +1200,38 @@ p {
   transition: fill 0.3s;
 }
 
+.input-form__wrapper {
+  position: relative;
+}
+
+.input-form__label {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  transition: all 0.5s;
+  color: #868686;
+  font-size: 1rem;
+}
+
+.form-input {
+  width: 400px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #8D8D8D;
+  padding: 10px;
+}
+
+.form-input::placeholder {
+  color: #868686;
+  font-size: 0.875rem;
+}
+
+.form-input:focus + .input-form__label {
+  top: -25px;
+  left: 0px;
+  font-size: 0.813rem;
+}
+
 .subscribe {
   padding: 33px 0;
 }
@@ -1151,19 +1285,6 @@ p {
   }
 }
 
-.subscribe-form__input {
-  width: 400px;
-  display: block;
-  border: none;
-  border-bottom: 1px solid #8D8D8D;
-  padding: 10px;
-}
-
-.subscribe-form__input::placeholder {
-  color: #868686;
-  font-size: 0.875rem;
-}
-
 @media screen and (max-width: 1366px) {
   .subscribe-form__input {
     width: 300px;
@@ -1176,7 +1297,17 @@ p {
   }
 }
 
+.contact-us__input {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact-us__input::placeholder {
+  font-size: 1rem;
+}
+
 .btn {
+  display: block;
   border-radius: 50%;
   background-color: #60CAE5;
   background-repeat: no-repeat;
@@ -1195,6 +1326,33 @@ p {
 
 .btn_submit:hover {
   background-position: 26px;
+}
+
+.btn-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 70px;
+  border: none;
+  background-color: #fff;
+}
+
+.btn-icon-text:hover {
+  cursor: pointer;
+}
+
+.contacts .btn_submit {
+  width: 58px;
+  height: 58px;
+  background-size: 30%;
+}
+
+.contact-us__form .btn_submit {
+  background-image: url("../../img/carbon_send.svg");
+}
+
+.contact-us__form .btn_submit:hover {
+  background-position: center;
 }
 
 .footer {
@@ -1489,23 +1647,6 @@ p {
   }
 }
 
-.projects-detailed__back {
-  font-size: .875rem;
-  display: flex;
-  align-items: center;
-  height: 34px;
-  color: #8F8F8F;
-  padding-left: 42px;
-  background-image: url("../img/arrow-left-circle-icon.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-  text-decoration: none;
-}
-
-.projects-detailed__back:hover {
-  text-decoration: underline;
-}
-
 .projects-detailed .projects__controls {
   position: absolute;
   top: 236px;
@@ -1686,6 +1827,107 @@ p {
   color: #9F9F9F;
 }
 
+.contacts {
+  padding: 45px 0 62px;
+}
+
+.contacts p {
+  max-width: 741px;
+}
+
+.contacts .social-list {
+  margin-top: 17px;
+  gap: 12px;
+}
+
+.contact-links__wrapper {
+  margin-top: 60px;
+  display: flex;
+  gap: 113px;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 560px) {
+  .contact-links__wrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.write-us-popup-link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 560px) {
+  .write-us-popup-link {
+    width: 100%;
+  }
+}
+
+.write-us-popup-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.contact-social-links__wrapper p {
+  margin: 0;
+  color: #7B7B7B;
+}
+
+.team-cards {
+  display: flex;
+  gap: 9px;
+}
+
+@media screen and (max-width: 1280px) {
+  .team-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 250px;
+  border: 1px solid #D9D9D9;
+  padding: 39px 28px;
+}
+
+.team-card img {
+  border-radius: 50%;
+}
+
+.team-card h3 {
+  font-weight: 700;
+  font-size: 0.825rem;
+  margin: 26px 0 0;
+  text-transform: uppercase;
+}
+
+.team-card p {
+  color: #727272;
+  font-size: 0.825rem;
+  margin: 20px 0 0;
+}
+
+.team-card a {
+  color: #000;
+  margin-top: 24px;
+}
+
+.team-card a:hover {
+  opacity: 0.8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1729,3 +1971,5 @@ body {
 img {
   max-width: 100%;
 }
+
+/*# sourceMappingURL=../maps/style.css.map */
