@@ -28,6 +28,17 @@ p {
   margin: 24px 0 24px 0;
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: $main-font-color;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 .mark {
   position: relative;
   &::after {

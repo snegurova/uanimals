@@ -28,6 +28,18 @@ p {
   margin: 24px 0 24px 0;
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #000;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
 .mark {
   position: relative;
 }
@@ -424,6 +436,13 @@ p {
   display: flex;
   gap: 59px;
   align-items: center;
+}
+
+@media screen and (max-width: 560px) {
+  .secondary-navigation {
+    flex-wrap: wrap;
+    gap: 36px;
+  }
 }
 
 .back-btn {
@@ -989,7 +1008,7 @@ p {
 .popup__body {
   transform: scale(0);
   transition: all 0.3s ease 0s;
-  background-color: #666;
+  background-color: #fff;
   width: 100%;
   max-width: 1280px;
 }
@@ -1095,6 +1114,33 @@ p {
   }
 }
 
+.popup-form .popup__body {
+  max-width: 750px;
+  border-radius: 5px;
+  padding: 59px 108px;
+}
+
+@media screen and (max-width: 560px) {
+  .popup-form .popup__body {
+    padding: 36px 24px;
+  }
+}
+
+.popup-form .popup__close {
+  width: 15px;
+  height: 15px;
+  top: 59px;
+  right: 108px;
+  background: url(../../img/popup-form-close.svg) 0 0 no-repeat;
+}
+
+@media screen and (max-width: 560px) {
+  .popup-form .popup__close {
+    top: 36px;
+    right: 24px;
+  }
+}
+
 .social-list {
   padding-left: 0;
   list-style: none;
@@ -1154,6 +1200,38 @@ p {
   transition: fill 0.3s;
 }
 
+.input-form__wrapper {
+  position: relative;
+}
+
+.input-form__label {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  transition: all 0.5s;
+  color: #868686;
+  font-size: 1rem;
+}
+
+.form-input {
+  width: 400px;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #8D8D8D;
+  padding: 10px;
+}
+
+.form-input::placeholder {
+  color: #868686;
+  font-size: 0.875rem;
+}
+
+.form-input:focus + .input-form__label {
+  top: -25px;
+  left: 0px;
+  font-size: 0.813rem;
+}
+
 .subscribe {
   padding: 33px 0;
 }
@@ -1207,19 +1285,6 @@ p {
   }
 }
 
-.subscribe-form__input {
-  width: 400px;
-  display: block;
-  border: none;
-  border-bottom: 1px solid #8D8D8D;
-  padding: 10px;
-}
-
-.subscribe-form__input::placeholder {
-  color: #868686;
-  font-size: 0.875rem;
-}
-
 @media screen and (max-width: 1366px) {
   .subscribe-form__input {
     width: 300px;
@@ -1230,6 +1295,15 @@ p {
   .subscribe-form__input {
     width: 280px;
   }
+}
+
+.contact-us__input {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact-us__input::placeholder {
+  font-size: 1rem;
 }
 
 .btn {
@@ -1254,10 +1328,31 @@ p {
   background-position: 26px;
 }
 
+.btn-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 70px;
+  border: none;
+  background-color: #fff;
+}
+
+.btn-icon-text:hover {
+  cursor: pointer;
+}
+
 .contacts .btn_submit {
   width: 58px;
   height: 58px;
   background-size: 30%;
+}
+
+.contact-us__form .btn_submit {
+  background-image: url("../../img/carbon_send.svg");
+}
+
+.contact-us__form .btn_submit:hover {
+  background-position: center;
 }
 
 .footer {

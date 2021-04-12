@@ -58,7 +58,7 @@
 	&__body {
 		transform: scale(0);
 		transition: all 0.3s ease 0s;
-		background-color: #666;
+		background-color: $background-color;
 		width: 100%;
 		max-width: 1280px;
 		@media screen and (max-width: 1919px) {
@@ -142,6 +142,31 @@
 			width: 40px;
 			height: 40px;
 			background-size: 17%;
+		}
+	}
+}
+
+//===============
+//===============
+
+.popup-form {
+	.popup__body {
+		max-width: 750px;
+		border-radius: 5px;
+		padding: 59px 108px;
+		@media screen and (max-width: 560px) {
+			padding: 36px 24px;
+		}
+	}
+	.popup__close {
+		width: 15px;
+		height: 15px;
+		top: 59px;
+		right: 108px;
+		background: url(../../img/popup-form-close.svg) 0 0 no-repeat;
+		@media screen and (max-width: 560px) {
+			top: 36px;
+			right: 24px;
 		}
 	}
 }
