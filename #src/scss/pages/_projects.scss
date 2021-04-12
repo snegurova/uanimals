@@ -12,21 +12,6 @@
       display: none;
     }
   }
-  &__back {
-    font-size: .875rem;
-    display: flex;
-    align-items: center;
-    height: 34px;
-    color: #8F8F8F;
-    padding-left: 42px;
-    background-image: url("../img/arrow-left-circle-icon.svg");
-    background-position: left;
-    background-repeat: no-repeat;
-    text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
   .projects__controls {
     position: absolute;
     top: 236px;

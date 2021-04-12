@@ -12,6 +12,7 @@
 @import "typography";
 @import './module/effect-fade';
 @import "./module/header";
+@import "./module/secondary-nav";
 @import "./module/sliders";
 @import "./module/label";
 @import "./module/popup";
@@ -21,6 +22,7 @@
 @import "./module/footer";
 @import "./pages/home";
 @import "./pages/projects";
+@import "./pages/contacts";
 
 * {
 	box-sizing: border-box;

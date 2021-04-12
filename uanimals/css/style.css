@@ -7,7 +7,13 @@ body {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin: 45px 0 70px;
+}
+
+.banner-heading {
+  font-size: 2.8rem;
   font-weight: 800;
 }
 
@@ -407,6 +413,51 @@ p {
 
 ._lock {
   overflow: hidden;
+}
+
+.secondary-navigation {
+  display: flex;
+  gap: 59px;
+  align-items: center;
+}
+
+.back-btn {
+  font-size: .875rem;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  color: #8F8F8F;
+  padding-left: 42px;
+  background-image: url("../img/arrow-left-circle-icon.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  font-size: 0.825rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #000;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs li:not(:last-child) a, .breadcrumbs li:not(:last-child) {
+  color: #8F8F8F;
 }
 
 .swiper-container {
@@ -1177,6 +1228,7 @@ p {
 }
 
 .btn {
+  display: block;
   border-radius: 50%;
   background-color: #60CAE5;
   background-repeat: no-repeat;
@@ -1489,23 +1541,6 @@ p {
   }
 }
 
-.projects-detailed__back {
-  font-size: .875rem;
-  display: flex;
-  align-items: center;
-  height: 34px;
-  color: #8F8F8F;
-  padding-left: 42px;
-  background-image: url("../img/arrow-left-circle-icon.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-  text-decoration: none;
-}
-
-.projects-detailed__back:hover {
-  text-decoration: underline;
-}
-
 .projects-detailed .projects__controls {
   position: absolute;
   top: 236px;
@@ -1684,6 +1719,58 @@ p {
 .body-slider .share p {
   font-size: 0.875rem;
   color: #9F9F9F;
+}
+
+.contacts {
+  padding: 45px 0 62px;
+}
+
+.contacts p {
+  max-width: 741px;
+}
+
+.contacts .social-list {
+  margin-top: 17px;
+  gap: 12px;
+}
+
+.contact-links__wrapper {
+  margin-top: 60px;
+  display: flex;
+  gap: 113px;
+  align-items: flex-end;
+}
+
+@media screen and (max-width: 560px) {
+  .contact-links__wrapper {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
+
+.write-us-popup-link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 560px) {
+  .write-us-popup-link {
+    width: 100%;
+  }
+}
+
+.write-us-popup-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.contact-social-links__wrapper p {
+  margin: 0;
+  color: #7B7B7B;
 }
 
 * {

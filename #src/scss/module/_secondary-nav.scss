@@ -1,0 +1,40 @@
+.secondary-navigation {
+  display: flex;
+  gap: 59px;
+  align-items: center;
+}
+
+.back-btn {
+  font-size: .875rem;
+  display: flex;
+  align-items: center;
+  height: 34px;
+  color: #8F8F8F;
+  padding-left: 42px;
+  background-image: url("../img/arrow-left-circle-icon.svg");
+  background-position: left;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  font-size: 0.825rem;
+  a {
+    text-decoration: none;
+    color: $main-font-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  li:not(:last-child) a, li:not(:last-child){
+    color: #8F8F8F;
+  }
+}
