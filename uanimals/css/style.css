@@ -1731,13 +1731,13 @@ section {
 }
 
 .heading {
-  padding-top: 50px;
+  padding: 50px 0 0 0;
   align-self: flex-start;
 }
 
 @media screen and (max-width: 1919px) {
   .heading {
-    padding-top: 0;
+    padding: 0;
   }
 }
 
@@ -1781,6 +1781,10 @@ section {
   }
 }
 
+.last-news {
+  padding: 0;
+}
+
 @media screen and (max-width: 560px) {
   .last-news {
     padding: 26px 0 0 0;
@@ -1800,6 +1804,10 @@ section {
 
 .last-news__slide-inner {
   max-width: 413px;
+}
+
+.projects {
+  padding: 0;
 }
 
 @media screen and (max-width: 560px) {
@@ -2235,6 +2243,7 @@ section {
 
 .our-mission__card-icon-wrapper {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 65px;
