@@ -615,7 +615,7 @@ button:hover {
 .scroll-down-link__btn {
   width: 52px;
   height: 52px;
-  background-image: url("../../img/arrow-btn-scroll-down.svg");
+  background-image: url("../img/arrow-btn-scroll-down.svg");
   margin-right: 21px;
   background-color: transparent;
   border: 1px solid #9F9F9F;
