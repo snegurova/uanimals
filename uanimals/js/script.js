@@ -10389,21 +10389,6 @@ const projectsSlider = new Swiper('.progects-detailed__titles-slider', {
     hashNavigation: {
         watchState: true,
     },
-    // pagination: {
-    //     el: '.progects-detailed-scrollbar',
-    //     type: 'custom',
-    //     renderCustom: function (swiper, current, total) {
-    //         runCircleProgress(swiper, current, total);
-    //     }
-    // },
-    //
-    // // Navigation arrows
-    // navigation: {
-    //     nextEl: '.projects-button-next',
-    // },
-    // thumbs: {
-    //     swiper: projectsControlsSlider,
-    // }
 });
 
 const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
@@ -10429,6 +10414,25 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
     // Navigation arrows
     navigation: {
         nextEl: '.projects-button-next',
+    },
+});
+
+const whatWeDoSlider = new Swiper('.what-we-do__slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    // effect: 'fade',
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 });
 
