@@ -12,17 +12,20 @@
 @import "typography";
 @import './module/effect-fade';
 @import "./module/header";
+@import "./module/btn";
+@import "./module/banner";
+@import "./module/scroll-down";
 @import "./module/secondary-nav";
 @import "./module/sliders";
 @import "./module/label";
 @import "./module/popup";
 @import "./module/social-icons";
 @import "./module/forms";
-@import "./module/btn";
 @import "./module/footer";
 @import "./pages/home";
 @import "./pages/projects";
 @import "./pages/contacts";
+@import "./pages/about-us";
 
 * {
 	box-sizing: border-box;
@@ -35,6 +38,9 @@ body {
 .container {
 	width: 1280px;
 	margin: 0 auto;
+	&_horizontal {
+		display: flex;
+	}
 	@media screen and (max-width: 1280px) {
 		padding-left: 30px;
 		padding-right: 30px;

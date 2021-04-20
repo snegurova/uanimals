@@ -12,6 +12,20 @@ h1 {
   margin: 45px 0 70px;
 }
 
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 1.7rem;
+    margin: 30px 0 46px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 1.2rem;
+    margin: 23px 0 35px;
+  }
+}
+
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -24,7 +38,7 @@ h2 {
 
 p {
   font-size: 1rem;
-  line-height: 2;
+  line-height: 1.5;
   margin: 24px 0 24px 0;
 }
 
@@ -54,6 +68,25 @@ button:hover {
   height: 80%;
   transform: rotate(11deg);
   z-index: -1;
+}
+
+.mark_small {
+  color: #000;
+}
+
+.mark_small::after {
+  top: -8px;
+  left: -10px;
+  width: 110%;
+  height: 120%;
+  transform: rotate(355deg);
+}
+
+.highlighted {
+  display: inline-block;
+  background-color: #60CAE5;
+  color: #000;
+  font-weight: 700;
 }
 
 .swiper-container-fade.swiper-container-free-mode .swiper-slide {
@@ -432,6 +465,140 @@ button:hover {
   overflow: hidden;
 }
 
+.btn {
+  display: block;
+  border-radius: 50%;
+  background-color: #60CAE5;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.btn_submit {
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/arrow-btn-submit.svg");
+  font-size: 0;
+  transition: background-position 0.3s ease-in;
+}
+
+.btn_submit:hover {
+  background-position: 26px;
+}
+
+.btn-icon-text {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 70px;
+  border: none;
+  background-color: #fff;
+}
+
+.btn-icon-text:hover {
+  cursor: pointer;
+}
+
+.contacts .btn_submit {
+  width: 58px;
+  height: 58px;
+  background-size: 30%;
+}
+
+.contact-us__form .btn_submit {
+  background-image: url("../img/carbon_send.svg");
+}
+
+.contact-us__form .btn_submit:hover {
+  background-position: center;
+}
+
+.banner {
+  padding: 54px 0 72px;
+  position: relative;
+  z-index: 0;
+  height: calc(100vh - 117px);
+  background-size: cover;
+}
+
+@media screen and (max-width: 992px) {
+  .banner {
+    padding: 35px 0 48px;
+  }
+}
+
+.banner .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner h1 {
+  font-size: 2.81rem;
+  max-width: 1072px;
+  margin: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .banner h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .banner h1 {
+    font-size: 1.4rem;
+  }
+}
+
+.banner p {
+  max-width: 609px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 560px) {
+  .banner p {
+    font-size: 0.875rem;
+  }
+}
+
+.banner_dark {
+  color: #fff;
+}
+
+._no-webp .banner_about-us {
+  background-image: url("../img/bg-about-us.jpg"); }
+
+.scroll-down-link {
+  display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
+  color: #9F9F9F;
+  text-decoration: none;
+}
+
+.scroll-down-link:hover {
+  text-decoration: underline;
+}
+
+.scroll-down-link__btn {
+  width: 52px;
+  height: 52px;
+  background-image: url("../../img/arrow-btn-scroll-down.svg");
+  margin-right: 21px;
+  background-color: transparent;
+  border: 1px solid #9F9F9F;
+}
+
 .secondary-navigation {
   display: flex;
   gap: 59px;
@@ -443,6 +610,10 @@ button:hover {
     flex-wrap: wrap;
     gap: 36px;
   }
+}
+
+.secondary-navigation_on-dark .breadcrumbs li {
+  color: #fff;
 }
 
 .back-btn {
@@ -471,9 +642,12 @@ button:hover {
   font-size: 0.825rem;
 }
 
+.breadcrumbs li {
+  color: #000;
+}
+
 .breadcrumbs a {
   text-decoration: none;
-  color: #000;
 }
 
 .breadcrumbs a:hover {
@@ -1306,55 +1480,6 @@ button:hover {
   font-size: 1rem;
 }
 
-.btn {
-  display: block;
-  border-radius: 50%;
-  background-color: #60CAE5;
-  background-repeat: no-repeat;
-  background-position: center;
-  border: none;
-  cursor: pointer;
-}
-
-.btn_submit {
-  width: 48px;
-  height: 48px;
-  background-image: url("../img/arrow-btn-submit.svg");
-  font-size: 0;
-  transition: background-position 0.3s ease-in;
-}
-
-.btn_submit:hover {
-  background-position: 26px;
-}
-
-.btn-icon-text {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 70px;
-  border: none;
-  background-color: #fff;
-}
-
-.btn-icon-text:hover {
-  cursor: pointer;
-}
-
-.contacts .btn_submit {
-  width: 58px;
-  height: 58px;
-  background-size: 30%;
-}
-
-.contact-us__form .btn_submit {
-  background-image: url("../img/carbon_send.svg");
-}
-
-.contact-us__form .btn_submit:hover {
-  background-position: center;
-}
-
 .footer {
   background-color: #222222;
 }
@@ -1928,6 +2053,10 @@ button:hover {
   opacity: 0.8;
 }
 
+.about-us h2 {
+  font-size: 2.25rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -1939,6 +2068,10 @@ body {
 .container {
   width: 1280px;
   margin: 0 auto;
+}
+
+.container_horizontal {
+  display: flex;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1971,5 +2104,7 @@ body {
 img {
   max-width: 100%;
 }
+
+._webp .banner_about-us { background-image: url(../img/bg-about-us.webp); }
 
 /*# sourceMappingURL=../maps/style.css.map */

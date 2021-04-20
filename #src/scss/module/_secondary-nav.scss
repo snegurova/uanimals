@@ -6,6 +6,13 @@
     flex-wrap: wrap;
     gap: 36px;
   }
+  &_on-dark {
+    .breadcrumbs {
+      li {
+        color: $label-color;
+      }
+    }
+  }
 }
 
 .back-btn {
@@ -31,9 +38,11 @@
   display: flex;
   gap: 8px;
   font-size: 0.825rem;
+  li {
+    color: $main-font-color;
+  }
   a {
     text-decoration: none;
-    color: $main-font-color;
     &:hover {
       text-decoration: underline;
     }

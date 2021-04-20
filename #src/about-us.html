@@ -1,0 +1,65 @@
+@@include('_head.html',{
+"title":"UAnimals-Projects"
+})
+<body class="about-us">
+<div class="wrapper">
+    @@include('_header.html')
+    <main class="main">
+        <section class="banner banner_dark banner_about-us">
+            <div class="container">
+                <div class="secondary-navigation secondary-navigation_on-dark">
+                    <a class="back-btn" href="#">Назад</a>
+                    <ul class="breadcrumbs">
+                        <li><a href=" ">Головна</a></li>
+                        <li>/</li>
+                        <li><a href="">Новини</a></li>
+                        <li>/</li>
+                        <li>Про нас</li>
+                    </ul>
+                </div>
+                <h1>З 2016 року <span class="mark mark_small">UAnimals</span> пропагує гуманне ставлення до тварин, їх
+                    захист від експлуатації та знущань.</h1>
+                <p>За останні роки нам вдалося добитися заборони цирків з тваринами у <span class="highlighted">трьох десятках міст</span>,
+                    домовитися про відмову від натурального хутра <span class="highlighted">кількома десятками дизайнерів</span>
+                    Ukrainian Fashion Week, допомогти з харчуванням та лікуванням тварин у притулках та реабілітаційних
+                    центрах.
+                </p>
+                <a href="#details" class="scroll-down-link _goto-block">
+                    <span class="scroll-down-link__btn btn"></span>
+                    <span class="scroll-down-link__text">детальніше</span>
+                </a>
+            </div>
+        </section>
+        <section class="details">
+            <div class="container container_horizontal">
+                <h2>Що ми робимо?</h2>
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        ...
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('_subscribe.html',{})
+    @@include('_footer.html',{})
+</div>
+@@include('_popup-contact-us.html',{})
+@@include('_js.html',{})
+</body>
+</html>

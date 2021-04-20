@@ -1,5 +1,7 @@
 @@include('functions.js', {})
 @@include('sliders.js', {})
+@@include('scroll.js', {})
+@@include('libs/smoothScroll.js', {})
 
 function testWebP(callback) {
 	var webP = new Image();

@@ -3,6 +3,7 @@ let project_folder = require("path").basename(__dirname);
 let source_folder = "#src";
 
 let fs = require('fs');
+const replace = require('gulp-replace');
 
 let path = {
 	build: {
@@ -63,6 +64,7 @@ function html() {
 	return src(path.src.html)
 		.pipe(fileinclude())
 		.pipe(webphtml())
+		// .pipe(replace('href=\"/', 'href=\"/uanimals/uanimals/'))
 		.pipe(dest(path.build.html))
 		.pipe(browsersync.stream())
 }

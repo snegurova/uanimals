@@ -1,0 +1,43 @@
+.banner {
+  padding: 54px 0 72px;
+  position: relative;
+  z-index: 0;
+  height: calc(100vh - 117px);
+  background-size: cover;
+  @media screen and (max-width: 992px) {
+    padding: 35px 0 48px;
+  }
+  .container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 2.81rem;
+    max-width: 1072px;
+    margin: 0;
+    @media screen and (max-width: 1280px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 1.7rem;
+    }
+    @media screen and (max-width: 560px) {
+      font-size: 1.4rem;
+    }
+  }
+  p {
+    max-width: 609px;
+    font-weight: 500;
+    @media screen and (max-width: 560px) {
+      font-size: 0.875rem;
+    }
+  }
+  &_dark {
+    color: $label-color;
+  }
+  &_about-us {
+    background-image: url("../img/bg-about-us.jpg");
+  }
+}
