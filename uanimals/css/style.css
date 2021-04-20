@@ -58,6 +58,13 @@ h3 {
   max-width: 760px;
 }
 
+.section-promo-text {
+  margin: 15px 0 63px;
+  max-width: 850px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -102,6 +109,14 @@ button:hover {
   width: 110%;
   height: 120%;
   transform: rotate(355deg);
+}
+
+.section-promo-text .mark::after {
+  top: -5px;
+  left: -7px;
+  width: 103%;
+  height: 135%;
+  transform: rotate(3deg);
 }
 
 .highlighted {
@@ -1130,6 +1145,41 @@ Sliders
   cursor: pointer;
 }
 
+.long-active-bullet__controls {
+  margin-top: 37px;
+}
+
+.long-active-bullet__controls .swiper-button-next:hover,
+.long-active-bullet__controls .swiper-button-prev:hover {
+  border-color: #60CAE5;
+}
+
+.long-active-bullet__controls .swiper-button-next {
+  border-color: #696969;
+  margin: 0 0 0 57px;
+}
+
+.long-active-bullet__controls .swiper-button-prev {
+  border-color: #696969;
+  margin: 0 57px 0 0;
+}
+
+.long-active-bullet__controls .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.29);
+}
+
+.long-active-bullet__controls .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 8px;
+}
+
+.long-active-bullet__controls .swiper-pagination-bullet-active {
+  width: 20px;
+  background-color: #60CAE5;
+}
+
 .what-we-do__slider {
   margin-left: 436px;
   max-width: 600px;
@@ -1154,39 +1204,23 @@ Sliders
   margin: 45px 0 32px;
 }
 
-.what-we-do__controls {
-  margin-top: 37px;
+.march-gallery__slider {
+  width: 550px;
+  flex-shrink: 0;
+  padding-bottom: 51px;
+  margin-top: 29px;
 }
 
-.what-we-do__controls .swiper-button-next:hover,
-.what-we-do__controls .swiper-button-prev:hover {
-  border-color: #60CAE5;
+.march-gallery__slider .long-active-bullet__controls {
+  margin-top: 0px;
 }
 
-.what-we-do__controls .swiper-button-next {
-  border-color: #696969;
-  margin: 0 0 0 57px;
-}
-
-.what-we-do__controls .swiper-button-prev {
-  border-color: #696969;
-  margin: 0 57px 0 0;
-}
-
-.what-we-do__controls .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.29);
-}
-
-.what-we-do__controls .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 8px;
-}
-
-.what-we-do__controls .swiper-pagination-bullet-active {
-  width: 20px;
-  background-color: #60CAE5;
+.march-gallery__img-wrapper {
+  width: 505px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .label {
@@ -1697,16 +1731,6 @@ Sliders
   }
 }
 
-section {
-  padding: 70px 0 90px;
-}
-
-@media screen and (max-width: 780px) {
-  section {
-    padding: 35px 0 45px;
-  }
-}
-
 .home {
   height: 100vh;
   margin: 0;
@@ -2180,6 +2204,18 @@ section {
   opacity: 0.8;
 }
 
+.our-mission,
+.details {
+  padding: 25px 0 90px;
+}
+
+@media screen and (max-width: 780px) {
+  .our-mission,
+  .details {
+    padding: 15px 0 45px;
+  }
+}
+
 .our-mission__cards {
   margin-top: 70px;
   display: flex;
@@ -2254,6 +2290,18 @@ section {
 
 .our-mission__card-title {
   margin-left: 20px;
+}
+
+.march-description {
+  max-width: 565px;
+}
+
+.slider-with-text-wrapper {
+  display: flex;
+}
+
+.march-gallery__text {
+  margin-left: 79px;
 }
 
 * {

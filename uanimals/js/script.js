@@ -10436,6 +10436,24 @@ const whatWeDoSlider = new Swiper('.what-we-do__slider', {
     },
 });
 
+const marchGallerySlider = new Swiper('.march-gallery__slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');

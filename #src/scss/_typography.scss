@@ -46,6 +46,13 @@ h3 {
   max-width: 760px;
 }
 
+.section-promo-text {
+  margin: 15px 0 63px;
+  max-width: 850px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.5;
@@ -87,7 +94,17 @@ button {
     }
   }
 }
-
+.section-promo-text {
+  .mark {
+    &::after {
+      top: -5px;
+      left: -7px;
+      width: 103%;
+      height: 135%;
+      transform: rotate(3deg);
+    }
+  }
+}
 .highlighted {
   display: inline-block;
   background-color: $accent-color;

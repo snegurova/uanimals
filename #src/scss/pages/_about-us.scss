@@ -1,3 +1,10 @@
+.our-mission,
+.details {
+  padding: 25px 0 90px;
+  @media screen and (max-width: 780px) {
+    padding: 15px 0 45px;
+  }
+}
 .our-mission {
   &__cards {
     margin-top: 70px;
