@@ -457,16 +457,24 @@ Sliders
     flex-shrink: 0;
     padding-bottom: 51px;
     margin-top: 29px;
+    @media screen and (max-width: 992px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 560px) {
+      width: 100%;
+    }
     .long-active-bullet__controls {
       margin-top: 0px;
+      @media screen and (max-width: 992px) {
+        margin-top: 17px;
+      }
     }
   }
   &__img-wrapper {
-    width: 505px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    img {
+      width: 100%;
+    }
   }
 }
 

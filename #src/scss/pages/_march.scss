@@ -3,8 +3,31 @@
 }
 .slider-with-text-wrapper {
   display: flex;
+  margin-bottom: 109px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 55px;
+  }
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
 }
 
 .march-gallery__text {
   margin-left: 79px;
+  padding-top: 78px;
+  @media screen and (max-width: 1024px) {
+    margin-left: 38px;
+    padding-top: 29px;
+  }
+  @media screen and (max-width: 992px) {
+    margin-left: 0;
+  }
+}
+
+.line-above-block::before {
+  content: '';
+  display: block;
+  width: 37px;
+  height: 3px;
+  background-color: $accent-color;
 }
