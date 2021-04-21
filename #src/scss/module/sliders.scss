@@ -197,6 +197,7 @@
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 0 0 30px;
+  transition: all 0.5s;
   &:hover {
     background-color: $accent-color;
     border-color: $accent-color;
@@ -258,13 +259,19 @@ Sliders
     width: 100%;
     height: 100%;
     z-index: 1;
+    img {
+      transition: 0.3s;
+    }
+    .project__link-hover {
+      transition: opacity 0.4s;
+    }
     &:hover {
       .project__link-hover {
         opacity: 1;
         transition: opacity 0.3s;
       }
       img {
-        filter: blur(8px);
+        filter: blur(3px);
         //transition: filter 0.3s;
       }
       .project__img-wrapper::after {
