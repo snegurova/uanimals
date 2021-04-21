@@ -231,7 +231,7 @@ const whatWeDoSlider = new Swiper('.what-we-do__slider', {
     },
 });
 
-const marchGallerySlider = new Swiper('.march-gallery__slider', {
+const hashtagGallerySlider = new Swiper('.hashtag-gallery__slider', {
     // Optional parameters
     loop: true,
     slidesPerView: 1,
