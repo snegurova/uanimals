@@ -630,7 +630,7 @@ button:hover {
 .scroll-down-link__btn {
   width: 52px;
   height: 52px;
-  background-image: url("../../img/arrow-btn-scroll-down.svg");
+  background-image: url("../img/arrow-btn-scroll-down.svg");
   margin-right: 21px;
   background-color: transparent;
   border: 1px solid #9F9F9F;
@@ -989,8 +989,15 @@ Sliders
   z-index: 1;
 }
 
-.project__link img {
+.project__link .project__slide-img {
   transition: 0.3s;
+}
+
+.project__link .project__slide-img-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .project__link .project__link-hover {
@@ -1002,7 +1009,7 @@ Sliders
   transition: opacity 0.3s;
 }
 
-.project__link:hover img {
+.project__link:hover .project__slide-img {
   filter: blur(3px);
 }
 
