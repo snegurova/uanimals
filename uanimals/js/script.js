@@ -2,10 +2,18 @@
 //Menu
 let unlock = true;
 let iconMenu = document.querySelector(".burger-menu__icon");
+let menuOverlay = document.querySelector(".burger-menu__overlay");
 if (iconMenu != null) {
     let delay = 500;
     let menuBody = document.querySelector(".burger-menu__body");
     iconMenu.addEventListener("click", function (e) {
+        if (unlock) {
+            body_lock(delay);
+            iconMenu.classList.toggle("_active");
+            menuBody.classList.toggle("_active");
+        }
+    });
+    menuOverlay.addEventListener("click", function (e) {
         if (unlock) {
             body_lock(delay);
             iconMenu.classList.toggle("_active");
@@ -10436,6 +10444,24 @@ const whatWeDoSlider = new Swiper('.what-we-do__slider', {
     },
 });
 
+const hashtagGallerySlider = new Swiper('.hashtag-gallery__slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 1,
+    effect: 'fade',
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
@@ -10492,7 +10518,7 @@ function scroll_scroll() {
 			let scr_item_height = scr_item.offsetHeight;
 
 
-			let scr_item_point = window.innerHeight - (window.innerHeight - scr_item_height / 3);
+			let scr_item_point = window.innerHeight - (window.innerHeight - scr_item_height / 2);
 			if (window.innerHeight > scr_item_height) {
 				scr_item_point = window.innerHeight - scr_item_height / 3;
 			}
@@ -10501,7 +10527,7 @@ function scroll_scroll() {
 				scr_item.classList.add('_active');
 				scroll_load_item(scr_item);
 			} else {
-				scr_item.classList.remove('_active');
+				// scr_item.classList.remove('_active');
 			}
 			if (((src_value > scr_item_offset - window.innerHeight))) {
 				if (scr_item.querySelectorAll('._lazy').length > 0) {
