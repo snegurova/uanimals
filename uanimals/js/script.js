@@ -2,10 +2,18 @@
 //Menu
 let unlock = true;
 let iconMenu = document.querySelector(".burger-menu__icon");
+let menuOverlay = document.querySelector(".burger-menu__overlay");
 if (iconMenu != null) {
     let delay = 500;
     let menuBody = document.querySelector(".burger-menu__body");
     iconMenu.addEventListener("click", function (e) {
+        if (unlock) {
+            body_lock(delay);
+            iconMenu.classList.toggle("_active");
+            menuBody.classList.toggle("_active");
+        }
+    });
+    menuOverlay.addEventListener("click", function (e) {
         if (unlock) {
             body_lock(delay);
             iconMenu.classList.toggle("_active");

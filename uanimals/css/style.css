@@ -270,7 +270,7 @@ button:hover {
   width: 35%;
   min-width: 302px;
   max-width: 760px;
-  height: calc(100% - 127px);
+  height: calc(100% - 118px);
   background-color: #fff;
   transition: right 0.5s ease 0s;
   overflow: auto;
@@ -443,8 +443,8 @@ button:hover {
   transition: opacity 1s, visibility 0s 1s;
   position: absolute;
   width: 100%;
-  height: calc(100% - 128px);
-  top: 128px;
+  height: calc(100% - 118px);
+  top: 118px;
   left: 0;
   background-color: rgba(17, 24, 39, 0.5);
   z-index: 3;
