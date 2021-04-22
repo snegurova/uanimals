@@ -4,12 +4,14 @@
   margin-top: 123px;
   display: flex;
   justify-content: flex-start;
-  gap: 47px;
   @media screen and (max-width: 1919px) {
       margin-top: 65px;
   }
   @media screen and (max-width: 680px) {
     margin-top: 25px;
+  }
+  li:not(:last-child) {
+    margin-right: 47px;
   }
   a {
     display: flex;
@@ -35,7 +37,9 @@
 .footer__social {
   .social-list {
     margin: 0;
-    gap: 22px;
+    li:not(:last-child) {
+      margin-right: 22px;
+    }
     a {
       width: 22px;
       height: 22px;
