@@ -1557,6 +1557,50 @@ Sliders
   transition: fill 0.3s;
 }
 
+.pagination__wrapper {
+  display: flex;
+  margin-top: 60px;
+}
+
+@media screen and (max-width: 1337px) {
+  .pagination__wrapper {
+    justify-content: center;
+  }
+}
+
+.pagination__prev, .pagination__next, .pagination__item {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #696969;
+  color: #696969;
+  transition: all 0.4s;
+}
+
+.pagination__prev:hover, .pagination__prev_active, .pagination__next:hover, .pagination__next_active, .pagination__item:hover, .pagination__item_active {
+  cursor: pointer;
+  color: #fff;
+  background-color: #222222;
+}
+
+.pagination__prev:hover path, .pagination__prev_active path, .pagination__next:hover path, .pagination__next_active path, .pagination__item:hover path, .pagination__item_active path {
+  stroke: #fff;
+}
+
+.pagination__prev_disabled, .pagination__next_disabled, .pagination__item_disabled {
+  background-color: #F2F3F5;
+  border-color: #C4C4C4;
+}
+
+.pagination__next {
+  transform: scale(-1);
+}
+
 .input-form__wrapper {
   position: relative;
 }
