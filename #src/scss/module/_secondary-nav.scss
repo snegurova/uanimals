@@ -38,8 +38,12 @@
   display: flex;
   gap: 8px;
   font-size: 0.825rem;
+  @media screen and (max-width: 780px) {
+    flex-wrap: wrap;
+  }
   li {
     color: $main-font-color;
+    white-space: nowrap;
   }
   a {
     text-decoration: none;

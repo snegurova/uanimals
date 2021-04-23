@@ -685,8 +685,15 @@ button:hover {
   font-size: 0.825rem;
 }
 
+@media screen and (max-width: 780px) {
+  .breadcrumbs {
+    flex-wrap: wrap;
+  }
+}
+
 .breadcrumbs li {
   color: #000;
+  white-space: nowrap;
 }
 
 .breadcrumbs a {
@@ -2718,7 +2725,7 @@ Sliders
   height: 36px;
   background-color: #F5F5F2;
   border-radius: 50%;
-  background-image: url("../../img/arrow-btn-submit.svg");
+  background-image: url("../img/arrow-btn-submit.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: all 0.4s;
@@ -2726,6 +2733,20 @@ Sliders
 
 .report-card__link:hover {
   background-color: #60CAE5;
+}
+
+.singe-report__title {
+  text-transform: uppercase;
+}
+
+.singe-report__content {
+  padding: 15px 0 100px;
+}
+
+@media screen and (max-width: 992px) {
+  .singe-report__content {
+    padding: 15px 0 30px;
+  }
 }
 
 * {

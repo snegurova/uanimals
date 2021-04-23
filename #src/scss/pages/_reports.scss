@@ -57,12 +57,24 @@
     height: 36px;
     background-color: #F5F5F2;
     border-radius: 50%;
-    background-image: url("../../img/arrow-btn-submit.svg");
+    background-image: url("../img/arrow-btn-submit.svg");
     background-repeat: no-repeat;
     background-position: center;
     transition: all 0.4s;
     &:hover {
       background-color: $accent-color;
+    }
+  }
+}
+
+.singe-report {
+  &__title {
+    text-transform: uppercase;
+  }
+  &__content {
+    padding: 15px 0 100px;
+    @media screen and (max-width: 992px) {
+      padding: 15px 0 30px;
     }
   }
 }
