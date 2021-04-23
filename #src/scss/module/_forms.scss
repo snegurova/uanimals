@@ -88,3 +88,97 @@
     }
   }
 }
+
+//<SELECT (sel+tab)>====================================================================================================
+.select {
+  position: relative;
+  line-height: 1;
+  // .select__item
+  &__item {
+    position: relative;
+  }
+  // .select__title
+  &__title {
+    color: #000;
+    cursor: pointer;
+    @media (max-width: 780px) {
+      font-size: 0.875rem;
+    }
+  }
+  // .select__value
+  &__value {
+    display: flex;
+    height: 24px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    span {
+      height: 1em;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    &:before {
+      content: "";
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+      width: 6px;
+      height: 10px;
+      background: url("../img/select.svg") center no-repeat;
+    }
+  }
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+  }
+  // .select__options
+  &__options {
+    color: #000;
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: -19px;
+    border-radius: 0 0 4px 4px;
+    width: 200px;
+    background-color: #fff;
+    padding: 9px 0;
+    @media (max-width: 780px) {
+      font-size: 0.875rem;
+    }
+  }
+  // .select__option
+  &__option {
+    cursor: pointer;
+    padding: 9px 19px;
+    margin: 0px 0px 0px 0px;
+    letter-spacing: -0.5px;
+    @media (min-width: 992px) {
+      &:hover {
+        background: #E1E1E1;
+      }
+    }
+  }
+  &._active {
+    z-index: 5;
+    .select__value {
+      &:before {
+        transform: rotate(90deg);
+      }
+    }
+    .select__options {
+      display: block;
+    }
+  }
+}
+//</SELECT>====================================================================================================
+
+.select_city-select {
+  width: 200px;
+  padding: 5px 16px 5px 19px;
+  letter-spacing: -0.5px;
+  border-radius: 17px;
+  background-color: #F2F3F5;
+  border: 1px solid #E1E1E1;
+}

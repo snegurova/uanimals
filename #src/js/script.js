@@ -1,6 +1,7 @@
 @@include('functions.js', {})
 @@include('sliders.js', {})
 @@include('scroll.js', {})
+@@include('forms.js', {})
 @@include('libs/smoothScroll.js', {})
 
 function testWebP(callback) {

@@ -1,0 +1,38 @@
+@@include('_head.html',{
+"title":"UAnimals-Single news page"
+})
+<body>
+<div class="wrapper">
+    @@include('_header.html')
+    <main class="main">
+        <section class="container pt-45">
+            <div class="secondary-navigation">
+                <a class="back-btn" href="#">Назад</a>
+                <ul class="breadcrumbs">
+                    <li><a href=" ">Головна</a></li>
+                    <li>/</li>
+                    <li><a href=" ">Новини</a></li>
+                    <li>/</li>
+                    <li>Календар подій</li>
+                </ul>
+            </div>
+            <h1 class="calendar__title">Календар подій</h1>
+            <div class="calendar__city-select">
+                <select name="form" id="" class="city-select">
+                    <option value="Київ" selected="selected">Київ</option>
+                    <option value="Івано-Франківськ">Івано-Франківськ</option>
+                    <option value="Дніпропетровськ">Дніпропетровськ</option>
+                    <option value="Харків">Харків</option>
+                </select>
+            </div>
+            <div class="calendar">
+<!--li{$}*5-->
+            </div>
+        </section>
+    </main>
+    @@include('_subscribe.html',{})
+    @@include('_footer.html',{})
+</div>
+@@include('_js.html',{})
+</body>
+</html>
