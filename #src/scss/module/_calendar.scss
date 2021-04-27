@@ -2,6 +2,7 @@
   color: #8F8F8F;
   margin-right: 19px;
 }
+
 .calendar {
   margin: 45px 0 100px;
   padding: 16px 75px;
@@ -13,6 +14,7 @@
     padding: 20px 12px;
     font-size: 0.75rem;
   }
+
   &__city-select {
     display: flex;
     align-items: center;
@@ -20,9 +22,11 @@
       justify-content: space-between;
     }
   }
+
   li {
     list-style: none;
   }
+
   &__month,
   &__weekdays,
   &__week {
@@ -30,6 +34,7 @@
     display: flex;
     align-items: center;
   }
+
   &__month {
     justify-content: center;
     font-size: 1rem;
@@ -37,11 +42,13 @@
       margin-bottom: 15px;
     }
   }
+
   &__month-title {
     margin: 0 51px;
     font-weight: 700;
     text-align: center;
   }
+
   &__month-prev,
   &__month-next {
     width: 44px;
@@ -52,14 +59,17 @@
     font-size: 0;
     border-radius: 50%;
     transition: all 0.4s;
+
     &:hover {
       cursor: pointer;
       background-color: $background-color;
     }
   }
+
   &__month-prev {
     transform: scale(-1);
   }
+
   &__weekdays {
     padding: 20px 0 19px;
     border-bottom: 1px solid #ADADAD;
@@ -68,6 +78,7 @@
     @media screen and (max-width: 670px) {
       padding: 20px 0 9px;
     }
+
     li {
       flex-shrink: 0;
       width: 44px;
@@ -82,6 +93,7 @@
       }
     }
   }
+
   &__weeks {
     padding: 18px 0;
     margin: 0;
@@ -89,18 +101,21 @@
       padding: 0;
     }
   }
+
   &__week {
     padding: 19px 0;
     justify-content: space-between;
     @media screen and (max-width: 670px) {
       padding: 11px 0;
     }
+
     &:not(:last-child) {
       border-bottom: 1px solid #D3D3D3;
       @media screen and (max-width: 670px) {
         border-bottom: none;
       }
     }
+
     li {
       flex-shrink: 0;
       width: 44px;
@@ -114,23 +129,130 @@
         width: 30px;
         height: 30px;
       }
-      &.tippy-item:hover, &[aria-describedby] {
+
+      &.tippy-item:hover, &[aria-expanded^="true"] {
         background-color: $accent-color;
         border-color: $accent-color;
         cursor: pointer;
       }
-      &.with-events {
+
+      &.tippy-item {
         border: 1px solid $accent-color;
       }
+
       &.warning {
         border: 1px solid $label-bg-color;
+
         &:hover, &.active {
           background-color: $label-bg-color;
         }
       }
+
       &.dotted {
         border: 1px dotted $accent-color;
       }
+    }
+  }
+}
+
+div[data-tippy-root] {
+  pointer-events: all !important;
+}
+
+.events {
+  padding: 40px 36px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
+  max-width: 320px;
+  max-height: 412px;
+  overflow-y: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #ededed;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+.event {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.05em;
+
+  &:not(:last-child) {
+    padding-bottom: 29px;
+    border-bottom: 1px solid #E7E7E7;
+  }
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &__title {
+    color: #97AD10;
+    font-size: 1rem;
+    text-decoration: underline;
+    font-weight: 400;
+    margin: 0;
+
+    &_warning {
+      color: #D70505;
+    }
+  }
+
+  &__time, &__location, &__add-to-calendar {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      left: 0;
+      top: calc(50% - 9px);
+      content: '';
+      width: 16px;
+      height: 16px;
+      display: block;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__time {
+    margin-top: 19px;
+
+    &::before {
+      background-image: url("../img/time-icon.svg");
+    }
+  }
+
+  &__location {
+    margin-top: 19px;
+
+    &::before {
+      background-image: url("../img/location-icon.svg");
+    }
+  }
+
+  &__add-to-calendar {
+    margin-top: 29px;
+    color: #808080;
+    text-decoration: underline;
+
+    &::before {
+      background-image: url("../img/add-icon.svg");
     }
   }
 }

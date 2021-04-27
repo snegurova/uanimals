@@ -5,13 +5,16 @@ const events = tippy('.tippy-item', {
     return template.innerHTML;
   },
   trigger: 'mouseenter click',
+  interactive:'true',
   placement: 'left-start',
   offset: [0, 18],
+  delay: [null, 100],
   allowHTML: true,
   theme: 'light',
   animation: 'scale-subtle',
   arrow: false,
 });
+console.log(events);
 
 window.addEventListener('resize', () => {
   if (window.innerWidth < 670) {
@@ -30,3 +33,4 @@ window.addEventListener('resize', () => {
     });
   }
 });
+

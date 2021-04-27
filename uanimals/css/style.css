@@ -1964,13 +1964,13 @@ Sliders
   }
 }
 
-.calendar__week li.tippy-item:hover, .calendar__week li[aria-describedby] {
+.calendar__week li.tippy-item:hover, .calendar__week li[aria-expanded^="true"] {
   background-color: #60CAE5;
   border-color: #60CAE5;
   cursor: pointer;
 }
 
-.calendar__week li.with-events {
+.calendar__week li.tippy-item {
   border: 1px solid #60CAE5;
 }
 
@@ -1984,6 +1984,109 @@ Sliders
 
 .calendar__week li.dotted {
   border: 1px dotted #60CAE5;
+}
+
+div[data-tippy-root] {
+  pointer-events: all !important;
+}
+
+.events {
+  padding: 40px 36px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
+  max-width: 320px;
+  max-height: 412px;
+  overflow-y: auto;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.events::-webkit-scrollbar {
+  width: 4px;
+}
+
+.events::-webkit-scrollbar-track {
+  background: #ededed;
+}
+
+.events::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.events::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.event {
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: -0.05em;
+}
+
+.event:not(:last-child) {
+  padding-bottom: 29px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.event:not(:first-child) {
+  margin-top: 30px;
+}
+
+.event__title {
+  color: #97AD10;
+  font-size: 1rem;
+  text-decoration: underline;
+  font-weight: 400;
+  margin: 0;
+}
+
+.event__title_warning {
+  color: #D70505;
+}
+
+.event__time, .event__location, .event__add-to-calendar {
+  position: relative;
+  padding-left: 26px;
+}
+
+.event__time::before, .event__location::before, .event__add-to-calendar::before {
+  left: 0;
+  top: calc(50% - 9px);
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.event__time {
+  margin-top: 19px;
+}
+
+.event__time::before {
+  background-image: url("../img/time-icon.svg");
+}
+
+.event__location {
+  margin-top: 19px;
+}
+
+.event__location::before {
+  background-image: url("../img/location-icon.svg");
+}
+
+.event__add-to-calendar {
+  margin-top: 29px;
+  color: #808080;
+  text-decoration: underline;
+}
+
+.event__add-to-calendar::before {
+  background-image: url("../img/add-icon.svg");
 }
 
 .input-form__wrapper {
