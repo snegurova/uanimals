@@ -36,6 +36,7 @@
   }
 
   &__month {
+    padding: 0;
     justify-content: center;
     font-size: 1rem;
     @media screen and (max-width: 670px) {
@@ -160,10 +161,10 @@ div[data-tippy-root] {
 }
 
 .events {
-  padding: 40px 36px;
+  padding: 4px 36px;
   border-radius: 5px;
-  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
-  max-width: 320px;
+  //box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
+  max-width: 100%;
   max-height: 412px;
   overflow-y: auto;
   /* width */
@@ -255,4 +256,8 @@ div[data-tippy-root] {
       background-image: url("../img/add-icon.svg");
     }
   }
+}
+
+.tippy-content {
+  padding: 36px 5px;
 }
