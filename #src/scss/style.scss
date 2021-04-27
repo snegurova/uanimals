@@ -38,8 +38,20 @@
 
 body {
 	margin: 0;
+	height: 100vh;
 }
-
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+.main {
+	flex: 1 1 auto;
+}
 .container {
 	width: 1280px;
 	margin: 0 auto;

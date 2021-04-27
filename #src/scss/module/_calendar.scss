@@ -1,0 +1,95 @@
+.calendar {
+  margin: 45px 0 100px;
+  padding: 16px 75px;
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  background-color: #F2F3F5;
+  ul {
+    margin: 0;
+  }
+  li {
+    list-style: none;
+  }
+  &__month,
+  &__weekdays,
+  &__week {
+    display: flex;
+    align-items: center;
+  }
+  &__month {
+    justify-content: center;
+  }
+  &__month-title {
+    margin: 0 51px;
+    font-weight: 700;
+  }
+  &__month-prev,
+  &__month-next {
+    width: 44px;
+    height: 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../img/arrow-calendar.svg");
+    font-size: 0;
+    border-radius: 50%;
+    transition: all 0.4s;
+    &:hover {
+      cursor: pointer;
+      background-color: $background-color;
+    }
+  }
+  &__month-prev {
+    transform: scale(-1);
+  }
+  &__weekdays {
+    padding: 20px 0 19px;
+    border-bottom: 1px solid #ADADAD;
+    justify-content: space-between;
+    li {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ABABAB;
+    }
+  }
+  &__weeks {
+    padding: 18px 0;
+  }
+  &__week {
+    padding: 19px 0;
+    justify-content: space-between;
+    &:not(:last-child) {
+      border-bottom: 1px solid #D3D3D3;
+    }
+    li {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.4s;
+      &:hover, &.active {
+        background-color: $accent-color;
+        border-color: $accent-color;
+        cursor: pointer;
+      }
+      &.with-events {
+        border: 1px solid $accent-color;
+      }
+      &.warning {
+        border: 1px solid $label-bg-color;
+        &:hover, &.active {
+          background-color: $label-bg-color;
+        }
+      }
+      &.dotted {
+        border: 1px dotted $accent-color;
+      }
+    }
+  }
+}

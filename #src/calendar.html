@@ -1,5 +1,5 @@
 @@include('_head.html',{
-"title":"UAnimals-Single news page"
+"title":"UAnimals-Calendar page"
 })
 <body>
 <div class="wrapper">
@@ -26,7 +26,70 @@
                 </select>
             </div>
             <div class="calendar">
-<!--li{$}*5-->
+                <ul class="calendar__month">
+                    <li class="calendar__month-prev">попередній</li>
+                    <li class="calendar__month-title">Жовтень 2021</li>
+                    <li class="calendar__month-next">наступний</li>
+                </ul>
+
+                <ul class="calendar__weekdays">
+                    <li>ПН</li>
+                    <li>ВТ</li>
+                    <li>СР</li>
+                    <li>ЧТ</li>
+                    <li>ПТ</li>
+                    <li>СБ</li>
+                    <li>НД</li>
+                </ul>
+
+                <ul class="calendar__weeks">
+                    <ul class="calendar__week">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li class="dotted">6</li>
+                        <li class="dotted">7</li>
+                    </ul>
+                    <ul class="calendar__week">
+                        <li>8</li>
+                        <li>9</li>
+                        <li>10</li>
+                        <li>11</li>
+                        <li>12</li>
+                        <li>13</li>
+                        <li>14</li>
+                    </ul>
+                    <ul class="calendar__week">
+                        <li class="with-events">15</li>
+                        <li>16</li>
+                        <li>17</li>
+                        <li>18</li>
+                        <li>19</li>
+                        <li>20</li>
+                        <li>21</li>
+                    </ul>
+                    <ul class="calendar__week">
+                        <li>21</li>
+                        <li>22</li>
+                        <li>23</li>
+                        <li class="warning">24</li>
+                        <li>25</li>
+                        <li>26</li>
+                        <li>27</li>
+                    </ul>
+                    <ul class="calendar__week">
+                        <li>28</li>
+                        <li>29</li>
+                        <li>30</li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </ul>
+                <!-- li{$@5}*5-->
             </div>
         </section>
     </main>

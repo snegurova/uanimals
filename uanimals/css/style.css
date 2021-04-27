@@ -1614,6 +1614,118 @@ Sliders
   transform: scale(-1);
 }
 
+.calendar {
+  margin: 45px 0 100px;
+  padding: 16px 75px;
+  border-radius: 5px;
+  border: 1px solid #D9D9D9;
+  background-color: #F2F3F5;
+}
+
+.calendar ul {
+  margin: 0;
+}
+
+.calendar li {
+  list-style: none;
+}
+
+.calendar__month, .calendar__weekdays, .calendar__week {
+  display: flex;
+  align-items: center;
+}
+
+.calendar__month {
+  justify-content: center;
+}
+
+.calendar__month-title {
+  margin: 0 51px;
+  font-weight: 700;
+}
+
+.calendar__month-prev, .calendar__month-next {
+  width: 44px;
+  height: 44px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../img/arrow-calendar.svg");
+  font-size: 0;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.calendar__month-prev:hover, .calendar__month-next:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.calendar__month-prev {
+  transform: scale(-1);
+}
+
+.calendar__weekdays {
+  padding: 20px 0 19px;
+  border-bottom: 1px solid #ADADAD;
+  justify-content: space-between;
+}
+
+.calendar__weekdays li {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ABABAB;
+}
+
+.calendar__weeks {
+  padding: 18px 0;
+}
+
+.calendar__week {
+  padding: 19px 0;
+  justify-content: space-between;
+}
+
+.calendar__week:not(:last-child) {
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.calendar__week li {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+
+.calendar__week li:hover, .calendar__week li.active {
+  background-color: #60CAE5;
+  border-color: #60CAE5;
+  cursor: pointer;
+}
+
+.calendar__week li.with-events {
+  border: 1px solid #60CAE5;
+}
+
+.calendar__week li.warning {
+  border: 1px solid #F50C0C;
+}
+
+.calendar__week li.warning:hover, .calendar__week li.warning.active {
+  background-color: #F50C0C;
+}
+
+.calendar__week li.dotted {
+  border: 1px dotted #60CAE5;
+}
+
 .input-form__wrapper {
   position: relative;
 }
@@ -1812,6 +1924,7 @@ Sliders
 
 .select._active .select__options {
   display: block;
+  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
 }
 
 .select_city-select {
@@ -2858,6 +2971,19 @@ Sliders
 
 body {
   margin: 0;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 .container {
