@@ -1614,6 +1614,11 @@ Sliders
   transform: scale(-1);
 }
 
+.city-select__title {
+  color: #8F8F8F;
+  margin-right: 19px;
+}
+
 .calendar {
   margin: 45px 0 100px;
   padding: 16px 75px;
@@ -1622,8 +1627,23 @@ Sliders
   background-color: #F2F3F5;
 }
 
-.calendar ul {
-  margin: 0;
+@media screen and (max-width: 670px) {
+  .calendar {
+    margin: 45px 0;
+    padding: 20px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+.calendar__city-select {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__city-select {
+    justify-content: space-between;
+  }
 }
 
 .calendar li {
@@ -1631,17 +1651,26 @@ Sliders
 }
 
 .calendar__month, .calendar__weekdays, .calendar__week {
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
 .calendar__month {
   justify-content: center;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__month {
+    margin-bottom: 15px;
+  }
 }
 
 .calendar__month-title {
   margin: 0 51px;
   font-weight: 700;
+  text-align: center;
 }
 
 .calendar__month-prev, .calendar__month-next {
@@ -1668,6 +1697,13 @@ Sliders
   padding: 20px 0 19px;
   border-bottom: 1px solid #ADADAD;
   justify-content: space-between;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__weekdays {
+    padding: 20px 0 9px;
+  }
 }
 
 .calendar__weekdays li {
@@ -1680,8 +1716,22 @@ Sliders
   color: #ABABAB;
 }
 
+@media screen and (max-width: 670px) {
+  .calendar__weekdays li {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 .calendar__weeks {
   padding: 18px 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__weeks {
+    padding: 0;
+  }
 }
 
 .calendar__week {
@@ -1689,8 +1739,20 @@ Sliders
   justify-content: space-between;
 }
 
+@media screen and (max-width: 670px) {
+  .calendar__week {
+    padding: 11px 0;
+  }
+}
+
 .calendar__week:not(:last-child) {
   border-bottom: 1px solid #D3D3D3;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__week:not(:last-child) {
+    border-bottom: none;
+  }
 }
 
 .calendar__week li {
@@ -1702,6 +1764,13 @@ Sliders
   justify-content: center;
   align-items: center;
   transition: all 0.4s;
+}
+
+@media screen and (max-width: 670px) {
+  .calendar__week li {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .calendar__week li:hover, .calendar__week li.active {
