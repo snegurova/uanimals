@@ -2012,7 +2012,7 @@ div[data-tippy-root] {
 }
 
 .events::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #C0C0C0;
 }
 
 .events::-webkit-scrollbar-thumb:hover {
