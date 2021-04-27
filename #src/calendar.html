@@ -48,8 +48,8 @@
                         <li>1</li>
                         <li>2</li>
                         <li>3</li>
-                        <li class="active">4</li>
-                        <li>5</li>
+                        <li class="with-events tippy-item" data-template="date-4">4</li>
+                        <li class="with-events tippy-item" data-template="date-5">5</li>
                         <li class="dotted">6</li>
                         <li class="dotted">7</li>
                     </ul>
@@ -63,7 +63,7 @@
                         <li>14</li>
                     </ul>
                     <ul class="calendar__week">
-                        <li class="with-events">15</li>
+                        <li>15</li>
                         <li>16</li>
                         <li>17</li>
                         <li>18</li>
@@ -89,8 +89,15 @@
                         <li></li>
                         <li></li>
                     </ul>
+                    <div id="template" style="display: none;">
+                        <div id="date-4">
+                            <strong>Content for four</strong>
+                        </div>
+                        <div id="date-5">
+                            <strong>Content for five</strong>
+                        </div>
+                    </div>
                 </ul>
-                <!-- li{$@5}*5-->
             </div>
         </section>
     </main>

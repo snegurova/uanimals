@@ -114,7 +114,7 @@
         width: 30px;
         height: 30px;
       }
-      &:hover, &.active {
+      &.tippy-item:hover, &[aria-describedby] {
         background-color: $accent-color;
         border-color: $accent-color;
         cursor: pointer;

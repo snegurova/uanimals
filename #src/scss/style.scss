@@ -10,6 +10,10 @@
 
 @import "variables_";
 @import "typography";
+@import './module/tippy/tippy';
+@import './module/tippy/light';
+@import './module/tippy/scale-subtle';
+@import './module/tippy/svg-arrow';
 @import './module/effect-fade';
 @import "./module/header";
 @import "./module/btn";
