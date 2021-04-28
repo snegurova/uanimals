@@ -344,6 +344,9 @@ button:hover {
 .header {
   border-bottom: solid 1px #d9d9d9;
   z-index: 10;
+  position: fixed;
+  background: #fff;
+  width: 100%;
 }
 
 .header__wrapper {
@@ -640,7 +643,7 @@ button:hover {
   transition: opacity 1s, visibility 0s 1s;
   position: absolute;
   width: 100%;
-  height: calc(100% - 118px);
+  height: 100vh;
   top: 118px;
   left: 0;
   background-color: rgba(17, 24, 39, 0.5);
@@ -3394,6 +3397,7 @@ body {
 
 .main {
   flex: 1 1 auto;
+  margin-top: 118px;
 }
 
 .container {
