@@ -155,6 +155,8 @@ const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-sl
     // Optional parameters
     // loop: true,
     slidesPerView: 3.5,
+    touchRatio: 0.2,
+    slideToClickedSlide: true,
     mousewheel: true,
     freeMode: false,
     watchSlidesVisibility: true,

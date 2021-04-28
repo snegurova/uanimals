@@ -2133,7 +2133,6 @@ div[data-tippy-root] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 54px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -2153,9 +2152,19 @@ div[data-tippy-root] {
   }
 }
 
+@media screen and (max-width: 560px) {
+  .subscribe-form {
+    width: 100%;
+  }
+}
+
+.subscribe-form__text-wrapper {
+  margin: 0 54px 0 0;
+}
+
 @media screen and (max-width: 1279px) {
   .subscribe-form__text-wrapper {
-    width: 100%;
+    margin: 0 0 54px 0;
   }
 }
 
@@ -2169,12 +2178,29 @@ div[data-tippy-root] {
 .subscribe-form__inputs-wrapper {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  margin: 0 54px 0 0;
 }
 
 @media screen and (max-width: 780px) {
   .subscribe-form__inputs-wrapper {
     flex-direction: column;
+    margin: 0 0 54px 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .subscribe-form__inputs-wrapper {
+    width: 100%;
+  }
+}
+
+.subscribe-form__input:first-child {
+  margin: 0 24px 0 0;
+}
+
+@media screen and (max-width: 780px) {
+  .subscribe-form__input:first-child {
+    margin: 0 0 24px 0;
   }
 }
 
@@ -2187,6 +2213,12 @@ div[data-tippy-root] {
 @media screen and (max-width: 780px) {
   .subscribe-form__input {
     width: 280px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .subscribe-form__input {
+    width: 100%;
   }
 }
 
@@ -2676,7 +2708,7 @@ div[data-tippy-root] {
   .titles-control-slider-wrapper {
     width: 100%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -2860,6 +2892,12 @@ div[data-tippy-root] {
   transition: all 0.4s;
 }
 
+@media screen and (max-width: 540px) {
+  .team-card {
+    width: 100%;
+  }
+}
+
 .team-card:hover {
   background-color: #f9f9f9;
 }
@@ -2937,7 +2975,7 @@ div[data-tippy-root] {
 @media screen and (max-width: 641px) {
   .our-mission__card {
     margin: 17px 0 0 0;
-    max-width: 305px;
+    max-width: 100%;
   }
 }
 
@@ -3276,6 +3314,11 @@ div[data-tippy-root] {
   border-radius: 5px;
   border: 1px solid #D9D9D9;
   max-width: 630px;
+  transition: all 0.4s;
+}
+
+.report-card:hover {
+  background-color: #f9f9f9;
 }
 
 .report-card:nth-child(2n) {
