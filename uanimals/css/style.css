@@ -3402,7 +3402,6 @@ div[data-tippy-root] {
   display: block;
   max-width: 410px;
   border-radius: 5px;
-  border: 1px solid #CBCBCB;
   margin-bottom: 24px;
   transition: all 0.4s;
   color: #000;
@@ -3474,9 +3473,14 @@ div[data-tippy-root] {
   filter: blur(3px);
 }
 
+.donate-card:hover .donate-card__description {
+  border-color: transparent;
+}
+
 .donate-card__img-wrapper {
   position: relative;
   overflow: hidden;
+  border-radius: 5px 5px 0 0;
 }
 
 .donate-card__img-wrapper::after {
@@ -3502,6 +3506,9 @@ div[data-tippy-root] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid #CBCBCB;
+  border-radius: 0 0 5px 5px;
+  border-top: none;
 }
 
 .donate-card__title {

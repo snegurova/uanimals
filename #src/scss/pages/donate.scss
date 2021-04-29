@@ -15,7 +15,7 @@
   display: block;
   max-width: 410px;
   border-radius: 5px;
-  border: 1px solid #CBCBCB;
+  //border: 1px solid #CBCBCB;
   margin-bottom: 24px;
   transition: all 0.4s;
   color: $main-font-color;
@@ -68,10 +68,14 @@
     .donate-card__img {
       filter: blur(3px);
     }
+    .donate-card__description {
+      border-color: transparent;
+    }
   }
   &__img-wrapper {
     position: relative;
     overflow: hidden;
+    border-radius: 5px 5px 0 0;
     &::after {
       content: '';
       position: absolute;
@@ -94,6 +98,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border: 1px solid #CBCBCB;
+    border-radius: 0 0 5px 5px;
+    border-top: none;
   }
   &__title {
     margin: 0;
