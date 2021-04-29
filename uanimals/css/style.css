@@ -814,6 +814,26 @@ button:hover {
 ._no-webp .banner_about-us {
   background-image: url("../img/bg-about-us.jpg"); }
 
+._no-webp .banner_donate-single {
+  background-image: url("../img/donate-single-bg.jpg"); }
+
+.banner_donate-single {
+  position: relative;
+}
+
+.banner_donate-single::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  opacity: 0.8;
+  z-index: -1;
+}
+
 .scroll-down-link {
   display: flex;
   width: 180px;
@@ -3596,6 +3616,58 @@ div[data-tippy-root] {
   margin-left: 12px;
 }
 
+.project__progress_donate-banner {
+  max-width: 630px;
+}
+
+.project__progress_donate-banner .project__progress-numbers {
+  align-items: flex-end;
+}
+
+.project__progress_donate-banner .project__fund-date {
+  color: #9F9F9F;
+}
+
+.project__progress_donate-banner .project__fund {
+  align-items: baseline;
+}
+
+.project__progress_donate-banner .project__amount {
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.project__progress_donate-banner .project__relative_donate {
+  margin-left: 14px;
+}
+
+.project__progress_donate-banner .project__total-amount {
+  font-weight: 700;
+  font-size: 1.17rem;
+  margin-bottom: 9px;
+}
+
+.project__progress_donate-banner .project__total-amount span {
+  color: #9F9F9F;
+  font-size: 1rem;
+}
+
+.project__progress_donate-banner .project__progress-bar {
+  margin-top: 20px;
+}
+
+.project__progress_donate-banner .project__progress-bar-full {
+  height: 19px;
+  background-color: #F5F5F2;
+  opacity: 0.22;
+  border-radius: 10px;
+}
+
+.project__progress_donate-banner .project__progress-bar-done {
+  height: 19px;
+  border-radius: 10px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -3663,5 +3735,7 @@ img {
 }
 
 ._webp .banner_about-us { background-image: url(../img/bg-about-us.webp); }
+
+._webp .banner_donate-single { background-image: url(../img/donate-single-bg.webp); }
 
 /*# sourceMappingURL=../maps/style.css.map */

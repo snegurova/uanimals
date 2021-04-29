@@ -182,3 +182,51 @@
   color: #9F9F9F;
   margin-left: 12px;
 }
+
+//------------
+//Donate Single
+//------------
+
+.project__progress_donate-banner {
+  max-width: 630px;
+  .project {
+    &__progress-numbers {
+      align-items: flex-end;
+    }
+    &__fund-date {
+      color: $secondary-font-color-light;
+    }
+    &__fund {
+      align-items: baseline;
+    }
+    &__amount {
+      font-weight: 800;
+      font-size: 2rem;
+    }
+    &__relative_donate {
+      margin-left: 14px;
+    }
+    &__total-amount {
+      font-weight: 700;
+      font-size: 1.17rem;
+      margin-bottom: 9px;
+      span {
+        color: $secondary-font-color-light;
+        font-size: 1rem;
+      }
+    }
+    &__progress-bar {
+      margin-top: 20px;
+    }
+    &__progress-bar-full {
+      height: 19px;
+      background-color: #F5F5F2;
+      opacity: 0.22;
+      border-radius: 10px;
+    }
+    &__progress-bar-done {
+      height: 19px;
+      border-radius: 10px;
+    }
+  }
+}
