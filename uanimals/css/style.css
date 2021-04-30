@@ -751,6 +751,36 @@ button:hover {
   background-position: center;
 }
 
+.btn-with-icon {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 28px 7px 9px;
+  border-radius: 40px;
+  background-color: #60CAE5;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.7s;
+}
+
+.btn-with-icon:hover {
+  background-color: #fff;
+  color: #60CAE5;
+}
+
+.btn-with-icon__icon-wrapper {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 17px;
+}
+
 .banner {
   padding: 54px 0 72px;
   position: relative;
@@ -770,6 +800,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .banner h1 {
@@ -832,6 +863,16 @@ button:hover {
   background-color: #222222;
   opacity: 0.8;
   z-index: -1;
+}
+
+.banner_donate-single h1 {
+  font-size: calc(24px + 25 * (100vw - 320px) / (1920 - 320));
+}
+
+@media screen and (min-width: 1920px) {
+  .banner_donate-single h1 {
+    max-width: calc(982px + 982 * (100vw - 1920px) / 1920);
+  }
 }
 
 .scroll-down-link {
@@ -3617,7 +3658,13 @@ div[data-tippy-root] {
 }
 
 .project__progress_donate-banner {
-  max-width: 630px;
+  width: 630px;
+}
+
+@media screen and (max-width: 630px) {
+  .project__progress_donate-banner {
+    width: 100%;
+  }
 }
 
 .project__progress_donate-banner .project__progress-numbers {
@@ -3666,6 +3713,44 @@ div[data-tippy-root] {
 .project__progress_donate-banner .project__progress-bar-done {
   height: 19px;
   border-radius: 10px;
+}
+
+.donate-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.donate-wrapper .btn-with-icon {
+  margin-right: 54px;
+}
+
+.donate-social-links__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.donate-social-links__wrapper .social-list {
+  margin: 0;
+}
+
+.donate-social-links__wrapper .social-list a {
+  background-color: #F9F9F9;
+}
+
+.donate-social-links__wrapper .social-list a:hover {
+  background-color: #60CAE5;
+}
+
+.donate-social-links__wrapper li:not(:last-child) {
+  margin-right: 20px;
+}
+
+.donate-social-links__text {
+  font-size: 0.875rem;
+  color: #9F9F9F;
+  margin-right: 19px;
 }
 
 * {

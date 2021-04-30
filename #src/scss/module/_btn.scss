@@ -46,3 +46,31 @@
     }
   }
 }
+
+.btn-with-icon {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 28px 7px 9px;
+  border-radius: 40px;
+  background-color: $accent-color;
+  color: $label-color;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.7s;
+  &:hover {
+    background-color: $background-color;
+    color: $accent-color;
+  }
+  &__icon-wrapper {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: $background-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 17px;
+  }
+}
