@@ -34,4 +34,21 @@
   &__next {
     transform: scale(-1);
   }
+  &_light {
+    margin-top: 47px;
+    .pagination {
+      &__prev, &__next, &__item {
+        &:hover, &_active {
+          background-color: #696969;
+        }
+      }
+    }
+
+    &.pagination__wrapper {
+      @media screen and (max-width: 880px) {
+        justify-content: flex-start;
+      }
+    }
+
+  }
 }
