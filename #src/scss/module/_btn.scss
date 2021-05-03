@@ -64,7 +64,10 @@
   transition: all 0.7s;
   &:hover {
     background-color: $background-color;
-    color: $accent-color;
+    color: $main-font-color;
+    path {
+      fill: $label-bg-color;
+    }
   }
   &__icon-wrapper {
     width: 58px;

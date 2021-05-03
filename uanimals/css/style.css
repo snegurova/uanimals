@@ -773,7 +773,11 @@ button:hover {
 
 .btn-with-icon:hover {
   background-color: #fff;
-  color: #60CAE5;
+  color: #000;
+}
+
+.btn-with-icon:hover path {
+  fill: #F50C0C;
 }
 
 .btn-with-icon__icon-wrapper {
