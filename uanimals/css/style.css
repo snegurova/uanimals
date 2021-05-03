@@ -737,6 +737,12 @@ button:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 560px) {
+  .btn-icon-text {
+    flex-wrap: wrap;
+  }
+}
+
 .contacts .btn_submit {
   width: 58px;
   height: 58px;
@@ -1764,8 +1770,8 @@ Sliders
 
 @media screen and (max-width: 560px) {
   .popup-form .popup__close {
-    top: 36px;
-    right: 24px;
+    top: 15px;
+    right: 15px;
   }
 }
 
@@ -2448,7 +2454,13 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-flow: column wrap;
-  max-height: 180px;
+  height: 180px;
+}
+
+@media screen and (max-width: 560px) {
+  .column-list {
+    height: auto;
+  }
 }
 
 .input-form__radio-wrapper {
@@ -2462,8 +2474,20 @@ textarea {
   align-items: center;
 }
 
+@media screen and (max-width: 560px) {
+  .input-form__wrapper_radio {
+    flex-wrap: wrap;
+  }
+}
+
 .input-form__wrapper_radio .input-form__radio-wrapper {
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .input-form__wrapper_radio .input-form__radio-wrapper:first-child {
+    margin-bottom: 20px;
+  }
 }
 
 .input-form__radio-label {
@@ -2472,6 +2496,7 @@ textarea {
   line-height: 1.8;
   font-weight: 600;
   transition: all 0.4s;
+  font-size: calc(0.875rem + 2 * (100vw - 320px) / (1920 - 320));
 }
 
 [type="radio"]:checked,
@@ -2501,6 +2526,14 @@ textarea {
   background: #fff;
 }
 
+@media screen and (max-width: 560px) {
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
   content: '';
@@ -2513,6 +2546,16 @@ textarea {
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 560px) {
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after {
+    width: 8px;
+    height: 8px;
+    top: 7px;
+    left: 7px;
+  }
 }
 
 [type="radio"]:not(:checked) + label:after {
@@ -2533,7 +2576,7 @@ textarea {
 
 .form__section-title {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: calc(1.25rem + 4 * (100vw - 320px) / (1920 - 320));
 }
 
 .form__section-description {
@@ -2547,6 +2590,14 @@ textarea {
 .btn_submit-l {
   width: 58px;
   height: 58px;
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 560px) {
+  .btn_submit-l {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 .footer {
@@ -3907,6 +3958,32 @@ textarea {
   font-size: 0.875rem;
   color: #9F9F9F;
   margin-right: 19px;
+}
+
+.donate-persons__section-title {
+  font-size: 1.125rem;
+}
+
+.donate-persons-list {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.donate-persons-list__item {
+  width: 336px;
+  display: flex;
+}
+
+.donate-persons-list .donate-person {
+  width: 263px;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.donate-persons-list .donate-person__amount {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 700;
 }
 
 * {

@@ -27,6 +27,9 @@
   &:hover {
     cursor: pointer;
   }
+  @media screen and (max-width: 560px) {
+    flex-wrap: wrap;
+  }
 }
 
 .contacts {

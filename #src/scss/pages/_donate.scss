@@ -272,5 +272,46 @@
     color: $secondary-font-color-light;
     margin-right: 19px;
   }
-
 }
+
+.donate-persons__section-title {
+  font-size: 1.125rem;
+}
+
+.donate-persons-list {
+  display: flex;
+  flex-flow: column wrap;
+  &__item {
+    width: 336px;
+    display: flex;
+  }
+  .donate-person {
+    width: 263px;
+    margin: 0;
+    letter-spacing: -0.5px;
+    &__amount {
+      margin: 0;
+      font-size: 1.125rem;
+      font-weight: 700;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

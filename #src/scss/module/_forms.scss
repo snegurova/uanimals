@@ -240,7 +240,10 @@ textarea {
   display: flex;
   flex-direction: column;
   flex-flow: column wrap;
-  max-height: 180px;
+  height: 180px;
+  @media screen and (max-width: 560px) {
+    height: auto;
+  }
 }
 .input-form__radio-wrapper {
   display: flex;
@@ -250,8 +253,16 @@ textarea {
 .input-form__wrapper_radio {
   display: flex;
   align-items: center;
+  @media screen and (max-width: 560px) {
+    flex-wrap: wrap;
+  }
   .input-form__radio-wrapper {
     margin-bottom: 0;
+    &:first-child {
+      @media screen and (max-width: 560px) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 .input-form__radio-label {
@@ -260,6 +271,7 @@ textarea {
   line-height: 1.8;
   font-weight: 600;
   transition: all 0.4s;
+  font-size: calc(0.875rem + 2 * (100vw - 320px) / (1920 - 320));
 }
 
 [type="radio"]:checked,
@@ -286,6 +298,10 @@ textarea {
   border: 1px solid $accent-color;
   border-radius: 100%;
   background: $background-color;
+  @media screen and (max-width: 560px) {
+    width: 20px;
+    height: 20px;
+  }
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
@@ -299,6 +315,12 @@ textarea {
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  @media screen and (max-width: 560px) {
+    width: 8px;
+    height: 8px;
+    top: 7px;
+    left: 7px;
+  }
 }
 [type="radio"]:not(:checked) + label:after {
   opacity: 0;
@@ -321,7 +343,7 @@ textarea {
 .form {
   &__section-title {
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: calc(1.25rem + 4 * (100vw - 320px) / (1920 - 320));;
   }
   &__section-description {
     font-size: 0.875rem;
@@ -334,6 +356,11 @@ textarea {
 .btn_submit-l {
   width: 58px;
   height: 58px;
+  flex-shrink: 0;
+  @media screen and (max-width: 560px) {
+    width: 36px;
+    height: 36px;
+  }
 }
 
 //</Donate form>====================================================================================================
