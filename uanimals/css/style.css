@@ -3886,6 +3886,13 @@ textarea {
   align-items: flex-end;
 }
 
+@media screen and (max-width: 380px) {
+  .project__progress_donate-banner .project__progress-numbers {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .project__progress_donate-banner .project__fund-date {
   color: #9F9F9F;
 }
@@ -3950,6 +3957,7 @@ textarea {
 .donate-social-links__wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .donate-social-links__wrapper .social-list {
@@ -4055,6 +4063,24 @@ textarea {
 
 .about-donate-project__description p:first-child {
   font-weight: 700;
+}
+
+.project__progress_banner-complete .project__total-amount {
+  position: relative;
+  padding-right: 47px;
+}
+
+.project__progress_banner-complete .project__total-amount::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/donate-complete.svg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 * {

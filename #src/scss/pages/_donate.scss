@@ -197,6 +197,10 @@
   .project {
     &__progress-numbers {
       align-items: flex-end;
+      @media screen and (max-width: 380px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
     &__fund-date {
       color: $secondary-font-color-light;
@@ -254,6 +258,7 @@
   &__wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     .social-list {
       margin: 0;
       a {
@@ -338,7 +343,24 @@
   }
 }
 
-
+.project__progress_banner-complete {
+  .project__total-amount {
+    position: relative;
+    padding-right: 47px;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      background-image: url("../img/donate-complete.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
 
 
 
