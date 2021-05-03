@@ -265,7 +265,7 @@ Sliders
     .project__slide-img-second {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 2px;
       z-index: -1;
     }
     .project__link-hover {
@@ -308,7 +308,6 @@ Sliders
   }
   &__img-wrapper {
     position: relative;
-    overflow: hidden;
     img {
       width: 100%;
       display: block;
