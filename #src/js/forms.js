@@ -319,8 +319,10 @@ function inputs_init(inputs) {
 			input_placeholder_add(input);
 			if (input.value != '' && input.value != input_g_value) {
 				input_focus_add(input);
+				input.classList.add('filled');
 			}
 			input.addEventListener('focus', function (e) {
+				input.classList.remove('_filled');
 				if (input.value == input_g_value) {
 					input_focus_add(input);
 					input.value = '';
@@ -346,7 +348,7 @@ function inputs_init(inputs) {
 					//'+38(999) 999 9999'
 					//'+375(99)999-99-99'
 					input.classList.add('_mask');
-					Inputmask("+375 (99) 9999999", {
+					Inputmask("+38 (999) 9999999", {
 						//"placeholder": '',
 						clearIncomplete: true,
 						clearMaskOnLostFocus: true,
@@ -369,6 +371,11 @@ function inputs_init(inputs) {
 				form_remove_error(input);
 			});
 			input.addEventListener('blur', function (e) {
+				if (input.value != '') {
+					input.classList.add('_filled');
+				} else {
+					input.classList.remove('_filled');
+				}
 				if (input.value == '') {
 					input.value = input_g_value;
 					input_focus_remove(input);

@@ -866,7 +866,7 @@ button:hover {
 }
 
 .banner_donate-single h1 {
-  font-size: calc(24px + 25 * (100vw - 320px) / (1920 - 320));
+  font-size: calc(1.5rem + 25 * (100vw - 320px) / (1920 - 320));
 }
 
 @media screen and (min-width: 1920px) {
@@ -1739,6 +1739,15 @@ Sliders
   padding: 59px 108px;
 }
 
+.popup-form .popup__body_s-padding {
+  padding: 63px 59px 80px;
+}
+
+.popup-form .popup__body_s-padding .popup__close {
+  top: 43px;
+  right: 59px;
+}
+
 @media screen and (max-width: 560px) {
   .popup-form .popup__body {
     padding: 36px 24px;
@@ -2183,9 +2192,24 @@ div[data-tippy-root] {
   font-size: 0.875rem;
 }
 
+.form-input_full-width {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.form-input_full-width::placeholder {
+  font-size: 1rem;
+}
+
 .form-input:focus + .input-form__label {
   top: -25px;
   left: 0px;
+  font-size: 0.813rem;
+}
+
+.form-input._filled + .input-form__label {
+  top: -15px;
+  left: 10px;
   font-size: 0.813rem;
 }
 
@@ -3681,7 +3705,7 @@ div[data-tippy-root] {
 
 .project__progress_donate-banner .project__amount {
   font-weight: 800;
-  font-size: 2rem;
+  font-size: calc(1.25rem + 12 * (100vw - 320px) / (1920 - 320));
 }
 
 .project__progress_donate-banner .project__relative_donate {
@@ -3692,6 +3716,12 @@ div[data-tippy-root] {
   font-weight: 700;
   font-size: 1.17rem;
   margin-bottom: 9px;
+}
+
+@media screen and (max-width: 630px) {
+  .project__progress_donate-banner .project__total-amount {
+    margin-bottom: 0;
+  }
 }
 
 .project__progress_donate-banner .project__total-amount span {

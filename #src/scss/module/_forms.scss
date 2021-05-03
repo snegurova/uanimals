@@ -22,9 +22,21 @@
     color: #868686;
     font-size: 0.875rem;
   }
+  &_full-width {
+    width: 100%;
+    margin-top: 30px;
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
   &:focus + .input-form__label {
     top: -25px;
     left: 0px;
+    font-size: 0.813rem;
+  }
+  &._filled + .input-form__label {
+    top: -15px;
+    left: 10px;
     font-size: 0.813rem;
   }
 }

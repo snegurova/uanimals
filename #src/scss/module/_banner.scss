@@ -57,7 +57,7 @@
       z-index: -1;
     }
     h1 {
-      font-size: calc(24px + 25 * (100vw - 320px) / (1920 - 320));
+      font-size: calc(1.5rem + 25 * (100vw - 320px) / (1920 - 320));
       @media screen and (min-width: 1920px) {
         max-width: calc(982px + 982 * (100vw - 1920px) / 1920);
       }

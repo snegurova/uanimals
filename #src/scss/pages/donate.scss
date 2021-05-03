@@ -206,7 +206,7 @@
     }
     &__amount {
       font-weight: 800;
-      font-size: 2rem;
+      font-size: calc(1.25rem + 12 * (100vw - 320px) / (1920 - 320));
     }
     &__relative_donate {
       margin-left: 14px;
@@ -215,7 +215,10 @@
       font-weight: 700;
       font-size: 1.17rem;
       margin-bottom: 9px;
-      span {
+      @media screen and (max-width: 630px) {
+        margin-bottom: 0;
+      }
+        span {
         color: $secondary-font-color-light;
         font-size: 1rem;
       }

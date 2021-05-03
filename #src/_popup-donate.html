@@ -1,19 +1,19 @@
 <div class="popup popup_donate-form popup-form">
     <div class="popup__content">
-        <div class="popup__body">
+        <div class="popup__body popup__body_s-padding">
             <div class="popup__close"></div>
-            <form action="#" class="contact-us__form">
+            <form action="#" class="donate__form">
                 <div class="input-form__wrapper">
-                    <input class="contact-us__input form-input" id="name" type="text">
+                    <input class="form-input form-input_full-width" id="name" type="text" data-error="" data-value="">
                     <label class="input-form__label" for="name">Ім’я</label>
                 </div>
                 <div class="input-form__wrapper">
-                    <input class="contact-us__input form-input" type="email" id="email">
+                    <input class="form-input form-input_full-width" type="email" id="email" data-value="">
                     <label class="input-form__label" for="email">Email</label>
                 </div>
                 <div class="input-form__wrapper">
-                    <textarea class="contact-us__input form-input" name="" id="questions" cols="30" rows="10"></textarea>
-                    <label class="input-form__label" for="questions">Питання</label>
+                    <input class="form-input form-input_full-width _phone _mask" data-value="" name="phone" type="tel" id="phone">
+                    <label class="input-form__label" for="phone">Телефон</label>
                 </div>
 
                 <button type="submit" class="btn-icon-text">
