@@ -1,3 +1,15 @@
+//<INPUT (inp+tab)>====================================================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+//</INPUT>====================================================================================================
+
 .input-form {
   &__wrapper {
     position: relative;
@@ -18,6 +30,10 @@
   border: none;
   border-bottom: 1px solid #8D8D8D;
   padding: 10px;
+  color: $main-font-color;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
   &::placeholder {
     color: #868686;
     font-size: 0.875rem;
@@ -28,6 +44,12 @@
     &::placeholder {
       font-size: 1rem;
     }
+  }
+  &_bordered {
+    height: 50px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #CBCBCB;
   }
   &:focus + .input-form__label {
     top: -25px;
@@ -210,3 +232,108 @@
   background-color: #F2F3F5;
   border: 1px solid #E1E1E1;
 }
+
+//<RADIO>=====================================================================================================
+
+.column-list {
+  margin: 43px 0 25px;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  max-height: 180px;
+}
+.input-form__radio-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.input-form__wrapper_radio {
+  display: flex;
+  align-items: center;
+  .input-form__radio-wrapper {
+    margin-bottom: 0;
+  }
+}
+.input-form__radio-label {
+  cursor: pointer;
+  width: 133px;
+  line-height: 1.8;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+  display: inline-block;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $accent-color;
+  border-radius: 100%;
+  background: $background-color;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: $accent-color;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+[type="radio"]:checked + label {
+  color: $accent-color;
+}
+
+//</RADIO>====================================================================================================
+
+//<Donate form>====================================================================================================
+.form {
+  &__section-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  &__section-description {
+    font-size: 0.875rem;
+    margin-top: 23px;
+    max-width: 260px;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+  }
+}
+.btn_submit-l {
+  width: 58px;
+  height: 58px;
+}
+
+//</Donate form>====================================================================================================
