@@ -2629,6 +2629,10 @@ textarea {
   line-height: 1.2;
 }
 
+.form__section-description_full-width {
+  max-width: 100%;
+}
+
 .btn_submit-l {
   width: 58px;
   height: 58px;
@@ -2640,6 +2644,29 @@ textarea {
     width: 36px;
     height: 36px;
   }
+}
+
+.form__tags {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 9px 0 0;
+}
+
+.form__tag {
+  font-size: 0.875rem;
+  line-height: 1.2;
+  padding: 12px 15px;
+  border-radius: 20px;
+  margin: 17px 17px 0 0;
+}
+
+.form__tag.active {
+  background-color: #F2F3F5;
+}
+
+.form__tag:hover {
+  background-color: #F2F3F5;
+  cursor: pointer;
 }
 
 .footer {

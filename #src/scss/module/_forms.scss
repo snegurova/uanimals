@@ -353,6 +353,9 @@ textarea {
     max-width: 260px;
     letter-spacing: -0.5px;
     line-height: 1.2;
+    &_full-width {
+      max-width: 100%;
+    }
   }
 }
 .btn_submit-l {
@@ -366,3 +369,29 @@ textarea {
 }
 
 //</Donate form>====================================================================================================
+
+//<Get involved form>====================================================================================================
+
+.form {
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 9px 0 0;
+  }
+  &__tag {
+    font-size: 0.875rem;
+    line-height: 1.2;
+    padding: 12px 15px;
+    border-radius: 20px;
+    margin: 17px 17px 0 0;
+    &.active {
+      background-color: #F2F3F5;
+    }
+    &:hover {
+      background-color: #F2F3F5;
+      cursor: pointer;
+    }
+  }
+}
+
+//</Get involved form>====================================================================================================
