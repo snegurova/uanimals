@@ -130,6 +130,9 @@ button:hover {
   background-color: #60CAE5;
   color: #000;
   font-weight: 700;
+  height: 1.625rem;
+  padding: 0 3px;
+  margin-left: -3px;
 }
 
 .tippy-box[data-animation=fade][data-state=hidden] {
@@ -4272,6 +4275,143 @@ textarea {
 .how-to-help__card-link:hover {
   background-color: #60CAE5;
   border-color: #60CAE5;
+}
+
+.patreon {
+  padding-bottom: 83px;
+}
+
+@media screen and (max-width: 780px) {
+  .patreon {
+    padding-bottom: 60px;
+  }
+}
+
+.patreon-img-wrapper {
+  margin-top: -72px;
+  text-align: center;
+}
+
+.patreon-support__wrapper {
+  max-width: 748px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.patreon-support__title {
+  margin: 17px 0 70px;
+}
+
+@media screen and (max-width: 4px) {
+  .patreon-support__title {
+    margin: 17px 0 35px;
+  }
+}
+
+.patreon-support__text {
+  line-height: 2;
+  margin: 0 0 70px;
+}
+
+.patreon-support__link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 778px) {
+  .patreon-support__link-wrapper {
+    flex-direction: column;
+  }
+}
+
+.patreon-support__link {
+  margin-right: 29px;
+  background-color: #F2F3F5;
+  color: #000;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 778px) {
+  .patreon-support__link {
+    margin: 0 0 29px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .patreon-support__link {
+    font-size: 0.875rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .patreon-support__link.btn-with-icon {
+    padding: 14px 18px;
+  }
+}
+
+.patreon-support__link:hover {
+  background-color: #F2F3F5;
+  text-decoration: none;
+}
+
+.patreon-support__link:hover .btn-with-icon__icon-wrapper {
+  background-color: #F2F3F5;
+}
+
+.patreon-support__link .btn-with-icon__icon-wrapper {
+  background-color: #222222;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 428px) {
+  .patreon-support__link .btn-with-icon__icon-wrapper {
+    display: none;
+  }
+}
+
+.patreon-support__link .btn-with-icon__icon-wrapper:hover {
+  background-color: #F2F3F5;
+}
+
+.patreon-support__link .btn-with-icon__text {
+  letter-spacing: -0.5px;
+}
+
+.patreon-support__link-slogan {
+  position: relative;
+  text-align: left;
+  color: #C6C6C6;
+  line-height: 2;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  font-size: 1.125rem;
+  padding-left: 22px;
+}
+
+@media screen and (max-width: 778px) {
+  .patreon-support__link-slogan {
+    padding: 22px 0 0;
+  }
+}
+
+.patreon-support__link-slogan::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #D3D3D3;
+}
+
+@media screen and (max-width: 778px) {
+  .patreon-support__link-slogan::after {
+    height: 1px;
+    width: 100%;
+  }
 }
 
 * {

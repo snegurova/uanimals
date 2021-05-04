@@ -87,3 +87,104 @@
     }
   }
 }
+.patreon {
+  padding-bottom: 83px;
+  @media screen and (max-width: 780px) {
+    padding-bottom: 60px;
+  }
+}
+.patreon-img-wrapper {
+  margin-top: -72px;
+  text-align: center;
+}
+
+.patreon-support {
+  &__wrapper {
+    max-width: 748px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__title {
+    margin: 17px 0 70px;
+    @media screen and (max-width: 4px) {
+      margin: 17px 0 35px;
+    }
+  }
+  &__text {
+    line-height: 2;
+    margin: 0 0 70px;
+  }
+  &__link-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media screen and (max-width: 778px) {
+      flex-direction: column;
+    }
+  }
+  &__link {
+    margin-right: 29px;
+    background-color: #F2F3F5;
+    color: $main-font-color;
+    text-decoration: underline;
+    @media screen and (max-width: 778px) {
+      margin: 0 0 29px;
+    }
+    @media screen and (max-width: 428px) {
+      font-size: 0.875rem;
+    }
+    &.btn-with-icon {
+      @media screen and (max-width: 428px) {
+        padding: 14px 18px;
+      }
+    }
+    &:hover {
+      background-color: #F2F3F5;
+      text-decoration: none;
+      .btn-with-icon__icon-wrapper {
+        background-color: #F2F3F5;
+      }
+    }
+    .btn-with-icon__icon-wrapper {
+      background-color: $footer-background-color;
+      transition: all 0.4s;
+      @media screen and (max-width: 428px) {
+        display: none;
+      }
+      &:hover {
+        background-color: #F2F3F5;
+      }
+    }
+    .btn-with-icon__text {
+      letter-spacing: -0.5px;
+    }
+  }
+  &__link-slogan {
+    position: relative;
+    text-align: left;
+    color: #C6C6C6;
+    line-height: 2;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 1.125rem;
+    padding-left: 22px;
+    @media screen and (max-width: 778px) {
+      padding: 22px 0 0;
+    }
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background-color: #D3D3D3;
+      @media screen and (max-width: 778px) {
+        height: 1px;
+        width: 100%;
+      }
+    }
+  }
+}
