@@ -1,0 +1,72 @@
+.materials {
+  padding-bottom: 163px;
+  @media screen and (max-width: 992px) {
+    padding-bottom: 80px;
+  }
+}
+.material-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.material-card {
+  width: 23%;
+  margin-top: 24px;
+  border-radius: 5px;
+  background-color: #F2F3F5;
+  color: $main-font-color;
+  text-decoration: none;
+  padding: 25px 29px;
+  transition: all 0.4s;
+  @media screen and (max-width: 1024px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 870px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 560px) {
+    width: 100%;
+  }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 10px 30px rgba(22, 26, 27, 0.32);
+    .material-card__link {
+      background-color: $accent-color;
+    }
+  }
+  &:not(:nth-child(4n)) {
+    margin-right: 24px;
+    @media screen and (max-width: 1024px) {
+      margin-right: 0px;
+    }
+  }
+  &:not(:nth-child(3n)) {
+    margin-right: 24px;
+    @media screen and (max-width: 870px) {
+      margin-right: 0px;
+    }
+  }
+  &:not(:nth-child(2n)) {
+    margin-right: 24px;
+    @media screen and (max-width: 560px) {
+      margin-right: 0px;
+    }
+  }
+  &__title {
+    font-size: 1rem;
+    letter-spacing: -0.5px;
+    line-height: 2;
+    margin: 0 0 44px;
+  }
+  &__link {
+    font-size: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: $background-color;
+    background-image: url("../img/folder-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.4s;
+  }
+}

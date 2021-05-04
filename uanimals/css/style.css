@@ -4414,6 +4414,108 @@ textarea {
   }
 }
 
+.materials {
+  padding-bottom: 163px;
+}
+
+@media screen and (max-width: 992px) {
+  .materials {
+    padding-bottom: 80px;
+  }
+}
+
+.material-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.material-card {
+  width: 23%;
+  margin-top: 24px;
+  border-radius: 5px;
+  background-color: #F2F3F5;
+  color: #000;
+  text-decoration: none;
+  padding: 25px 29px;
+  transition: all 0.4s;
+}
+
+@media screen and (max-width: 1024px) {
+  .material-card {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .material-card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .material-card {
+    width: 100%;
+  }
+}
+
+.material-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 30px rgba(22, 26, 27, 0.32);
+}
+
+.material-card:hover .material-card__link {
+  background-color: #60CAE5;
+}
+
+.material-card:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+  .material-card:not(:nth-child(4n)) {
+    margin-right: 0px;
+  }
+}
+
+.material-card:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 870px) {
+  .material-card:not(:nth-child(3n)) {
+    margin-right: 0px;
+  }
+}
+
+.material-card:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 560px) {
+  .material-card:not(:nth-child(2n)) {
+    margin-right: 0px;
+  }
+}
+
+.material-card__title {
+  font-size: 1rem;
+  letter-spacing: -0.5px;
+  line-height: 2;
+  margin: 0 0 44px;
+}
+
+.material-card__link {
+  font-size: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url("../img/folder-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.4s;
+}
+
 * {
   box-sizing: border-box;
 }
