@@ -65,6 +65,7 @@ textarea {
 
 .subscribe {
   padding: 33px 0;
+  background-color: #F2F3F5;
 }
 .subscribe-form {
   display: flex;
@@ -110,6 +111,7 @@ textarea {
     }
   }
   &__input {
+    background-color: #F2F3F5;
     &:first-child {
       margin: 0 24px 0 0;
       @media screen and (max-width: 780px) {

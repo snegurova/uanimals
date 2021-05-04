@@ -19,11 +19,13 @@
 
 .write-us-popup-link {
   display: flex;
-  gap: 18px;
   align-items: center;
   font-weight: 600;
   text-decoration: none;
   color: $main-font-color;
+  .btn {
+    margin-right: 18px;
+  }
   @media screen and (max-width: 560px) {
     width: 100%;
   }

@@ -1,0 +1,17 @@
+.get-involved-popup-link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: $label-color;
+  .btn {
+    margin-right: 18px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  &__text:hover {
+    opacity: 0.8;
+  }
+}

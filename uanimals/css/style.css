@@ -885,6 +885,22 @@ button:hover {
   }
 }
 
+._no-webp .banner_get-involved {
+  background-image: url("../img/get-involved-bg.jpg"); }
+
+.banner_get-involved::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #222222;
+  opacity: 0.94;
+  z-index: -1;
+}
+
 .scroll-down-link {
   display: flex;
   width: 180px;
@@ -1492,6 +1508,10 @@ Sliders
   background-color: #60CAE5;
 }
 
+.what-we-do__slide {
+  background-color: #F2F3F5;
+}
+
 .what-we-do__slide-heading {
   text-transform: uppercase;
   margin: 45px 0 32px;
@@ -1758,6 +1778,13 @@ Sliders
 }
 
 @media screen and (max-width: 560px) {
+  .popup-form .popup__body_s-padding .popup__close {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
   .popup-form .popup__body {
     padding: 36px 24px;
   }
@@ -1769,13 +1796,6 @@ Sliders
   top: 59px;
   right: 108px;
   background: url(../img/popup-form-close.svg) 0 0 no-repeat;
-}
-
-@media screen and (max-width: 560px) {
-  .popup-form .popup__close {
-    top: 15px;
-    right: 15px;
-  }
 }
 
 .social-list {
@@ -2258,6 +2278,7 @@ textarea {
 
 .subscribe {
   padding: 33px 0;
+  background-color: #F2F3F5;
 }
 
 .subscribe-form {
@@ -2323,6 +2344,10 @@ textarea {
   .subscribe-form__inputs-wrapper {
     width: 100%;
   }
+}
+
+.subscribe-form__input {
+  background-color: #F2F3F5;
 }
 
 .subscribe-form__input:first-child {
@@ -3127,11 +3152,14 @@ textarea {
 
 .write-us-popup-link {
   display: flex;
-  gap: 18px;
   align-items: center;
   font-weight: 600;
   text-decoration: none;
   color: #000;
+}
+
+.write-us-popup-link .btn {
+  margin-right: 18px;
 }
 
 @media screen and (max-width: 560px) {
@@ -3220,6 +3248,10 @@ textarea {
   .details {
     padding: 15px 0 45px;
   }
+}
+
+.details {
+  background-color: #F2F3F5;
 }
 
 .our-mission__cards {
@@ -3957,6 +3989,11 @@ textarea {
   margin-right: 54px;
 }
 
+.donate-persons {
+  background-color: #F2F3F5;
+  padding: 59px 0 80px;
+}
+
 .donate-social-links__wrapper {
   display: flex;
   align-items: center;
@@ -3986,7 +4023,6 @@ textarea {
 }
 
 .donate-persons__section-title {
-  margin-top: 59px;
   font-size: 1.125rem;
 }
 
@@ -4086,6 +4122,27 @@ textarea {
   background-repeat: no-repeat;
 }
 
+.get-involved-popup-link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+}
+
+.get-involved-popup-link .btn {
+  margin-right: 18px;
+}
+
+.get-involved-popup-link:hover {
+  cursor: pointer;
+}
+
+.get-involved-popup-link__text:hover {
+  opacity: 0.8;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -4163,5 +4220,7 @@ img {
 ._webp .banner_about-us { background-image: url(../img/bg-about-us.webp); }
 
 ._webp .banner_donate-single { background-image: url(../img/donate-single-bg.webp); }
+
+._webp .banner_get-involved { background-image: url(../img/get-involved-bg.webp); }
 
 /*# sourceMappingURL=../maps/style.css.map */

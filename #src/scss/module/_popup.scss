@@ -159,6 +159,10 @@
       .popup__close {
         top: 43px;
         right: 59px;
+        @media screen and (max-width: 560px) {
+          top: 20px;
+          right: 20px;
+        }
       }
     }
     @media screen and (max-width: 560px) {
@@ -171,9 +175,6 @@
     top: 59px;
     right: 108px;
     background: url(../img/popup-form-close.svg) 0 0 no-repeat;
-    @media screen and (max-width: 560px) {
-      top: 15px;
-      right: 15px;
-    }
+
   }
 }
