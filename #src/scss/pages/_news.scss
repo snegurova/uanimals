@@ -1,3 +1,9 @@
+.news {
+  padding-bottom: 122px;
+  @media screen and (max-width: 992px) {
+    padding-bottom: 66px;
+  }
+}
 .news-cards-container {
   display: flex;
   flex-wrap: wrap;
