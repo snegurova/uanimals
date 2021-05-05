@@ -1,0 +1,163 @@
+.shop {
+  padding-bottom: 100px;
+  @media screen and (max-width: 992px) {
+    padding-bottom: 60px;
+  }
+}
+.products-filter {
+  margin: 45px 0 13px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: #F2F3F5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  &__item {
+    padding: 11px 35px 10px 33px;
+    color: #A0A0A0;
+    line-height: 1.5;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.4s;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+    &.active, &:hover {
+      background-color: $accent-color;
+      color: $main-font-color;
+    }
+  }
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  position: relative;
+  text-decoration: none;
+  color: $main-font-color;
+  width: 23%;
+  margin-top: 32px;
+  border: 1px solid #D7D7D7;
+  padding: 34px 32px 45px;
+  transition: all 0.4s;
+  &:hover {
+    box-shadow: 0px 20px 20px rgba(7, 0, 45, 0.1);
+  }
+  @media screen and (max-width: 1209px) {
+    width: 31.4%;
+  }
+  @media screen and (max-width: 870px) {
+    width: 47.8%;
+  }
+  @media screen and (max-width: 560px) {
+    width: 100%;
+  }
+  &:not(:nth-child(4n)) {
+    margin-right: 2.65%;
+    @media screen and (max-width: 1209px) {
+      margin-right: 0;
+    }
+  }
+  &:not(:nth-child(3n)) {
+    @media screen and (max-width: 1209px) {
+      margin-right: 2.89%;
+    }
+    @media screen and (max-width: 870px) {
+      margin-right: 0;
+    }
+  }
+  &:not(:nth-child(2n)) {
+    @media screen and (max-width: 870px) {
+      margin-right: 4.3%;
+    }
+    @media screen and (max-width: 560px) {
+      margin-right: 0;
+    }
+  }
+  &__img-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    &::before {
+      content: "";
+      padding-top: 100%;
+      float: left;
+    }
+    &:hover {
+      .donate-card__link-hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+      .donate-card__link-hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+      }
+      &::after {
+        opacity: 0.8;
+      }
+      .product-card__img {
+        filter: blur(5px);
+      }
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      transition: all 0.4s;
+      display: block;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: $accent-color;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+  &__title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin: 39px 0;
+  }
+  &__price-wrapper {
+    display: flex;
+  }
+  &__price {
+    font-weight: 700;
+    margin-right: 10px;
+  }
+  &__old-price {
+    font-weight: 500;
+    color: #ABABAB;
+    text-decoration-line: line-through;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

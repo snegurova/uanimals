@@ -5,6 +5,7 @@
 @@include('sliders.js', {})
 @@include('scroll.js', {})
 @@include('forms.js', {})
+@@include('radio.js', {})
 @@include('tippies.js', {})
 
 function testWebP(callback) {

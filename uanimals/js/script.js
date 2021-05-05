@@ -11373,6 +11373,23 @@ if (priceSlider) {
 		priceSlider.noUiSlider.set([priceStartValue, priceEndValue]);
 	}
 }
+
+//Shop radio buttons
+const radioButtons = document.querySelectorAll('.products-filter__item');
+
+const toggleActive = (elements) => {
+  elements.forEach((el) => {
+    el.classList.toggle("active");
+  });
+};
+
+radioButtons.forEach((radioButton) => {
+  radioButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleActive(radioButtons);
+  });
+});
+
 const events = tippy('.tippy-item', {
   content(reference) {
     const id = reference.getAttribute('data-template');

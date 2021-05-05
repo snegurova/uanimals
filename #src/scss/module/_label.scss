@@ -1,4 +1,5 @@
 .label {
+  padding-left: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,14 +13,29 @@
   font-weight: 700;
   right: -15px;
   top: -16px;
-  &_subscribe-form {
-    right: -20px;
-    top: -11px;
-  }
   @media screen and (max-width: 560px) {
     width: 14px;
     height: 14px;
     font-size: 10px;
+  }
+  &_subscribe-form {
+    right: -20px;
+    top: -11px;
+  }
+  &_shop {
+    width: 34px;
+    height: 34px;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+  }
+  &_sale {
+    background-color: #FF5050;
+    font-size: 16px;
+  }
+  &_new {
+    background-color: #FFF61B;
+    color: $main-font-color;
   }
 }
 
