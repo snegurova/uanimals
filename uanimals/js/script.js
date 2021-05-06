@@ -10518,6 +10518,46 @@ const productSlider = new Swiper('.product__slider', {
     },
 });
 
+const similarProductsSlider = new Swiper('.similar-products__slider', {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 4,
+    centeredSlides: false,
+    initialSlide: 0,
+    pagination: {
+        el: '.home-projects-scrollbar',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+            runCircleProgress(swiper, current, total);
+        },
+    },
+    spaceBetween: 25,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.home-projects-button-next',
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 12,
+        },
+        // when window width is >= 480px
+        580: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+        },
+        // when window width is >= 640px
+        780: {
+            slidesPerView: 3
+        },
+        1340: {
+            slidesPerView: 4
+        },
+    },
+});
+
 let scr_body = document.querySelector('body');
 let scr_blocks = document.querySelectorAll('._scr-sector');
 let scr_items = document.querySelectorAll('._scr-item');

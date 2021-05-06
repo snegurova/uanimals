@@ -130,4 +130,14 @@
   @media screen and (max-width: 560px) {
     padding: 0 0 60px;
   }
+  .projects__controls {
+    position: unset;
+    margin: 24px 0;
+    @media screen and (min-width: 993px) {
+      display: none;
+    }
+  }
+}
+.product-card.swiper-slide {
+  margin: 0;
 }

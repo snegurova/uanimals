@@ -5090,6 +5090,21 @@ label {
   }
 }
 
+.similar-products .projects__controls {
+  position: unset;
+  margin: 24px 0;
+}
+
+@media screen and (min-width: 993px) {
+  .similar-products .projects__controls {
+    display: none;
+  }
+}
+
+.product-card.swiper-slide {
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
