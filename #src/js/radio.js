@@ -1,6 +1,6 @@
 
 //Shop radio buttons
-const radioButtons = document.querySelectorAll('.products-filter__item');
+const radioButtons = document.querySelectorAll('._radio');
 
 const toggleActive = (elements) => {
   elements.forEach((el) => {

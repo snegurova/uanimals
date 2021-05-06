@@ -281,8 +281,7 @@ textarea {
   position: absolute;
   left: -9999px;
 }
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
+label
 {
   position: relative;
   padding-left: 36px;
@@ -395,3 +394,61 @@ textarea {
 }
 
 //</Get involved form>====================================================================================================
+
+//<QUANTITY>====================================================================================================
+.quantity {
+  width: 85px;
+  height: 29px;
+  border-radius: 20px;
+  display: flex;
+  background-color: #F2F3F7;
+  // .quantity__button
+  &__button {
+    flex: 0 0 30px;
+    position: relative;
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all 0.3s ease 0s;
+      margin: 0px 0px 0px -4.5px;
+      background-color: #888888;
+      width: 9px;
+      height: 1px;
+    }
+    @media (min-width: 992px) {
+      &:hover {
+        &::before,
+        &::after {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    // .quantity__button_plus
+    &_plus {
+      &::before {
+        transform: rotate(-90deg);
+      }
+    }
+    // .quantity__button_minus
+    &_minus {
+    }
+  }
+  // .quantity__input
+  &__input {
+    flex: 1 1 auto;
+    input {
+      height: 100%;
+      color: $main-font-color;
+      font-size: 0.75rem;
+      width: 100%;
+      text-align: center;
+      border: none;
+      background-color: #F2F3F7;
+    }
+  }
+}
+//</QUANTITY>====================================================================================================

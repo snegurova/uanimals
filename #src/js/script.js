@@ -7,6 +7,7 @@
 @@include('forms.js', {})
 @@include('radio.js', {})
 @@include('tippies.js', {})
+@@include('dynamicAdapt.js', {})
 
 function testWebP(callback) {
 	var webP = new Image();

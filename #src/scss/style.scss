@@ -20,6 +20,7 @@
 @import "./module/banner";
 @import "./module/scroll-down";
 @import "./module/secondary-nav";
+//@import "./module/swiper-bundle.min";
 @import "./module/sliders";
 @import "./module/label";
 @import "./module/popup";
@@ -27,6 +28,7 @@
 @import "./module/pagination";
 @import "./module/calendar";
 @import "./module/forms";
+@import "./module/radio";
 @import "./module/footer";
 @import "./pages/home";
 @import "./pages/projects";
@@ -39,6 +41,7 @@
 @import "./pages/get-involved";
 @import "./pages/materials";
 @import "./pages/shop";
+@import "./pages/product";
 
 * {
 	box-sizing: border-box;

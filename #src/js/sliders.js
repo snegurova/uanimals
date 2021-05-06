@@ -251,3 +251,29 @@ const hashtagGallerySlider = new Swiper('.hashtag-gallery__slider', {
         prevEl: '.swiper-button-prev',
     },
 });
+
+const productThumbsSlider = new Swiper('.product-thumb__slider', {
+    // Optional parameters
+    direction: 'vertical',
+    freeMode: true,
+    slidesPerView: 3,
+    initialSlide: 0,
+    slideToClickedSlide: true,
+    speed: 500,
+    spaceBetween: 30,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+});
+const productSlider = new Swiper('.product__slider', {
+    // Optional parameters
+    effect: 'fade',
+    direction: 'vertical',
+    slidesPerView: 1,
+    initialSlide: 0,
+    slideToClickedSlide: true,
+    speed: 700,
+    simulateTouch: false,
+    thumbs: {
+        swiper: productThumbsSlider,
+    },
+});
