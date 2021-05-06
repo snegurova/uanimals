@@ -478,12 +478,12 @@ button:hover {
   transition: right 0.5s ease 0s;
   overflow: auto;
   z-index: 4;
-  padding: 54px 18px 54px 115px;
+  padding: 54px 0;
 }
 
 @media screen and (max-width: 1919px) {
   .header .burger-menu__body {
-    padding: 50px 18px 48px 80px;
+    padding: 50px 0 48px;
   }
 }
 
@@ -501,7 +501,7 @@ button:hover {
 
 @media screen and (max-width: 680px) {
   .header .burger-menu__body {
-    padding: 46px 18px 39px 18px;
+    padding: 46px 0 39px;
   }
 }
 
@@ -512,9 +512,37 @@ button:hover {
   }
 }
 
+.header .burger-menu__body .social-list {
+  padding: 0 18px 62px 115px;
+}
+
+@media screen and (max-width: 1919px) {
+  .header .burger-menu__body .social-list {
+    padding: 0 18px 62px 80px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header .burger-menu__body .social-list {
+    padding: 0 18px 62px;
+  }
+}
+
 .header .burger-menu__list {
   list-style: none;
-  padding-left: 0;
+  padding: 0 18px 0 115px;
+}
+
+@media screen and (max-width: 1919px) {
+  .header .burger-menu__list {
+    padding: 0 18px 0 80px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header .burger-menu__list {
+    padding: 0 18px;
+  }
 }
 
 .header .burger-menu__list li:not(:first-child) {
@@ -654,18 +682,21 @@ button:hover {
 }
 
 .header .persons {
-  margin-top: 82px;
+  background-color: #F2F3F5;
+  padding: 82px 18px 0 115px;
 }
 
 @media screen and (max-width: 1919px) {
   .header .persons {
     margin-top: 45px;
+    padding: 82px 18px 0 80px;
   }
 }
 
 @media screen and (max-width: 680px) {
   .header .persons {
     margin-top: 0;
+    padding: 42px 18px 0;
   }
 }
 
