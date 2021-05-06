@@ -263,6 +263,14 @@ const productThumbsSlider = new Swiper('.product-thumb__slider', {
     spaceBetween: 30,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+    breakpoints: {
+        320: {
+            spaceBetween: 0,
+        },
+        561: {
+            spaceBetween: 30,
+        },
+    }
 });
 const productSlider = new Swiper('.product__slider', {
     // Optional parameters
