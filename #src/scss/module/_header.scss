@@ -105,9 +105,9 @@
       transition: right 0.5s ease 0s;
       overflow: auto;
       z-index: 4;
-      padding: 54px 18px 54px 115px;
+      padding: 54px 0;
       @media screen and (max-width: 1919px) {
-        padding: 50px 18px 48px 80px;
+        padding: 50px 0 48px;
       }
       @media screen and (max-width: 1280px) {
         width: 50%;
@@ -116,16 +116,34 @@
         width: 70%;
       }
       @media screen and (max-width: 680px) {
-        padding: 46px 18px 39px 18px;
+        //padding: 46px 18px 39px 18px;
+        padding: 46px 0 39px;
       }
+
+
       @media screen and (max-width: 560px) {
         right: -160%;
         width: 100%;
       }
+      .social-list {
+        padding: 0 18px 62px 115px;
+        @media screen and (max-width: 1919px) {
+          padding: 0 18px 62px 80px;
+        }
+        @media screen and (max-width: 680px) {
+          padding: 0 18px 62px;
+        }
+      }
     }
     &__list {
       list-style: none;
-      padding-left: 0;
+      padding: 0 18px 0 115px;
+      @media screen and (max-width: 1919px) {
+        padding: 0 18px 0 80px;
+      }
+      @media screen and (max-width: 680px) {
+        padding: 0 18px;
+      }
       li:not(:first-child) {
         margin-top: 24px;
         @media screen and (max-width: 1919px) {
@@ -235,12 +253,15 @@
     z-index: 3;
   }
   .persons {
-    margin-top: 82px;
+    background-color: #F2F3F5;
+    padding: 82px 18px 0 115px;
     @media screen and (max-width: 1919px) {
       margin-top: 45px;
+      padding: 82px 18px 0 80px;
     }
     @media screen and (max-width: 680px) {
       margin-top: 0;
+      padding: 42px 18px 0;
     }
   }
   .person {
