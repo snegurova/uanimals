@@ -28,11 +28,13 @@
       right: -120%;
       width: 65%;
       min-width: 302px;
-      max-width: 972px;
       height: 100%;
       transition: right 0.5s ease 0s;
       overflow: auto;
       z-index: 4;
+      @media screen and (min-width: 1921px) {
+        width: 57%;
+      }
       @media screen and (max-width: 590px) {
         width: 100%;
       }
