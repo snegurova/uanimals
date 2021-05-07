@@ -26,6 +26,10 @@ function menuClose(delay, menuIcon, menuBody) {
     menuBody.classList.remove("_active");
 }
 
+const main = document.querySelector("main");
+const headerRight = document.querySelector(".header__right");
+const subscribeForm = document.querySelector(".subscribe-form");
+const footer = document.querySelector(".footer");
 let unlock = true;
 let iconMenu = document.querySelector(".burger-menu__icon");
 let menuOverlay = document.querySelector(".burger-menu__overlay");
@@ -38,6 +42,10 @@ if (iconMenu != null) {
             if (iconCart.classList.contains("_active")) {
                 iconCart.classList.remove("_active");
                 cartBody.classList.remove("_active");
+                main.classList.remove("_filter");
+                headerRight.classList.remove("_filter");
+                subscribeForm.classList.remove("_filter");
+                footer.classList.remove("_filter");
                 removeLockPadding();
             }
                 body_lock(delay);
@@ -55,27 +63,38 @@ if (iconMenu != null) {
 //=================
 
 // Cart
-let iconCart = document.querySelector(".cart");
-let cartBody = document.querySelector(".cart__body");
-let cartOverlay = document.querySelector(".cart__overlay");
+const iconCart = document.querySelector(".cart");
+const cartBody = document.querySelector(".cart__body");
+const cartOverlay = document.querySelector(".cart__overlay");
+const closeCartBtn = document.querySelector(".close-cart");
 if (iconCart != null) {
     let delay = 500;
     let cartBody = document.querySelector(".cart__body");
-    iconCart.addEventListener("click", function (e) {
-        if (unlock) {
-            if (iconMenu.classList.contains("_active")) {
-                iconMenu.classList.remove("_active");
-                menuBody.classList.remove("_active");
-                removeLockPadding();
+    [iconCart, closeCartBtn].forEach(el => {
+        el.addEventListener("click", function (e) {
+            if (unlock) {
+                if (iconMenu.classList.contains("_active")) {
+                    iconMenu.classList.remove("_active");
+                    menuBody.classList.remove("_active");
+                    removeLockPadding();
+                }
+                body_lock(delay);
+                iconCart.classList.toggle("_active");
+                cartBody.classList.toggle("_active");
+                main.classList.toggle("_filter");
+                headerRight.classList.toggle("_filter");
+                subscribeForm.classList.toggle("_filter");
+                footer.classList.toggle("_filter");
             }
-            body_lock(delay);
-            iconCart.classList.toggle("_active");
-            cartBody.classList.toggle("_active");
-        }
+        });
     });
     cartOverlay.addEventListener("click", function (e) {
         if (unlock) {
             menuClose(delay, iconCart, cartBody);
+            main.classList.remove("_filter");
+            headerRight.classList.remove("_filter");
+            subscribeForm.classList.remove("_filter");
+            footer.classList.remove("_filter");
         }
     });
 };
@@ -11665,5 +11684,33 @@ testWebP(function (support) {
 		document.querySelector('html').classList.add('_no-webp');
 	}
 });
+
+// Move cart product images
+const mql = window.matchMedia("(max-width: 940px)");
+const cartBody1 = document.querySelector(".cart__body");
+const cartImages = document.querySelectorAll(".cart__product-left");
+const moveBackElements = document.querySelectorAll(".cart__product-right");
+const moveAfterElements = document.querySelectorAll(".product__title");
+
+const replaceElements = () => {
+	if (mql.matches && cartImages.length > 0) {
+		moveAfterElements.forEach((el, i) => {
+			const img = cartImages[i];
+			el.insertAdjacentElement('afterend', img);
+		});
+	} else {
+		moveBackElements.forEach((el, i) => {
+			el.insertAdjacentElement('beforebegin', cartImages[i]);
+		});
+	}
+};
+
+document.addEventListener('DOMContentLoaded', (event) => {
+	replaceElements();
+});
+
+mql.addEventListener('change', replaceElements);
+
+//===============================
 
 //# sourceMappingURL=../maps/script.js.map

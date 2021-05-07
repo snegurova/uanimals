@@ -13,6 +13,7 @@
   &__right {
     display: flex;
     justify-content: space-between;
+    transition: filter 0.3s;
   }
   &__left {
     display: flex;
@@ -71,65 +72,6 @@
     @media screen and (max-width: 560px) {
       width: 16px;
       height: 16px;
-    }
-  }
-  .cart {
-    position: relative;
-    display: block;
-    width: 48px;
-    height: 48px;
-    background-image: url("../img/cart-icon.svg");
-    background-size: 40%;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-left: 31px;
-    border-radius: 50px;
-    background-color: $accent-color;
-    z-index: 5;
-    @media screen and (max-width: 560px) {
-      width: 28px;
-      height: 28px;
-      margin-left: 17px;
-      background-size: 50%;
-    }
-    &__body {
-      position: fixed;
-      top: 0;
-      right: -120%;
-      width: 70%;
-      min-width: 302px;
-      max-width: 760px;
-      //height: calc(100% - 118px);
-      height: 100%;
-      background-color: $background-color;
-      transition: right 0.5s ease 0s;
-      overflow: auto;
-      z-index: 4;
-      padding: 0 0 54px 0;
-      &._active {
-        right: 0;
-        &~.cart__overlay {
-          visibility: visible;
-          opacity: 1;
-          transition: opacity 1s;
-        }
-      }
-    }
-    &__header {
-      height: 118px;
-      border-bottom: solid 1px #d9d9d9;
-    }
-    &__overlay {
-      visibility: hidden;
-      opacity: 0;
-      transition: opacity 1s, visibility 0s 1s;
-      position: absolute;
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background-color: rgba(17, 24, 39, 0.5);
-      z-index: 3;
     }
   }
 

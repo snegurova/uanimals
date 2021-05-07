@@ -23,3 +23,31 @@ testWebP(function (support) {
 		document.querySelector('html').classList.add('_no-webp');
 	}
 });
+
+// Move cart product images
+const mql = window.matchMedia("(max-width: 940px)");
+const cartBody1 = document.querySelector(".cart__body");
+const cartImages = document.querySelectorAll(".cart__product-left");
+const moveBackElements = document.querySelectorAll(".cart__product-right");
+const moveAfterElements = document.querySelectorAll(".product__title");
+
+const replaceElements = () => {
+	if (mql.matches && cartImages.length > 0) {
+		moveAfterElements.forEach((el, i) => {
+			const img = cartImages[i];
+			el.insertAdjacentElement('afterend', img);
+		});
+	} else {
+		moveBackElements.forEach((el, i) => {
+			el.insertAdjacentElement('beforebegin', cartImages[i]);
+		});
+	}
+};
+
+document.addEventListener('DOMContentLoaded', (event) => {
+	replaceElements();
+});
+
+mql.addEventListener('change', replaceElements);
+
+//===============================

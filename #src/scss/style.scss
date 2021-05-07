@@ -16,6 +16,7 @@
 @import './module/tippy/svg-arrow';
 @import './module/effect-fade';
 @import "./module/header";
+@import "./module/cart";
 @import "./module/btn";
 @import "./module/banner";
 @import "./module/scroll-down";
@@ -63,6 +64,7 @@ body {
 .main {
 	flex: 1 1 auto;
 	margin-top: 118px;
+	transition: filter 0.3s;
 }
 .container {
 	width: 1280px;

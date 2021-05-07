@@ -362,6 +362,7 @@ button:hover {
 .header__right {
   display: flex;
   justify-content: space-between;
+  transition: filter 0.3s;
 }
 
 .header__left {
@@ -442,73 +443,6 @@ button:hover {
     width: 16px;
     height: 16px;
   }
-}
-
-.header .cart {
-  position: relative;
-  display: block;
-  width: 48px;
-  height: 48px;
-  background-image: url("../img/cart-icon.svg");
-  background-size: 40%;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: 31px;
-  border-radius: 50px;
-  background-color: #60CAE5;
-  z-index: 5;
-}
-
-@media screen and (max-width: 560px) {
-  .header .cart {
-    width: 28px;
-    height: 28px;
-    margin-left: 17px;
-    background-size: 50%;
-  }
-}
-
-.header .cart__body {
-  position: fixed;
-  top: 0;
-  right: -120%;
-  width: 70%;
-  min-width: 302px;
-  max-width: 760px;
-  height: 100%;
-  background-color: #fff;
-  transition: right 0.5s ease 0s;
-  overflow: auto;
-  z-index: 4;
-  padding: 0 0 54px 0;
-}
-
-.header .cart__body._active {
-  right: 0;
-}
-
-.header .cart__body._active ~ .cart__overlay {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s;
-}
-
-.header .cart__header {
-  height: 118px;
-  border-bottom: solid 1px #d9d9d9;
-}
-
-.header .cart__overlay {
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 1s, visibility 0s 1s;
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(17, 24, 39, 0.5);
-  z-index: 3;
 }
 
 .header .burger-menu__body {
@@ -785,6 +719,234 @@ button:hover {
   filter: blur(2px);
 }
 
+.header .cart {
+  position: relative;
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url("../img/cart-icon.svg");
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: 31px;
+  border-radius: 50px;
+  background-color: #60CAE5;
+  z-index: 5;
+}
+
+.header .cart:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 560px) {
+  .header .cart {
+    width: 28px;
+    height: 28px;
+    margin-left: 17px;
+    background-size: 50%;
+  }
+}
+
+.header .cart__body {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 65%;
+  min-width: 302px;
+  max-width: 972px;
+  height: 100%;
+  transition: right 0.5s ease 0s;
+  overflow: auto;
+  z-index: 4;
+}
+
+@media screen and (max-width: 590px) {
+  .header .cart__body {
+    width: 100%;
+  }
+}
+
+.header .cart__body._active {
+  right: 0;
+}
+
+.header .cart__body._active ~ .cart__overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.header .cart__header {
+  height: 118px;
+  border-bottom: solid 1px #d9d9d9;
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  z-index: 5;
+}
+
+.header .cart__main {
+  position: relative;
+  padding: 164px 0 46px calc(30px + 78 * (100vw - 320px) / (1920 - 320));
+  min-height: 100%;
+}
+
+.header .cart__products {
+  padding: 22px calc((100vw - 1280px - 17px) / 2 - 18px) 35px 0;
+}
+
+@media screen and (max-width: 1340px) {
+  .header .cart__products {
+    padding-right: 30px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .header .cart__products {
+    padding-right: 16px;
+  }
+}
+
+.header .cart__product {
+  position: relative;
+  padding: 31px 31px 26px 26px;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.header .cart__remove {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 15px;
+  right: 18px;
+  background: url(../img/popup-form-close.svg) 0 0 no-repeat;
+  background-size: 60%;
+  background-position: center;
+}
+
+.header .cart__remove:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header .cart__product-left {
+  width: 136px;
+  margin-right: 56px;
+  flex-shrink: 0;
+}
+
+.header .cart__product-left img {
+  display: block;
+  width: 100%;
+}
+
+.header .cart__product-right .product__title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 32px;
+}
+
+@media screen and (max-width: 1280px) {
+  .header .cart__product-right .product__options-wrapper {
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .header .cart__product-right .product__options-wrapper {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header .cart__product-right .product__options-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.header .cart__product-right .product__option:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header .cart__product-right .product__option-title {
+  margin-bottom: 11px;
+}
+
+.header .cart__product-right .product__option-value {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.header .cart__product-right .product__option-color {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  font-size: 0;
+  border: 1px solid #000;
+}
+
+.header .cart__product-right .quantity {
+  margin-top: 0;
+}
+
+.header .cart__product-right .product__price {
+  font-size: 1rem;
+}
+
+.header .cart__checkout-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 440px) {
+  .header .cart__checkout-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
+.header .cart__checkout-wrapper .product__btn {
+  margin: 0 130px 0 0;
+}
+
+@media screen and (max-width: 770px) {
+  .header .cart__checkout-wrapper .product__btn {
+    margin: 0 45px 0 0;
+  }
+}
+
+.header .cart__checkout-wrapper .product__price {
+  margin-top: 5px;
+}
+
+.header .cart__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 0s 1s;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 24, 39, 0.5);
+  z-index: 3;
+}
+
+.translucent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.9;
+  z-index: -1;
+}
+
 .btn {
   display: block;
   border-radius: 50%;
@@ -1038,6 +1200,7 @@ button:hover {
 
 .back-btn:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .breadcrumbs {
@@ -5320,6 +5483,7 @@ body {
 .main {
   flex: 1 1 auto;
   margin-top: 118px;
+  transition: filter 0.3s;
 }
 
 .container {
