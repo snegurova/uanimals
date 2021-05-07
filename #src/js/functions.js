@@ -1,33 +1,67 @@
 
 //Menu
+function menuClose(delay, menuIcon, menuBody) {
+    body_lock(delay);
+    menuIcon.classList.remove("_active");
+    menuBody.classList.remove("_active");
+}
+
 let unlock = true;
 let iconMenu = document.querySelector(".burger-menu__icon");
 let menuOverlay = document.querySelector(".burger-menu__overlay");
+let menuBody = document.querySelector(".burger-menu__body");
 if (iconMenu != null) {
     let delay = 500;
     let menuBody = document.querySelector(".burger-menu__body");
     iconMenu.addEventListener("click", function (e) {
         if (unlock) {
-            body_lock(delay);
-            iconMenu.classList.toggle("_active");
-            menuBody.classList.toggle("_active");
+            if (iconCart.classList.contains("_active")) {
+                iconCart.classList.remove("_active");
+                cartBody.classList.remove("_active");
+                removeLockPadding();
+            }
+                body_lock(delay);
+                iconMenu.classList.toggle("_active");
+                menuBody.classList.toggle("_active");
         }
     });
     menuOverlay.addEventListener("click", function (e) {
         if (unlock) {
-            body_lock(delay);
-            iconMenu.classList.toggle("_active");
-            menuBody.classList.toggle("_active");
+            menuClose(delay, iconMenu, menuBody);
         }
     });
 };
-function menu_close() {
-    let iconMenu = document.querySelector(".burger-menu__icon");
-    let menuBody = document.querySelector(".burger-menu__body");
-    iconMenu.classList.remove("_active");
-    menuBody.classList.remove("_active");
-}
+
 //=================
+
+// Cart
+let iconCart = document.querySelector(".cart");
+let cartBody = document.querySelector(".cart__body");
+let cartOverlay = document.querySelector(".cart__overlay");
+if (iconCart != null) {
+    let delay = 500;
+    let cartBody = document.querySelector(".cart__body");
+    iconCart.addEventListener("click", function (e) {
+        if (unlock) {
+            if (iconMenu.classList.contains("_active")) {
+                iconMenu.classList.remove("_active");
+                menuBody.classList.remove("_active");
+                removeLockPadding();
+            }
+            body_lock(delay);
+            iconCart.classList.toggle("_active");
+            cartBody.classList.toggle("_active");
+        }
+    });
+    cartOverlay.addEventListener("click", function (e) {
+        if (unlock) {
+            menuClose(delay, iconCart, cartBody);
+        }
+    });
+};
+
+//=================
+
 //BodyLock
 function body_lock(delay) {
     let body = document.querySelector("body");
@@ -37,17 +71,20 @@ function body_lock(delay) {
         body_lock_add(delay);
     }
 }
-function body_lock_remove(delay) {
+function removeLockPadding() {
     let body = document.querySelector("body");
+    let lock_padding = document.querySelectorAll("._lp");
+    for (let index = 0; index < lock_padding.length; index++) {
+        const el = lock_padding[index];
+        el.style.paddingRight = '0px';
+    }
+    body.style.paddingRight = '0px';
+    body.classList.remove("_lock");
+}
+function body_lock_remove(delay) {
     if (unlock) {
-        let lock_padding = document.querySelectorAll("._lp");
         setTimeout(() => {
-            for (let index = 0; index < lock_padding.length; index++) {
-                const el = lock_padding[index];
-                el.style.paddingRight = '0px';
-            }
-            body.style.paddingRight = '0px';
-            body.classList.remove("_lock");
+            removeLockPadding();
         }, delay);
 
         unlock = false;
@@ -129,72 +166,6 @@ if (location.hash) {
         popup_open(hsh);
     } else if (document.querySelector('div.' + hsh)) {
         _goto(document.querySelector('.' + hsh), 500, '');
-    }
-}
-//=================
-//Menu
-// let iconMenu = document.querySelector(".icon-menu");
-if (iconMenu != null) {
-    let delay = 500;
-    let menuBody = document.querySelector(".menu__body");
-    iconMenu.addEventListener("click", function (e) {
-        if (unlock) {
-            body_lock(delay);
-            iconMenu.classList.toggle("_active");
-            menuBody.classList.toggle("_active");
-        }
-    });
-};
-function menu_close() {
-    let iconMenu = document.querySelector(".icon-menu");
-    let menuBody = document.querySelector(".menu__body");
-    iconMenu.classList.remove("_active");
-    menuBody.classList.remove("_active");
-}
-//=================
-//BodyLock
-function body_lock(delay) {
-    let body = document.querySelector("body");
-    if (body.classList.contains('_lock')) {
-        body_lock_remove(delay);
-    } else {
-        body_lock_add(delay);
-    }
-}
-function body_lock_remove(delay) {
-    let body = document.querySelector("body");
-    if (unlock) {
-        let lock_padding = document.querySelectorAll("._lp");
-        setTimeout(() => {
-            for (let index = 0; index < lock_padding.length; index++) {
-                const el = lock_padding[index];
-                el.style.paddingRight = '0px';
-            }
-            body.style.paddingRight = '0px';
-            body.classList.remove("_lock");
-        }, delay);
-
-        unlock = false;
-        setTimeout(function () {
-            unlock = true;
-        }, delay);
-    }
-}
-function body_lock_add(delay) {
-    let body = document.querySelector("body");
-    if (unlock) {
-        let lock_padding = document.querySelectorAll("._lp");
-        for (let index = 0; index < lock_padding.length; index++) {
-            const el = lock_padding[index];
-            el.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-        }
-        body.style.paddingRight = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
-        body.classList.add("_lock");
-
-        unlock = false;
-        setTimeout(function () {
-            unlock = true;
-        }, delay);
     }
 }
 //=================

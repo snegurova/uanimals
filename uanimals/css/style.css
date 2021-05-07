@@ -434,6 +434,7 @@ button:hover {
   height: 22px;
   background-image: url("../img/profile-icon.svg");
   background-size: contain;
+  z-index: 5;
 }
 
 @media screen and (max-width: 560px) {
@@ -455,6 +456,7 @@ button:hover {
   margin-left: 31px;
   border-radius: 50px;
   background-color: #60CAE5;
+  z-index: 5;
 }
 
 @media screen and (max-width: 560px) {
@@ -464,6 +466,49 @@ button:hover {
     margin-left: 17px;
     background-size: 50%;
   }
+}
+
+.header .cart__body {
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 70%;
+  min-width: 302px;
+  max-width: 760px;
+  height: 100%;
+  background-color: #fff;
+  transition: right 0.5s ease 0s;
+  overflow: auto;
+  z-index: 4;
+  padding: 0 0 54px 0;
+}
+
+.header .cart__body._active {
+  right: 0;
+}
+
+.header .cart__body._active ~ .cart__overlay {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.header .cart__header {
+  height: 118px;
+  border-bottom: solid 1px #d9d9d9;
+}
+
+.header .cart__overlay {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 0s 1s;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 24, 39, 0.5);
+  z-index: 3;
 }
 
 .header .burger-menu__body {
@@ -734,6 +779,10 @@ button:hover {
 
 ._lock {
   overflow: hidden;
+}
+
+._filter {
+  filter: blur(2px);
 }
 
 .btn {

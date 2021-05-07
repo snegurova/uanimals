@@ -13,8 +13,8 @@
         </div>
         <div class="header__left">
             <a href="#" class="profile"></a>
-            <a href="#" class="cart"><span class="label">2</span></a>
-            <div class="burger-menu">
+            <div role="dialog" tabindex="0" class="cart" aria-labelledby="Cart menu"><span class="label">2</span></div>
+            <div role="dialog" tabindex="0" class="burger-menu" aria-labelledby="Burger menu">
                 <div class="burger-menu__icon">
                     <span></span>
                 </div>
@@ -55,6 +55,10 @@
                     </div>
                 </div>
                 <div class="burger-menu__overlay"></div>
+                <div class="cart__body">
+                    <div class="cart__header"></div>
+                </div>
+                <div class="cart__overlay"></div>
             </div>
         </div>
     </div>
