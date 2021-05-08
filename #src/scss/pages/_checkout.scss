@@ -9,10 +9,17 @@
       max-width: 521px;
     }
   }
+  .form-input {
+    margin: 0 0 29px 0;
+  }
+  .input-form__label {
+    padding: 0;
+  }
 }
 .spollers-block {
   &__title {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
@@ -20,13 +27,31 @@
     transition: all 0.4s;
     &:hover {
       cursor: pointer;
+      color: $main-font-color;
+    }
+    &._active {
+      color: $main-font-color;
     }
     &._filled {
-      color: $accent-color;
       .spollers-block__number {
         background-color: $accent-color;
+        font-size: 0;
+        background-image: url("../img/checkout-filled.svg");
+      }
+      &._collapsed {
+        .spollers-block__data {
+          display: block;
+          color: grey;
+        }
       }
     }
+  }
+  &__data {
+    display: none;
+  }
+  &__title-left {
+    display: flex;
+    align-items: center;
   }
   &__number {
     display: flex;
@@ -37,10 +62,17 @@
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
     transition: all 0.4s;
   }
   &__body {
     display: none;
-    padding: 20px 0 0 0;
+    padding: 53px 55px 65px;
+    .btn {
+      display: inline-block;
+      margin: 10px 0 0;
+      padding: 14px 40px;
+    }
   }
 }

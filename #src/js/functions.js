@@ -468,8 +468,13 @@ let _slideToggle = (target, duration = 500) => {
 
 //Spollers
 let spollers = document.querySelectorAll("._spoller");
-
-spollers[0].classList.add('_active');
+spollers.forEach((el, i)=> {
+    if (i === 0) {
+        el.classList.add('_active');
+    } else {
+        el.classList.add('_collapsed');
+    }
+});
 _slideToggle(spollers[0].nextElementSibling);
 
 let spollersGo = true;
@@ -491,11 +496,13 @@ if (spollers.length > 0) {
                         let el = curent_spollers[i];
                         if (el != spoller) {
                             el.classList.remove('_active');
+                            el.classList.add('_collapsed');
                             _slideUp(el.nextElementSibling);
                         }
                     }
                 }
                 spoller.classList.toggle('_active');
+                spoller.classList.toggle('_collapsed');
                 _slideToggle(spoller.nextElementSibling);
 
                 setTimeout(function () {
@@ -518,11 +525,13 @@ nextButtons.forEach(el => {
 
                 if (spoller.classList.contains('_active')) {
                     spoller.classList.remove('_active');
+                    spoller.classList.add('_collapsed');
                     _slideUp(spoller.nextElementSibling);
 
                     const nextSpoller = spollers[i + 1];
 
                     nextSpoller.classList.toggle('_active');
+                    nextSpoller.classList.toggle('_collapsed');
                     _slideToggle(nextSpoller.nextElementSibling);
 
                     setTimeout(function () {
@@ -537,8 +546,10 @@ nextButtons.forEach(el => {
 });
 
 let inputGroups = [];
+const dataElements = [];
 for (let i = 0; i < spollers.length; i++) {
     inputGroups.push(spollers[i].nextElementSibling.querySelectorAll("input"));
+    dataElements.push(spollers[i].querySelector(".spollers-block__data"));
     if (i === 2) {
         inputGroups[i].forEach(el => {
             el.addEventListener('change', (e) => {
@@ -550,16 +561,23 @@ for (let i = 0; i < spollers.length; i++) {
     } else {
         inputGroups[i].forEach(el => {
             el.addEventListener('change', (e) => {
+                let isFilled = false;
                 for (let j = 0; j < inputGroups[i].length; j++) {
                     const el = inputGroups[i][j];
-                    console.log(el.value);
                     if (el.value === '') {
                         spollers[i].classList.remove('_filled');
+                        isFilled = false;
                         break;
                     }
-                    spollers[i].classList.add('_filled');
+                    isFilled = true;
                 }
-
+                if (isFilled) {
+                    spollers[i].classList.add('_filled');
+                    for (let j = 0; j < inputGroups[i].length; j++) {
+                        const el = inputGroups[i][j];
+                        dataElements[i].innerHTML += `<div>${el.value}</div>`;
+                    }
+                }
             });
         });
     }
