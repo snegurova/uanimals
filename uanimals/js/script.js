@@ -255,42 +255,7 @@ for (let index = 0; index < tabs.length; index++) {
     }
 }
 //=================
-//Spollers
-let spollers = document.querySelectorAll("._spoller");
-let spollersGo = true;
-if (spollers.length > 0) {
-    for (let index = 0; index < spollers.length; index++) {
-        const spoller = spollers[index];
-        spoller.addEventListener("click", function (e) {
-            if (spollersGo) {
-                spollersGo = false;
-                if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
-                    return false;
-                }
-                if (spoller.classList.contains('_spoller-768') && window.innerWidth > 768) {
-                    return false;
-                }
-                if (spoller.closest('._spollers').classList.contains('_one')) {
-                    let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
-                    for (let i = 0; i < curent_spollers.length; i++) {
-                        let el = curent_spollers[i];
-                        if (el != spoller) {
-                            el.classList.remove('_active');
-                            _slideUp(el.nextElementSibling);
-                        }
-                    }
-                }
-                spoller.classList.toggle('_active');
-                _slideToggle(spoller.nextElementSibling);
 
-                setTimeout(function () {
-                    spollersGo = true;
-                }, 500);
-            }
-        });
-    }
-}
-//=================
 //Gallery
 let gallery = document.querySelectorAll('._gallery');
 if (gallery) {
@@ -520,6 +485,76 @@ let _slideToggle = (target, duration = 500) => {
     }
 }
 //========================================
+
+//Spollers
+let spollers = document.querySelectorAll("._spoller");
+
+spollers[0].classList.add('_active');
+_slideToggle(spollers[0].nextElementSibling);
+
+let spollersGo = true;
+if (spollers.length > 0) {
+    for (let index = 0; index < spollers.length; index++) {
+        const spoller = spollers[index];
+        spoller.addEventListener("click", function (e) {
+            if (spollersGo) {
+                spollersGo = false;
+                if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
+                    return false;
+                }
+                if (spoller.classList.contains('_spoller-768') && window.innerWidth > 768) {
+                    return false;
+                }
+                if (spoller.closest('._spollers').classList.contains('_one')) {
+                    let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
+                    for (let i = 0; i < curent_spollers.length; i++) {
+                        let el = curent_spollers[i];
+                        if (el != spoller) {
+                            el.classList.remove('_active');
+                            _slideUp(el.nextElementSibling);
+                        }
+                    }
+                }
+                spoller.classList.toggle('_active');
+                _slideToggle(spoller.nextElementSibling);
+
+                setTimeout(function () {
+                    spollersGo = true;
+                }, 500);
+            }
+        });
+    }
+}
+
+nextButtons = document.querySelectorAll("._spoller-next");
+
+nextButtons.forEach(el => {
+    el.addEventListener('click', () => {
+        if (spollersGo) {
+            spollersGo = false;
+            for (let i = 0; i < spollers.length; i++) {
+                let spoller = spollers[i];
+                console.log(spoller.classList.contains('_active'));
+                if (spoller.classList.contains('_active')) {
+                    spoller.classList.remove('_active');
+                    _slideUp(spoller.nextElementSibling);
+
+                    const nextSpoller = spollers[i + 1];
+
+                    nextSpoller.classList.toggle('_active');
+                    _slideToggle(nextSpoller.nextElementSibling);
+
+                    setTimeout(function () {
+                        spollersGo = true;
+                    }, 500);
+
+                    break;
+                }
+            }
+        }
+    });
+});
+//=================
 //Wrap
 function _wrap(el, wrapper) {
     el.parentNode.insertBefore(wrapper, el);
