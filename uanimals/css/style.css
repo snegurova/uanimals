@@ -5487,10 +5487,19 @@ label {
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
   line-height: 1.2;
+  transition: all 0.4s;
 }
 
 .spollers-block__title:hover {
   cursor: pointer;
+}
+
+.spollers-block__title._filled {
+  color: #60CAE5;
+}
+
+.spollers-block__title._filled .spollers-block__number {
+  background-color: #60CAE5;
 }
 
 .spollers-block__number {
@@ -5502,6 +5511,7 @@ label {
   justify-content: center;
   align-items: center;
   margin-right: 15px;
+  transition: all 0.4s;
 }
 
 .spollers-block__body {

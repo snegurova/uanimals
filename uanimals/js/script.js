@@ -526,15 +526,16 @@ if (spollers.length > 0) {
     }
 }
 
-nextButtons = document.querySelectorAll("._spoller-next");
+const nextButtons = document.querySelectorAll("._spoller-next");
 
 nextButtons.forEach(el => {
     el.addEventListener('click', () => {
+        // const inputs = document.querySelectorAll("input");
         if (spollersGo) {
             spollersGo = false;
             for (let i = 0; i < spollers.length; i++) {
                 let spoller = spollers[i];
-                console.log(spoller.classList.contains('_active'));
+
                 if (spoller.classList.contains('_active')) {
                     spoller.classList.remove('_active');
                     _slideUp(spoller.nextElementSibling);
@@ -554,6 +555,38 @@ nextButtons.forEach(el => {
         }
     });
 });
+
+let inputGroups = [];
+for (let i = 0; i < spollers.length; i++) {
+    inputGroups.push(spollers[i].nextElementSibling.querySelectorAll("input"));
+    if (i === 2) {
+        inputGroups[i].forEach(el => {
+            el.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    spollers[i].classList.add('_filled');
+                }
+            });
+        });
+    } else {
+        inputGroups[i].forEach(el => {
+            el.addEventListener('change', (e) => {
+                for (let j = 0; j < inputGroups[i].length; j++) {
+                    const el = inputGroups[i][j];
+                    console.log(el.value);
+                    if (el.value === '') {
+                        spollers[i].classList.remove('_filled');
+                        break;
+                    }
+                    spollers[i].classList.add('_filled');
+                }
+
+            });
+        });
+    }
+}
+
+// console.log(inputGroups);
+
 //=================
 //Wrap
 function _wrap(el, wrapper) {

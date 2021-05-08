@@ -17,8 +17,15 @@
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
     line-height: 1.2;
+    transition: all 0.4s;
     &:hover {
       cursor: pointer;
+    }
+    &._filled {
+      color: $accent-color;
+      .spollers-block__number {
+        background-color: $accent-color;
+      }
     }
   }
   &__number {
@@ -30,6 +37,7 @@
     justify-content: center;
     align-items: center;
     margin-right: 15px;
+    transition: all 0.4s;
   }
   &__body {
     display: none;
