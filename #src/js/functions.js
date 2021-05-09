@@ -557,6 +557,17 @@ for (let i = 0; i < spollers.length; i++) {
                     spollers[i].classList.add('_filled');
                     dataElements[i].innerHTML = `<div>${el.nextElementSibling.innerText}</div>`;
                 }
+                let formIsFilled = false;
+                for (let j = 0; j < spollers.length; j++) {
+                    if (!spollers[j].classList.contains('_filled')) {
+                        formIsFilled = false;
+                        break
+                    }
+                    formIsFilled = true;
+                }
+                if (formIsFilled) {
+                    document.querySelector('.checkout__btn').disabled = false;
+                }
             });
         });
     } else {
@@ -578,6 +589,17 @@ for (let i = 0; i < spollers.length; i++) {
                         const el = inputGroups[i][j];
                         dataElements[i].innerHTML += `<div>${el.value}</div>`;
                     }
+                }
+                let formIsFilled = false;
+                for (let j = 0; j < spollers.length; j++) {
+                    if (!spollers[j].classList.contains('_filled')) {
+                        formIsFilled = false;
+                        break
+                    }
+                    formIsFilled = true;
+                }
+                if (formIsFilled) {
+                    document.querySelector('.checkout__btn').disabled = false;
                 }
             });
         });

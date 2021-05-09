@@ -60,88 +60,7 @@
       padding: 164px 0 46px calc(30px + 78 * (100vw - 320px) / (1920 - 320));
       min-height: 100%;
     }
-    &__products {
-      padding: 22px calc((100vw - 1280px - 17px) / 2 - 18px) 35px 0;
-      @media screen and (max-width: 1340px) {
-        padding-right: 30px;
-      }
-      @media screen and (max-width: 780px) {
-        padding-right: 16px;
-      }
-    }
-    &__product {
-      position: relative;
-      padding: 31px 31px 26px 26px;
-      background-color: $background-color;
-      border-radius: 5px;
-      margin-bottom: 16px;
-      display: flex;
-    }
-    &__remove {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      top: 15px;
-      right: 18px;
-      background: url(../img/popup-form-close.svg) 0 0 no-repeat;
-      background-size: 60%;
-      background-position: center;
-      &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-      }
-    }
-    &__product-left {
-      width: 136px;
-      margin-right: 56px;
-      flex-shrink: 0;
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    &__product-right {
-      .product__title {
-        font-size: 1rem;
-        font-weight: 600;
-        line-height: 1.2;
-        margin: 0 0 32px;
-      }
-      .product__options-wrapper {
-        @media screen and (max-width: 1280px) {
-          flex-direction: row;
-        }
-        @media screen and (max-width: 940px) {
-          margin-top: 30px;
-        }
-        @media screen and (max-width: 400px) {
-          flex-wrap: wrap;
-        }
-      }
-      .product__option:not(:last-child) {
-        margin-right: 45px;
-      }
-      .product__option-title {
-        margin-bottom: 11px;
-      }
-      .product__option-value {
-        text-transform: uppercase;
-        font-size: 0.75rem;
-      }
-      .product__option-color {
-        width: 29px;
-        height: 29px;
-        border-radius: 50%;
-        font-size: 0;
-        border: 1px solid $main-font-color;
-      }
-      .quantity {
-        margin-top: 0;
-      }
-      .product__price {
-        font-size: 1rem;
-      }
-    }
+
     &__checkout-wrapper {
       display: flex;
       align-items: center;
@@ -181,5 +100,90 @@
   background-color: $background-color;
   opacity: 0.9;
   z-index: -1;
+}
+
+.cart {
+  &__products {
+    padding: 22px calc((100vw - 1280px - 17px) / 2 - 18px) 35px 0;
+    @media screen and (max-width: 1340px) {
+      padding-right: 30px;
+    }
+    @media screen and (max-width: 780px) {
+      padding-right: 16px;
+    }
+  }
+  &__product {
+    position: relative;
+    padding: 31px 31px 26px 26px;
+    background-color: $background-color;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    display: flex;
+  }
+  &__remove {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 18px;
+    background: url(../img/popup-form-close.svg) 0 0 no-repeat;
+    background-size: 60%;
+    background-position: center;
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+  }
+  &__product-left {
+    width: 136px;
+    margin-right: 56px;
+    flex-shrink: 0;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  &__product-right {
+    .product__title {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.2;
+      margin: 0 0 32px;
+    }
+    .product__options-wrapper {
+      @media screen and (max-width: 1280px) {
+        flex-direction: row;
+      }
+      @media screen and (max-width: 940px) {
+        margin-top: 30px;
+      }
+      @media screen and (max-width: 400px) {
+        flex-wrap: wrap;
+      }
+    }
+    .product__option:not(:last-child) {
+      margin-right: 45px;
+    }
+    .product__option-title {
+      margin-bottom: 11px;
+    }
+    .product__option-value {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+    .product__option-color {
+      width: 29px;
+      height: 29px;
+      border-radius: 50%;
+      font-size: 0;
+      border: 1px solid $main-font-color;
+    }
+    .quantity {
+      margin-top: 0;
+    }
+    .product__price {
+      font-size: 1rem;
+    }
+  }
 }
 

@@ -5,9 +5,48 @@
   display: flex;
   justify-content: space-between;
   &__right {
+    margin-top: -106px;
     .cart__product {
       max-width: 521px;
+      border: 1px solid #DFDFDF;
     }
+    .cart__products {
+      padding-right: 0;
+    }
+    .cart__product-left {
+      width: 85px;
+    }
+    .product__price {
+      margin-top: 22px;
+    }
+    .product__option .quantity {
+      margin: 0;
+    }
+    .cart__checkout-wrapper {
+      display: flex;
+      justify-content: space-between;
+      background-color: #F2F3F7;
+      border-radius: 5px;
+      padding: 20px 43px;
+    }
+    .product__btn {
+      margin-top: 0;
+      padding: 19px 26px;
+      line-height: 1.2;
+    }
+    .btn:disabled {
+      cursor: unset;
+      opacity: 0.5;
+    }
+  }
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 40px;
+  }
+  &__option {
+    margin-bottom: 28px;
   }
   .form-input {
     margin: 0 0 29px 0;
@@ -20,10 +59,11 @@
   //flex-grow: 0.5;
   width: 50%;
 }
+
 .spollers-block {
   &__item {
     position: relative;
-    &::before {
+    &:not(:last-child)::before {
       content: '';
       display: block;
       position: absolute;
@@ -41,7 +81,7 @@
     color: rgba(0, 0, 0, 0.5);
     line-height: 1.2;
     transition: all 0.4s;
-    margin-bottom: 26px;
+    padding-bottom: 26px;
     &:hover {
       cursor: pointer;
       color: $main-font-color;
@@ -114,6 +154,25 @@
   &__body {
     display: none;
     padding: 27px 55px 65px;
+    &_payment-method {
+      padding: 7px 55px;
+      .input-form__radio-label {
+        font-weight: 500;
+        font-size: 0.875rem;
+        width: unset;
+      }
+      [type="radio"]:checked + label {
+        color: $main-font-color;
+      }
+      [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+        width: 16px;
+        height: 16px;
+      }
+      [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+        top: 4px;
+        left: 4px;
+      }
+    }
     .btn {
       display: inline-block;
       margin: 10px 0 0;
@@ -142,6 +201,7 @@
   transition: all 0.4s;
   &__wrapper {
     position: relative;
+    margin-bottom: 40px;
   }
   &__item {
     padding: 11px 19px;
