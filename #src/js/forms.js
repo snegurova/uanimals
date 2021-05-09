@@ -147,6 +147,21 @@ for (let index = 0; index < viewPass.length; index++) {
 	});
 }
 
+// Search select
+
+const inputSearchSelect = document.querySelector('.search-select');
+const inputSearchSelectOptions = document.querySelectorAll('.city-list__item');
+
+inputSearchSelectOptions.forEach((el) => {
+	el.addEventListener('click', () => {
+		inputSearchSelect.value = el.innerHTML;
+		inputSearchSelect.classList.add('_filled');
+	});
+});
+
+inputSearchSelect.addEventListener('change', () => {
+
+});
 
 //Select
 let selects = document.getElementsByTagName('select');

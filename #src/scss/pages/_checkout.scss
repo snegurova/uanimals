@@ -124,3 +124,36 @@
     }
   }
 }
+
+.city-list {
+  position: absolute;
+  left: 0;
+  top: 43px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
+  max-height: 255px;
+  overflow: auto;
+  background-color: $background-color;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+  &__wrapper {
+    position: relative;
+  }
+  &__item {
+    padding: 11px 19px;
+    width: 100%;
+    &:hover {
+      background-color: #F2F3F7;
+      cursor: pointer;
+    }
+  }
+}
+
+.form-input:focus ~ .city-list {
+  visibility: visible;
+  opacity: 1;
+}

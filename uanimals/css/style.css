@@ -5608,6 +5608,42 @@ label {
   opacity: 0.8;
 }
 
+.city-list {
+  position: absolute;
+  left: 0;
+  top: 43px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(19, 48, 55, 0.1);
+  max-height: 255px;
+  overflow: auto;
+  background-color: #fff;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.city-list__wrapper {
+  position: relative;
+}
+
+.city-list__item {
+  padding: 11px 19px;
+  width: 100%;
+}
+
+.city-list__item:hover {
+  background-color: #F2F3F7;
+  cursor: pointer;
+}
+
+.form-input:focus ~ .city-list {
+  visibility: visible;
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
 }
