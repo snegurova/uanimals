@@ -11210,8 +11210,16 @@ inputSearchSelectOptions.forEach((el) => {
 	});
 });
 
-inputSearchSelect.addEventListener('change', () => {
-
+inputSearchSelect.addEventListener('input', () => {
+	const value = `^${inputSearchSelect.value}`.toLowerCase();
+	inputSearchSelectOptions.forEach(el => {
+		if (el.classList.contains('_hidden')) {
+			el.classList.remove('_hidden');
+		}
+		if (!el.innerHTML.toLowerCase().match(value)) {
+			el.classList.add('_hidden');
+		}
+	});
 });
 
 //Select

@@ -5639,6 +5639,10 @@ label {
   cursor: pointer;
 }
 
+.city-list__item._hidden {
+  display: none;
+}
+
 .form-input:focus ~ .city-list {
   visibility: visible;
   opacity: 1;

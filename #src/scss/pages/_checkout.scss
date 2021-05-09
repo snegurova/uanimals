@@ -150,6 +150,9 @@
       background-color: #F2F3F7;
       cursor: pointer;
     }
+    &._hidden {
+      display: none;
+    }
   }
 }
 
