@@ -555,6 +555,7 @@ for (let i = 0; i < spollers.length; i++) {
             el.addEventListener('change', (e) => {
                 if (e.target.checked) {
                     spollers[i].classList.add('_filled');
+                    dataElements[i].innerHTML = `<div>${el.nextElementSibling.innerText}</div>`;
                 }
             });
         });
