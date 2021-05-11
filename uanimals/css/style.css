@@ -2503,6 +2503,7 @@ textarea {
 
 .form-input {
   width: 400px;
+  max-width: 100%;
   display: block;
   border: none;
   border-bottom: 1px solid #8D8D8D;
@@ -5477,13 +5478,32 @@ label {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 991px) {
+  .checkout-form {
+    flex-wrap: wrap;
+  }
+}
+
 .checkout-form__right {
   margin-top: -106px;
+}
+
+@media screen and (max-width: 991px) {
+  .checkout-form__right {
+    margin-top: 50px;
+  }
 }
 
 .checkout-form__right .cart__product {
   max-width: 521px;
   border: 1px solid #DFDFDF;
+}
+
+@media screen and (max-width: 991px) {
+  .checkout-form__right .cart__product {
+    max-width: unset;
+    width: 100%;
+  }
 }
 
 .checkout-form__right .cart__products {
@@ -5492,6 +5512,12 @@ label {
 
 .checkout-form__right .cart__product-left {
   width: 85px;
+}
+
+@media screen and (max-width: 991px) {
+  .checkout-form__right .cart__product-left {
+    width: 135px;
+  }
 }
 
 .checkout-form__right .product__price {
@@ -5510,15 +5536,33 @@ label {
   padding: 20px 43px;
 }
 
+@media screen and (max-width: 420px) {
+  .checkout-form__right .cart__checkout-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
 .checkout-form__right .product__btn {
   margin-top: 0;
   padding: 19px 26px;
   line-height: 1.2;
 }
 
+@media screen and (max-width: 420px) {
+  .checkout-form__right .product__btn {
+    margin-top: 35px;
+  }
+}
+
 .checkout-form__right .btn:disabled {
   cursor: unset;
   opacity: 0.5;
+}
+
+@media screen and (max-width: 375px) {
+  .checkout-form .product__options-wrapper {
+    flex-direction: column;
+  }
 }
 
 .checkout-form__subtitle {
@@ -5536,12 +5580,28 @@ label {
   margin: 0 0 29px 0;
 }
 
+@media screen and (max-width: 991px) {
+  .checkout-form .form-input {
+    width: 100%;
+  }
+}
+
 .checkout-form .input-form__label {
   padding: 0;
 }
 
 .checkout-form__left {
   width: 50%;
+}
+
+@media screen and (max-width: 991px) {
+  .checkout-form__left {
+    width: 100%;
+  }
+}
+
+.checkout-form__quantity {
+  font-size: 0.875rem;
 }
 
 .spollers-block__item {
@@ -5647,6 +5707,18 @@ label {
 .spollers-block__body {
   display: none;
   padding: 27px 55px 65px;
+}
+
+@media screen and (max-width: 560px) {
+  .spollers-block__body {
+    padding-right: 25px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .spollers-block__body {
+    padding-right: 15px;
+  }
 }
 
 .spollers-block__body_payment-method {

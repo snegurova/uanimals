@@ -4,17 +4,30 @@
 .checkout-form {
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 991px) {
+    flex-wrap: wrap;
+  }
   &__right {
     margin-top: -106px;
+    @media screen and (max-width: 991px) {
+      margin-top: 50px;
+    }
     .cart__product {
       max-width: 521px;
       border: 1px solid #DFDFDF;
+      @media screen and (max-width: 991px) {
+        max-width: unset;
+        width: 100%;
+      }
     }
     .cart__products {
       padding-right: 0;
     }
     .cart__product-left {
       width: 85px;
+      @media screen and (max-width: 991px) {
+        width: 135px;
+      }
     }
     .product__price {
       margin-top: 22px;
@@ -28,15 +41,26 @@
       background-color: #F2F3F7;
       border-radius: 5px;
       padding: 20px 43px;
+      @media screen and (max-width: 420px) {
+        flex-wrap: wrap;
+      }
     }
     .product__btn {
       margin-top: 0;
       padding: 19px 26px;
       line-height: 1.2;
+      @media screen and (max-width: 420px) {
+        margin-top: 35px;
+      }
     }
     .btn:disabled {
       cursor: unset;
       opacity: 0.5;
+    }
+  }
+  .product__options-wrapper {
+    @media screen and (max-width: 375px) {
+      flex-direction: column;
     }
   }
   &__subtitle {
@@ -50,15 +74,24 @@
   }
   .form-input {
     margin: 0 0 29px 0;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
   }
   .input-form__label {
     padding: 0;
   }
+  &__left {
+    width: 50%;
+    @media screen and (max-width: 991px) {
+      width: 100%;
+    }
+  }
+  &__quantity {
+    font-size: 0.875rem;
+  }
 }
-.checkout-form__left {
-  //flex-grow: 0.5;
-  width: 50%;
-}
+
 
 .spollers-block {
   &__item {
@@ -154,6 +187,12 @@
   &__body {
     display: none;
     padding: 27px 55px 65px;
+    @media screen and (max-width: 560px) {
+      padding-right: 25px;
+    }
+    @media screen and (max-width: 400px) {
+      padding-right: 15px;
+    }
     &_payment-method {
       padding: 7px 55px;
       .input-form__radio-label {
