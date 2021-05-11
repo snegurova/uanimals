@@ -475,10 +475,11 @@ spollers.forEach((el, i)=> {
         el.classList.add('_collapsed');
     }
 });
-_slideToggle(spollers[0].nextElementSibling);
+
 
 let spollersGo = true;
 if (spollers.length > 0) {
+    _slideToggle(spollers[0].nextElementSibling);
     for (let index = 0; index < spollers.length; index++) {
         const spoller = spollers[index];
         spoller.addEventListener("click", function (e) {
