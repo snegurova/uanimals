@@ -255,42 +255,7 @@ for (let index = 0; index < tabs.length; index++) {
     }
 }
 //=================
-//Spollers
-let spollers = document.querySelectorAll("._spoller");
-let spollersGo = true;
-if (spollers.length > 0) {
-    for (let index = 0; index < spollers.length; index++) {
-        const spoller = spollers[index];
-        spoller.addEventListener("click", function (e) {
-            if (spollersGo) {
-                spollersGo = false;
-                if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
-                    return false;
-                }
-                if (spoller.classList.contains('_spoller-768') && window.innerWidth > 768) {
-                    return false;
-                }
-                if (spoller.closest('._spollers').classList.contains('_one')) {
-                    let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
-                    for (let i = 0; i < curent_spollers.length; i++) {
-                        let el = curent_spollers[i];
-                        if (el != spoller) {
-                            el.classList.remove('_active');
-                            _slideUp(el.nextElementSibling);
-                        }
-                    }
-                }
-                spoller.classList.toggle('_active');
-                _slideToggle(spoller.nextElementSibling);
 
-                setTimeout(function () {
-                    spollersGo = true;
-                }, 500);
-            }
-        });
-    }
-}
-//=================
 //Gallery
 let gallery = document.querySelectorAll('._gallery');
 if (gallery) {
@@ -520,6 +485,151 @@ let _slideToggle = (target, duration = 500) => {
     }
 }
 //========================================
+
+//Spollers
+let spollers = document.querySelectorAll("._spoller");
+spollers.forEach((el, i)=> {
+    if (i === 0) {
+        el.classList.add('_active');
+    } else {
+        el.classList.add('_collapsed');
+    }
+});
+
+
+let spollersGo = true;
+if (spollers.length > 0) {
+    _slideToggle(spollers[0].nextElementSibling);
+    for (let index = 0; index < spollers.length; index++) {
+        const spoller = spollers[index];
+        spoller.addEventListener("click", function (e) {
+            if (spollersGo) {
+                spollersGo = false;
+                if (spoller.classList.contains('_spoller-992') && window.innerWidth > 992) {
+                    return false;
+                }
+                if (spoller.classList.contains('_spoller-768') && window.innerWidth > 768) {
+                    return false;
+                }
+                if (spoller.closest('._spollers').classList.contains('_one')) {
+                    let curent_spollers = spoller.closest('._spollers').querySelectorAll('._spoller');
+                    for (let i = 0; i < curent_spollers.length; i++) {
+                        let el = curent_spollers[i];
+                        if (el != spoller) {
+                            el.classList.remove('_active');
+                            el.classList.add('_collapsed');
+                            _slideUp(el.nextElementSibling);
+                        }
+                    }
+                }
+                spoller.classList.toggle('_active');
+                spoller.classList.toggle('_collapsed');
+                _slideToggle(spoller.nextElementSibling);
+
+                setTimeout(function () {
+                    spollersGo = true;
+                }, 500);
+            }
+        });
+    }
+}
+
+const nextButtons = document.querySelectorAll("._spoller-next");
+
+nextButtons.forEach(el => {
+    el.addEventListener('click', () => {
+        // const inputs = document.querySelectorAll("input");
+        if (spollersGo) {
+            spollersGo = false;
+            for (let i = 0; i < spollers.length; i++) {
+                let spoller = spollers[i];
+
+                if (spoller.classList.contains('_active')) {
+                    spoller.classList.remove('_active');
+                    spoller.classList.add('_collapsed');
+                    _slideUp(spoller.nextElementSibling);
+
+                    const nextSpoller = spollers[i + 1];
+
+                    nextSpoller.classList.toggle('_active');
+                    nextSpoller.classList.toggle('_collapsed');
+                    _slideToggle(nextSpoller.nextElementSibling);
+
+                    setTimeout(function () {
+                        spollersGo = true;
+                    }, 500);
+
+                    break;
+                }
+            }
+        }
+    });
+});
+
+let inputGroups = [];
+const dataElements = [];
+for (let i = 0; i < spollers.length; i++) {
+    inputGroups.push(spollers[i].nextElementSibling.querySelectorAll("input"));
+    dataElements.push(spollers[i].querySelector(".spollers-block__data"));
+    if (i === 2) {
+        inputGroups[i].forEach(el => {
+            el.addEventListener('change', (e) => {
+                if (e.target.checked) {
+                    spollers[i].classList.add('_filled');
+                    dataElements[i].innerHTML = `<div>${el.nextElementSibling.innerText}</div>`;
+                }
+                let formIsFilled = false;
+                for (let j = 0; j < spollers.length; j++) {
+                    if (!spollers[j].classList.contains('_filled')) {
+                        formIsFilled = false;
+                        break
+                    }
+                    formIsFilled = true;
+                }
+                if (formIsFilled) {
+                    document.querySelector('.checkout__btn').disabled = false;
+                }
+            });
+        });
+    } else {
+        inputGroups[i].forEach(el => {
+            el.addEventListener('change', (e) => {
+                let isFilled = false;
+                for (let j = 0; j < inputGroups[i].length; j++) {
+                    const el = inputGroups[i][j];
+                    if (el.value === '') {
+                        spollers[i].classList.remove('_filled');
+                        isFilled = false;
+                        break;
+                    }
+                    isFilled = true;
+                }
+                if (isFilled) {
+                    spollers[i].classList.add('_filled');
+                    for (let j = 0; j < inputGroups[i].length; j++) {
+                        const el = inputGroups[i][j];
+                        dataElements[i].innerHTML += `<div>${el.value}</div>`;
+                    }
+                }
+                let formIsFilled = false;
+                for (let j = 0; j < spollers.length; j++) {
+                    if (!spollers[j].classList.contains('_filled')) {
+                        formIsFilled = false;
+                        break
+                    }
+                    formIsFilled = true;
+                }
+                if (formIsFilled) {
+                    document.querySelector('.checkout__btn').disabled = false;
+                }
+            });
+        });
+    }
+}
+
+// console.log(inputGroups);
+
+//=================
 //Wrap
 function _wrap(el, wrapper) {
     el.parentNode.insertBefore(wrapper, el);
@@ -11111,6 +11221,29 @@ for (let index = 0; index < viewPass.length; index++) {
 	});
 }
 
+// Search select
+
+const inputSearchSelect = document.querySelector('.search-select');
+const inputSearchSelectOptions = document.querySelectorAll('.city-list__item');
+
+inputSearchSelectOptions.forEach((el) => {
+	el.addEventListener('click', () => {
+		inputSearchSelect.value = el.innerHTML;
+		inputSearchSelect.classList.add('_filled');
+	});
+});
+
+inputSearchSelect.addEventListener('input', () => {
+	const value = `^${inputSearchSelect.value}`.toLowerCase();
+	inputSearchSelectOptions.forEach(el => {
+		if (el.classList.contains('_hidden')) {
+			el.classList.remove('_hidden');
+		}
+		if (!el.innerHTML.toLowerCase().match(value)) {
+			el.classList.add('_hidden');
+		}
+	});
+});
 
 //Select
 let selects = document.getElementsByTagName('select');
