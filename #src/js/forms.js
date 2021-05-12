@@ -152,24 +152,27 @@ for (let index = 0; index < viewPass.length; index++) {
 const inputSearchSelect = document.querySelector('.search-select');
 const inputSearchSelectOptions = document.querySelectorAll('.city-list__item');
 
-inputSearchSelectOptions.forEach((el) => {
-	el.addEventListener('click', () => {
-		inputSearchSelect.value = el.innerHTML;
-		inputSearchSelect.classList.add('_filled');
+if (inputSearchSelect) {
+	inputSearchSelectOptions.forEach((el) => {
+		el.addEventListener('click', () => {
+			inputSearchSelect.value = el.innerHTML;
+			inputSearchSelect.classList.add('_filled');
+		});
 	});
-});
 
-inputSearchSelect.addEventListener('input', () => {
-	const value = `^${inputSearchSelect.value}`.toLowerCase();
-	inputSearchSelectOptions.forEach(el => {
-		if (el.classList.contains('_hidden')) {
-			el.classList.remove('_hidden');
-		}
-		if (!el.innerHTML.toLowerCase().match(value)) {
-			el.classList.add('_hidden');
-		}
+	inputSearchSelect.addEventListener('input', () => {
+		const value = `^${inputSearchSelect.value}`.toLowerCase();
+		inputSearchSelectOptions.forEach(el => {
+			if (el.classList.contains('_hidden')) {
+				el.classList.remove('_hidden');
+			}
+			if (!el.innerHTML.toLowerCase().match(value)) {
+				el.classList.add('_hidden');
+			}
+		});
 	});
-});
+}
+
 
 //Select
 let selects = document.getElementsByTagName('select');

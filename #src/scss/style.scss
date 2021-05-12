@@ -44,6 +44,7 @@
 @import "./pages/shop";
 @import "./pages/product";
 @import "./pages/checkout";
+@import "./pages/signup";
 
 * {
 	box-sizing: border-box;
@@ -55,8 +56,8 @@ body {
 }
 .wrapper {
 	width: 100%;
-	min-height: 100%;
-	overflow: hidden;
+	min-height: 100vh;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	&._loaded {

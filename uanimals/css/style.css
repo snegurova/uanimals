@@ -5798,6 +5798,124 @@ label {
   opacity: 1;
 }
 
+.tab__item {
+  display: none;
+}
+
+.tab__item.active {
+  display: block;
+}
+
+._tabs-block {
+  display: none;
+}
+
+._tabs-block._active {
+  display: block;
+}
+
+.signup {
+  padding-bottom: 45px;
+}
+
+.tabs-block__nav {
+  border: 1px solid #E1E1E1;
+}
+
+.radio__item._active,
+.radio__item:hover {
+  background-color: #222222;
+  color: #fff;
+}
+
+.signup__btn {
+  width: 100%;
+  color: #fff;
+  max-width: 400px;
+}
+
+.forget-password {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+}
+
+.forget-password__link {
+  color: #A4A3A3;
+}
+
+.forget-password__link:hover {
+  color: #7B7B7B;
+}
+
+._no-webp .signup-img {
+  background-image: url("../img/signup-bg.jpg"); }
+
+.signup-img {
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 11;
+}
+
+@media screen and (max-width: 991px) {
+  .signup-img {
+    display: none;
+  }
+}
+
+.custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.custom-checkbox + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin: -16px 0 0 -10px;
+}
+
+.custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #60CAE5;
+  border-radius: 3px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:not(:disabled):active + label::before {
+  background-color: #b3d7ff;
+  border-color: #b3d7ff;
+}
+
+.custom-checkbox:checked + label::before {
+  border-color: #60CAE5;
+  background-color: #60CAE5;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5809,8 +5927,8 @@ body {
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
-  overflow: hidden;
+  min-height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
 }
@@ -5879,5 +5997,7 @@ img {
 ._webp .banner_donate-single { background-image: url(../img/donate-single-bg.webp); }
 
 ._webp .banner_get-involved { background-image: url(../img/get-involved-bg.webp); }
+
+._webp .signup-img { background-image: url(../img/signup-bg.webp); }
 
 /*# sourceMappingURL=../maps/style.css.map */
