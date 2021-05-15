@@ -3,216 +3,279 @@
 })
 <body>
 <div class="wrapper">
-    @@include('_header.html')
-    <main class="main">
-        <section class="shop container pt-45">
-            <div class="secondary-navigation">
-                <a class="back-btn" href="#">Назад</a>
-                <ul class="breadcrumbs">
-                    <li><a href=" ">Головна</a></li>
-                    <li>/</li>
-                    <li><a href=" ">Новини </a></li>
-                    <li>/</li>
-                    <li>Підписка</li>
-                </ul>
+  @@include('_header.html')
+  <main class="main">
+    <section class="donate-subscription container pt-45">
+      <div class="secondary-navigation">
+        <a class="back-btn" href="#">Назад</a>
+        <ul class="breadcrumbs">
+          <li><a href=" ">Головна</a></li>
+          <li>/</li>
+          <li><a href=" ">Новини </a></li>
+          <li>/</li>
+          <li>Підписка</li>
+        </ul>
+      </div>
+      <div class="donate-subscription__wrapper">
+        <div class="left-col">
+          <div class="left-col__top">
+            <h1 class="donate-subscription__title">Підписка</h1>
+            <p class="donate-subscription__subtitle">Тут ви можете підтримати гуманістичний рух і долучитися до спільної
+              боротьби.</p>
+          </div>
+        
+        
+        </div>
+        <div class="right-col">
+          <div class="video-popup__wrapper">
+            <a href="#video" class="_popup-link video-popup-link" data-video="QEB5pQppfBY">
+              <img src="./img/subscription-video.png" alt="">
+            </a>
+            <div class="video-popup__text">
+              Як підтримати UAnimals?
             </div>
-            <h1>Підписка</h1>
-            <div class="products-filter radio__wrapper">
-                <a href="#" class="products-filter__item radio__item active _radio">Чоловікам</a>
-                <a href="#" class="products-filter__item radio__item _radio">Жінкам</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="left-col__bottom">
+        <p class="choose-subscription">
+          Виберіть рівень членства
+        </p>
+      </div>
+      <div class="individual-level">
+        <div class="individual-level__left">
+          <div class="individual-level__left-top">
+            <h2 class="individual-level__title">
+              Iндивідуально
+            </h2>
+            <p>
+              Не знайшли потрібний для себе рівень членства?
+            </p>
+          </div>
+          
+          <p>
+            Ви можете самі визначити суму <strong>щомісячної підписки</strong>
+            або <strong>пожертвувати одноразово</strong>
+          </p>
+        </div>
+        <div class="individual-level__right">
+          <form action="" class="individual-subscription">
+            <div class="input-form__wrapper radio__wrapper_individual">
+              <div class="input-form__radio-wrapper">
+                <input type="radio" name="individual-subscription" value="subscribe" id="subscribe" checked>
+                <label class="input-form__radio-label" for="subscribe">Підписка</label>
+              </div>
+              <div class="input-form__radio-wrapper">
+                <input type="radio" name="individual-subscription" value="one-time" id="one-time">
+                <label class="input-form__radio-label" for="one-time">Одноразово</label>
+              </div>
             </div>
-            <div class="product-cards _scr-item animated_fade-up">
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-1.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_sale">%</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-2.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-3.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_new">new</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-4.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-5.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_sale">%</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-4.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-2.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_sale">%</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-4.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-5.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_sale">%</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-4.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-2.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <span class="label label_shop label_sale">%</span>
-                    <div class="product-card__img-wrapper">
-                        <img src="./img/shop-4.jpg" alt="" class="product-card__img">
-                        <div class="donate-card__link-hover">
-                            <div class="donate-card__link-icon"></div>
-                        </div>
-                    </div>
-                    <h2 class="product-card__title">
-                        Монолыжа Plastkon OneFoot Miniski Черная с красным еще
-                    </h2>
-                    <div class="product-card__price-wrapper">
-                        <div class="product-card__price">999₴</div>
-                        <div class="product-card__old-price">1 459₴</div>
-                    </div>
-                </a>
+            
+            <div class="input-form__wrapper">
+              <input class="form-input" id="individual" type="text" name="individual" data-error="" data-value="">
+              <label class="input-form__label" for="individual">Введіть суму</label>
             </div>
-        </section>
-    </main>
-    @@include('_subscribe.html',{})
-    @@include('_footer.html',{})
+            <button type="submit" class="btn product__btn individual-subscription__btn" disabled>Задонатити</button>
+          </form>
+        
+        </div>
+      </div>
+      
+      
+      <div class="product-cards _scr-item animated_fade-up">
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-1.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_sale">%</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-2.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-3.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_new">new</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-4.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-5.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_sale">%</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-4.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-2.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_sale">%</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-4.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-5.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_sale">%</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-4.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-2.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+        <a href="product.html" class="product-card">
+          <span class="label label_shop label_sale">%</span>
+          <div class="product-card__img-wrapper">
+            <img src="./img/shop-4.jpg" alt="" class="product-card__img">
+            <div class="donate-card__link-hover">
+              <div class="donate-card__link-icon"></div>
+            </div>
+          </div>
+          <h2 class="product-card__title">
+            Монолыжа Plastkon OneFoot Miniski Черная с красным еще
+          </h2>
+          <div class="product-card__price-wrapper">
+            <div class="product-card__price">999₴</div>
+            <div class="product-card__old-price">1 459₴</div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  @@include('_subscribe.html',{})
+  @@include('_footer.html',{})
 </div>
+@@include('_popup-video.html',{})
 @@include('_js.html',{})
 </body>
 </html>

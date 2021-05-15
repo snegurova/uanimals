@@ -19,15 +19,16 @@
 //=====================================================================================================================
 .signup {
   padding-bottom: 45px;
+  .radio__item._active,
+  .radio__item:hover {
+    background-color: $footer-background-color;
+    color: $label-color;
+  }
 }
 .tabs-block__nav {
   border: 1px solid #E1E1E1;
 }
-.radio__item._active,
-.radio__item:hover {
-  background-color: $footer-background-color;
-  color: $label-color;
-}
+
 .signup__btn {
   width: 100%;
   color: $label-color;
