@@ -457,12 +457,12 @@ button:hover {
   transition: right 0.5s ease 0s;
   overflow: auto;
   z-index: 4;
-  padding: 54px 0;
+  padding: 54px 0 0;
 }
 
 @media screen and (max-width: 1919px) {
   .header .burger-menu__body {
-    padding: 50px 0 48px;
+    padding: 50px 0 0;
   }
 }
 
@@ -480,7 +480,7 @@ button:hover {
 
 @media screen and (max-width: 680px) {
   .header .burger-menu__body {
-    padding: 46px 0 39px;
+    padding: 46px 0 0;
   }
 }
 
@@ -662,20 +662,20 @@ button:hover {
 
 .header .persons {
   background-color: #F2F3F5;
-  padding: 82px 18px 0 115px;
+  padding: 82px 18px 50px 115px;
 }
 
 @media screen and (max-width: 1919px) {
   .header .persons {
     margin-top: 45px;
-    padding: 82px 18px 0 80px;
+    padding: 82px 18px 50px 80px;
   }
 }
 
 @media screen and (max-width: 680px) {
   .header .persons {
     margin-top: 0;
-    padding: 42px 18px 0;
+    padding: 42px 18px 50px;
   }
 }
 

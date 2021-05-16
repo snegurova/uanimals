@@ -10485,7 +10485,7 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
 
 const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-slider', {
     // Optional parameters
-    // loop: true,
+    loop: true,
     slidesPerView: 3.5,
     touchRatio: 0.2,
     slideToClickedSlide: true,
