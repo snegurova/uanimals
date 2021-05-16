@@ -1,5 +1,4 @@
 .label {
-  padding-left: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,6 +9,7 @@
   color: $label-color;
   background-color: $label-bg-color;
   font-size: 12px;
+  line-height: 1;
   font-weight: 700;
   right: -15px;
   top: -16px;

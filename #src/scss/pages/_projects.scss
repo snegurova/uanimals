@@ -73,6 +73,10 @@
     background-color: #F2F3F5;
     border: 1px solid #ECECEC;
     border-top: none;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+    }
     @media screen and (max-width: 992px) {
       padding: 24px 16px;
       min-height: 176px;

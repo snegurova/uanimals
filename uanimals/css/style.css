@@ -359,6 +359,12 @@ button:hover {
   min-height: 117px;
 }
 
+@media screen and (max-width: 560px) {
+  .header__wrapper {
+    min-height: 65px;
+  }
+}
+
 .header__right {
   display: flex;
   justify-content: space-between;
@@ -1804,7 +1810,6 @@ Sliders
 }
 
 .label {
-  padding-left: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1815,6 +1820,7 @@ Sliders
   color: #fff;
   background-color: #F50C0C;
   font-size: 12px;
+  line-height: 1;
   font-weight: 700;
   right: -15px;
   top: -16px;
@@ -2979,6 +2985,7 @@ label {
 
 .quantity__input {
   flex: 1 1 auto;
+  margin: 0;
 }
 
 .quantity__input input {
@@ -2989,6 +2996,23 @@ label {
   text-align: center;
   border: none;
   background-color: #F2F3F7;
+}
+
+.lwa-status-invalid, .lwa-status-confirm {
+  width: 400px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .lwa-status-invalid, .lwa-status-confirm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ur-frontend-form .ur-form-row .ur-form-grid .__PrivateStripeElement, .ur-frontend-form .ur-form-row .ur-form-grid input[type=date], .ur-frontend-form .ur-form-row .ur-form-grid input[type=email], .ur-frontend-form .ur-form-row .ur-form-grid input[type=number], .ur-frontend-form .ur-form-row .ur-form-grid input[type=password], .ur-frontend-form .ur-form-row .ur-form-grid input[type=phone], .ur-frontend-form .ur-form-row .ur-form-grid input[type=text], .ur-frontend-form .ur-form-row .ur-form-grid input[type=timepicker], .ur-frontend-form .ur-form-row .ur-form-grid input[type=url], .ur-frontend-form .ur-form-row .ur-form-grid select, .ur-frontend-form .ur-form-row .ur-form-grid textarea {
+    width: 100%;
+  }
 }
 
 .radio__wrapper {
@@ -3555,6 +3579,11 @@ label {
   background-color: #F2F3F5;
   border: 1px solid #ECECEC;
   border-top: none;
+}
+
+.titles-control-slider__slide:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 992px) {

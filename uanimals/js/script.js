@@ -11849,4 +11849,37 @@ mql.addEventListener('change', replaceElements);
 
 //===============================
 
+function initQuantity(){
+
+	jQuery(document).on('click','.quantity__button', function(){
+		for (let index = 0; index < jQuery(this).length; index++) {
+			const quantityButton = jQuery(this)[index];
+			quantityButton.addEventListener("click", function (e) {
+				let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
+				if (quantityButton.classList.contains('quantity__button_plus')) {
+					value++;
+				} else {
+					value = value - 1;
+					if (value < 1) {
+						value = 1
+					}
+				}
+				quantityButton.closest('.quantity').querySelector('input').value = value;
+
+				jQuery.ajax({
+					type: 'POST',
+					dataType: 'json',
+					url: admin.url,
+					data: {action : 'update_item_from_cart', 'cart_item_key' : quantityButton.closest('.quantity').querySelector('input').id, 'qty' : value,  },
+					success: function (data) {
+						jQuery(document.body).trigger('wc_fragment_refresh');
+					}
+
+				});
+			});
+		}
+	});
+
+}
+
 //# sourceMappingURL=../maps/script.js.map
