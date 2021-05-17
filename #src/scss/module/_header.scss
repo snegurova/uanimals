@@ -104,12 +104,15 @@
       @media screen and (max-width: 680px) {
         //padding: 46px 18px 39px 18px;
         padding: 46px 0 0;
+        height: calc(100% - 66px);
       }
 
 
       @media screen and (max-width: 560px) {
         right: -160%;
         width: 100%;
+        top: 66px;
+
       }
       .social-list {
         padding: 0 18px 62px 115px;
@@ -237,6 +240,9 @@
     left: 0;
     background-color: rgba(17, 24, 39, 0.5);
     z-index: 3;
+    @media screen and (max-width: 560px) {
+      top: 66px;
+    }
   }
   .persons {
     background-color: #F2F3F5;

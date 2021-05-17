@@ -487,6 +487,7 @@ button:hover {
 @media screen and (max-width: 680px) {
   .header .burger-menu__body {
     padding: 46px 0 0;
+    height: calc(100% - 66px);
   }
 }
 
@@ -494,6 +495,7 @@ button:hover {
   .header .burger-menu__body {
     right: -160%;
     width: 100%;
+    top: 66px;
   }
 }
 
@@ -664,6 +666,12 @@ button:hover {
   left: 0;
   background-color: rgba(17, 24, 39, 0.5);
   z-index: 3;
+}
+
+@media screen and (max-width: 560px) {
+  .header .burger-menu__overlay {
+    top: 66px;
+  }
 }
 
 .header .persons {
@@ -6588,6 +6596,12 @@ body {
   flex: 1 1 auto;
   margin-top: 118px;
   transition: filter 0.3s;
+}
+
+@media screen and (max-width: 560px) {
+  .main {
+    margin-top: 66px;
+  }
 }
 
 .container {
