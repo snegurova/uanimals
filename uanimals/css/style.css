@@ -413,7 +413,6 @@ button:hover {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 30px;
   margin: 0 0 0 78px;
   padding: 0;
 }
@@ -424,6 +423,7 @@ button:hover {
   color: #000;
   font-weight: 600;
   transition: color 0.5s;
+  margin-right: 30px;
 }
 
 .header .header__nav-list a:hover {
@@ -990,10 +990,13 @@ button:hover {
   background-position: 22px;
 }
 
+.btn.btn_submit {
+  margin-right: 18px;
+}
+
 .btn-icon-text {
   display: flex;
   align-items: center;
-  gap: 18px;
   margin-top: 70px;
   border: none;
   background-color: #fff;
@@ -1055,6 +1058,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-right: 17px;
+}
+
+.donate-submit-amount {
+  margin-left: 18px;
 }
 
 .banner {
@@ -1191,14 +1198,12 @@ button:hover {
 
 .secondary-navigation {
   display: flex;
-  gap: 59px;
   align-items: center;
 }
 
 @media screen and (max-width: 560px) {
   .secondary-navigation {
     flex-wrap: wrap;
-    gap: 36px;
   }
 }
 
@@ -1217,6 +1222,13 @@ button:hover {
   background-position: left;
   background-repeat: no-repeat;
   text-decoration: none;
+  margin-right: 59px;
+}
+
+@media screen and (max-width: 560px) {
+  .back-btn {
+    margin-right: 36px;
+  }
 }
 
 .back-btn:hover {
@@ -1229,7 +1241,6 @@ button:hover {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 8px;
   font-size: 0.825rem;
 }
 
@@ -1242,6 +1253,7 @@ button:hover {
 .breadcrumbs li {
   color: #000;
   white-space: nowrap;
+  margin-right: 8px;
 }
 
 .breadcrumbs a {
@@ -3924,7 +3936,6 @@ a.woocommerce-button.button.view {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 19px;
   margin: 0;
 }
 
@@ -3933,8 +3944,11 @@ a.woocommerce-button.button.view {
 }
 
 .body-slider .share .social-list {
-  gap: 9px;
-  margin: 0;
+  margin: 0 19px 0 0;
+}
+
+.body-slider .share .social-list li {
+  margin-right: 19px;
 }
 
 .body-slider .share p {
@@ -3948,20 +3962,21 @@ a.woocommerce-button.button.view {
 
 .contacts .social-list {
   margin-top: 17px;
-  gap: 12px;
+}
+
+.contacts .social-list li {
+  margin-right: 12px;
 }
 
 .contact-links__wrapper {
   margin-top: 60px;
   display: flex;
-  gap: 113px;
   align-items: flex-end;
 }
 
 @media screen and (max-width: 560px) {
   .contact-links__wrapper {
     flex-wrap: wrap;
-    gap: 40px;
   }
 }
 
@@ -3971,6 +3986,13 @@ a.woocommerce-button.button.view {
   font-weight: 600;
   text-decoration: none;
   color: #000;
+  margin-right: 113px;
+}
+
+@media screen and (max-width: 560px) {
+  .write-us-popup-link {
+    margin-right: 40px;
+  }
 }
 
 .write-us-popup-link .btn {
@@ -3999,7 +4021,6 @@ a.woocommerce-button.button.view {
 
 .team-cards {
   display: flex;
-  gap: 9px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -4019,6 +4040,7 @@ a.woocommerce-button.button.view {
   border: 1px solid #D9D9D9;
   padding: 39px 28px;
   transition: all 0.4s;
+  margin: 9px 9px 0 0;
 }
 
 @media screen and (max-width: 540px) {
@@ -4956,7 +4978,6 @@ a.woocommerce-button.button.view {
 
 .get-involved-popup-link {
   display: flex;
-  gap: 18px;
   align-items: center;
   font-weight: 600;
   text-decoration: none;

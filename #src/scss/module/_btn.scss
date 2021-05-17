@@ -17,10 +17,12 @@
     }
   }
 }
+.btn.btn_submit {
+  margin-right: 18px;
+}
 .btn-icon-text {
   display: flex;
   align-items: center;
-  gap: 18px;
   margin-top: 70px;
   border: none;
   background-color: $background-color;
@@ -79,4 +81,7 @@
     align-items: center;
     margin-right: 17px;
   }
+}
+.donate-submit-amount {
+  margin-left: 18px;
 }

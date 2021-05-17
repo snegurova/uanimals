@@ -47,7 +47,6 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    gap: 30px;
     margin: 0 0 0 78px;
     padding: 0;
     a {
@@ -56,6 +55,7 @@
       color: $main-font-color;
       font-weight: 600;
       transition: color 0.5s;
+      margin-right: 30px;
       &:hover {
         color: $active-nav-color;
         transition: color 0.5s;

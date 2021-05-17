@@ -1,10 +1,8 @@
 .secondary-navigation {
   display: flex;
-  gap: 59px;
   align-items: center;
   @media screen and (max-width: 560px) {
     flex-wrap: wrap;
-    gap: 36px;
   }
   &_on-dark {
     .breadcrumbs {
@@ -26,6 +24,10 @@
   background-position: left;
   background-repeat: no-repeat;
   text-decoration: none;
+  margin-right: 59px;
+  @media screen and (max-width: 560px) {
+    margin-right: 36px;
+  }
   &:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -37,7 +39,6 @@
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 8px;
   font-size: 0.825rem;
   @media screen and (max-width: 780px) {
     flex-wrap: wrap;
@@ -45,6 +46,7 @@
   li {
     color: $main-font-color;
     white-space: nowrap;
+    margin-right: 8px;
   }
   a {
     text-decoration: none;
