@@ -359,6 +359,12 @@ button:hover {
   min-height: 117px;
 }
 
+@media screen and (max-width: 560px) {
+  .header__wrapper {
+    min-height: 65px;
+  }
+}
+
 .header__right {
   display: flex;
   justify-content: space-between;
@@ -407,7 +413,6 @@ button:hover {
   display: flex;
   justify-content: space-between;
   list-style: none;
-  gap: 30px;
   margin: 0 0 0 78px;
   padding: 0;
 }
@@ -418,6 +423,7 @@ button:hover {
   color: #000;
   font-weight: 600;
   transition: color 0.5s;
+  margin-right: 30px;
 }
 
 .header .header__nav-list a:hover {
@@ -457,12 +463,12 @@ button:hover {
   transition: right 0.5s ease 0s;
   overflow: auto;
   z-index: 4;
-  padding: 54px 0;
+  padding: 54px 0 0;
 }
 
 @media screen and (max-width: 1919px) {
   .header .burger-menu__body {
-    padding: 50px 0 48px;
+    padding: 50px 0 0;
   }
 }
 
@@ -480,7 +486,8 @@ button:hover {
 
 @media screen and (max-width: 680px) {
   .header .burger-menu__body {
-    padding: 46px 0 39px;
+    padding: 46px 0 0;
+    height: calc(100% - 66px);
   }
 }
 
@@ -488,6 +495,7 @@ button:hover {
   .header .burger-menu__body {
     right: -160%;
     width: 100%;
+    top: 66px;
   }
 }
 
@@ -660,22 +668,28 @@ button:hover {
   z-index: 3;
 }
 
+@media screen and (max-width: 560px) {
+  .header .burger-menu__overlay {
+    top: 66px;
+  }
+}
+
 .header .persons {
   background-color: #F2F3F5;
-  padding: 82px 18px 0 115px;
+  padding: 82px 18px 50px 115px;
 }
 
 @media screen and (max-width: 1919px) {
   .header .persons {
     margin-top: 45px;
-    padding: 82px 18px 0 80px;
+    padding: 82px 18px 50px 80px;
   }
 }
 
 @media screen and (max-width: 680px) {
   .header .persons {
     margin-top: 0;
-    padding: 42px 18px 0;
+    padding: 42px 18px 50px;
   }
 }
 
@@ -976,10 +990,13 @@ button:hover {
   background-position: 22px;
 }
 
+.btn.btn_submit {
+  margin-right: 18px;
+}
+
 .btn-icon-text {
   display: flex;
   align-items: center;
-  gap: 18px;
   margin-top: 70px;
   border: none;
   background-color: #fff;
@@ -1041,6 +1058,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   margin-right: 17px;
+}
+
+.donate-submit-amount {
+  margin-left: 18px;
 }
 
 .banner {
@@ -1177,14 +1198,12 @@ button:hover {
 
 .secondary-navigation {
   display: flex;
-  gap: 59px;
   align-items: center;
 }
 
 @media screen and (max-width: 560px) {
   .secondary-navigation {
     flex-wrap: wrap;
-    gap: 36px;
   }
 }
 
@@ -1203,6 +1222,13 @@ button:hover {
   background-position: left;
   background-repeat: no-repeat;
   text-decoration: none;
+  margin-right: 59px;
+}
+
+@media screen and (max-width: 560px) {
+  .back-btn {
+    margin-right: 36px;
+  }
 }
 
 .back-btn:hover {
@@ -1215,7 +1241,6 @@ button:hover {
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 8px;
   font-size: 0.825rem;
 }
 
@@ -1228,6 +1253,7 @@ button:hover {
 .breadcrumbs li {
   color: #000;
   white-space: nowrap;
+  margin-right: 8px;
 }
 
 .breadcrumbs a {
@@ -1804,7 +1830,6 @@ Sliders
 }
 
 .label {
-  padding-left: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1815,6 +1840,7 @@ Sliders
   color: #fff;
   background-color: #F50C0C;
   font-size: 12px;
+  line-height: 1;
   font-weight: 700;
   right: -15px;
   top: -16px;
@@ -2979,6 +3005,7 @@ label {
 
 .quantity__input {
   flex: 1 1 auto;
+  margin: 0;
 }
 
 .quantity__input input {
@@ -2989,6 +3016,23 @@ label {
   text-align: center;
   border: none;
   background-color: #F2F3F7;
+}
+
+.lwa-status-invalid, .lwa-status-confirm {
+  width: 400px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .lwa-status-invalid, .lwa-status-confirm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ur-frontend-form .ur-form-row .ur-form-grid .__PrivateStripeElement, .ur-frontend-form .ur-form-row .ur-form-grid input[type=date], .ur-frontend-form .ur-form-row .ur-form-grid input[type=email], .ur-frontend-form .ur-form-row .ur-form-grid input[type=number], .ur-frontend-form .ur-form-row .ur-form-grid input[type=password], .ur-frontend-form .ur-form-row .ur-form-grid input[type=phone], .ur-frontend-form .ur-form-row .ur-form-grid input[type=text], .ur-frontend-form .ur-form-row .ur-form-grid input[type=timepicker], .ur-frontend-form .ur-form-row .ur-form-grid input[type=url], .ur-frontend-form .ur-form-row .ur-form-grid select, .ur-frontend-form .ur-form-row .ur-form-grid textarea {
+    width: 100%;
+  }
 }
 
 .radio__wrapper {
@@ -3227,13 +3271,7 @@ label {
   }
 }
 
-@media screen and (max-width: 548px) {
-  .footer .policies {
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 560px) {
   .footer .policies {
     flex-direction: column;
   }
@@ -3251,14 +3289,14 @@ label {
   }
 }
 
-@media screen and (max-width: 385px) {
+@media screen and (max-width: 560px) {
   .footer .policies li:not(:last-child) {
     margin-right: 0;
     margin-top: 17px;
   }
 }
 
-@media screen and (max-width: 548px) {
+@media screen and (max-width: 560px) {
   .footer .policies__payment {
     margin-top: 17px;
   }
@@ -3274,6 +3312,260 @@ label {
 
 .footer .policies__link:hover {
   text-decoration: underline;
+}
+
+/*----------------*/
+/* Product page */
+.woocommerce div.product form.cart .variations td, .woocommerce div.product form.cart .variations th {
+  padding: 0 10px;
+}
+
+.woo-variation-swatches .variable-items-wrapper {
+  flex-wrap: nowrap !important;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected, .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected:hover {
+  box-shadow: none;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item):hover {
+  box-shadow: none;
+}
+
+.woo-variation-swatches.wvs-style-rounded .variable-items-wrapper .variable-item .variable-item-span {
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: none;
+}
+
+.variable-item:not(.radio-variable-item) {
+  width: unset !important;
+  height: unset !important;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item) {
+  background-color: #F2F3F7;
+  box-shadow: none !important;
+  padding: 4px 6px !important;
+  margin: 0 4px 0 0;
+  color: #A0A0A0;
+}
+
+.product__option .radio__wrapper, .product__option .quantity {
+  margin: 0;
+}
+
+.woo-variation-swatches.wvs-style-rounded .variable-items-wrapper .variable-item {
+  border-radius: 50px !important;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected, .woo-variation-swatches .variable-items-wrapper .variable-item:not(.radio-variable-item).selected:hover {
+  background-color: #60CAE5;
+  color: #000;
+}
+
+.product__options-wrapper tr {
+  padding-right: 15px;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item.color-variable-item {
+  font-size: 0;
+  width: 29px !important;
+  height: 29px !important;
+  padding: 0 !important;
+  box-shadow: 0 0 0 1px #000 !important;
+  padding: 0;
+  transition: border 0.4s;
+}
+
+.woo-variation-swatches .variable-items-wrapper .variable-item.color-variable-item.selected {
+  box-shadow: 0 0 0 2px #60cae5 !important;
+}
+
+.reset_variations {
+  color: #A4A3A3;
+}
+
+.reset_variations:hover {
+  opacity: 0.8;
+}
+
+.woocommerce .quantity .qty {
+  width: 20px;
+}
+
+.product__btn {
+  padding: 25px 56px !important;
+  border-radius: 50px !important;
+  margin-top: 48px !important;
+}
+
+.btn {
+  display: block !important;
+  border-radius: 50px !important;
+  background-color: #60CAE5 !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+/*----------------*/
+/* Payment page */
+.woocommerce ul.order_details {
+  margin: 3em 0 3em;
+  padding: 0;
+}
+
+.woocommerce table.shop_table td a {
+  color: #000;
+}
+
+.woocommerce table.shop_table td a:hover {
+  opacity: 0.8;
+}
+
+.wc-item-meta li {
+  display: flex;
+  align-items: baseline;
+}
+
+.wc-item-meta li {
+  display: flex;
+  align-items: baseline;
+}
+
+.woocommerce td.product-name .wc-item-meta p {
+  margin: 0 10px 0;
+}
+
+/*----------------*/
+/* 404 page */
+/*----------------*/
+/* Subscribe page */
+.has-error {
+  display: block;
+  margin-top: 10px;
+  color: #F50C0C;
+}
+
+.individual-subscription__btn {
+  background-color: #222222 !important;
+  padding: 17px 38px !important;
+}
+
+/*----------------*/
+/* Signup page */
+.user-registration-error {
+  border-top: none;
+  background: none;
+  color: #F50C0C;
+}
+
+.checkout-form .form-input {
+  margin: 29px 0 0 !important;
+}
+
+.product__option .radio__wrapper, .product__option .quantity {
+  margin: 0;
+}
+
+.spollers-block__body .btn {
+  display: inline-block !important;
+}
+
+/*------------
+My account
+--------------*/
+.woocommerce-MyAccount-content a {
+  color: #000;
+}
+
+.woocommerce-account a:hover {
+  opacity: 0.8;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+  padding: 0;
+}
+
+.woocommerce-MyAccount-navigation-link a {
+  text-decoration: none;
+  padding: 12px 0;
+  display: block;
+  border-bottom: 1px solid #CBCBCB;
+  max-width: 200px;
+  transition: all 0.4s;
+  color: #000;
+}
+
+.woocommerce-MyAccount-navigation-link a:hover,
+.woocommerce-MyAccount-navigation-link.is-active a {
+  opacity: 1;
+  color: #60CAE5;
+}
+
+.woocommerce-Input.input-text {
+  max-width: 100%;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #8D8D8D;
+  padding: 10px;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.woocommerce-MyAccount-content label {
+  padding-left: 0;
+}
+
+.woocommerce form .form-row {
+  margin: 0 0 24px;
+}
+
+.woocommerce-MyAccount-content em {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #A0A0A0;
+}
+
+.woocommerce-MyAccount-content fieldset {
+  border: 1px solid #CBCBCB;
+  border-radius: 5px;
+  padding: 20px 40px;
+}
+
+.woocommerce form .form-row label {
+  line-height: 2;
+  font-weight: 600;
+  color: #7B7B7B;
+}
+
+a.post-edit-link {
+  color: #8d8d8d;
+  margin-bottom: 55px;
+  display: block;
+}
+
+.woocommerce-MyAccount-content .button {
+  display: inline-block !important;
+  border-radius: 50px !important;
+  background-color: #60CAE5 !important;
+  border: none !important;
+  color: #fff !important;
+  padding: 17px 38px !important;
+}
+
+a.woocommerce-button.button.view {
+  color: #60CAE5 !important;
+  background-color: #fff !important;
+  border: 2px solid #60CAE5 !important;
 }
 
 .home {
@@ -3557,6 +3849,11 @@ label {
   border-top: none;
 }
 
+.titles-control-slider__slide:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
 @media screen and (max-width: 992px) {
   .titles-control-slider__slide {
     padding: 24px 16px;
@@ -3639,7 +3936,6 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 19px;
   margin: 0;
 }
 
@@ -3648,8 +3944,11 @@ label {
 }
 
 .body-slider .share .social-list {
-  gap: 9px;
-  margin: 0;
+  margin: 0 19px 0 0;
+}
+
+.body-slider .share .social-list li {
+  margin-right: 19px;
 }
 
 .body-slider .share p {
@@ -3663,20 +3962,21 @@ label {
 
 .contacts .social-list {
   margin-top: 17px;
-  gap: 12px;
+}
+
+.contacts .social-list li {
+  margin-right: 12px;
 }
 
 .contact-links__wrapper {
   margin-top: 60px;
   display: flex;
-  gap: 113px;
   align-items: flex-end;
 }
 
 @media screen and (max-width: 560px) {
   .contact-links__wrapper {
     flex-wrap: wrap;
-    gap: 40px;
   }
 }
 
@@ -3686,6 +3986,13 @@ label {
   font-weight: 600;
   text-decoration: none;
   color: #000;
+  margin-right: 113px;
+}
+
+@media screen and (max-width: 560px) {
+  .write-us-popup-link {
+    margin-right: 40px;
+  }
 }
 
 .write-us-popup-link .btn {
@@ -3714,7 +4021,6 @@ label {
 
 .team-cards {
   display: flex;
-  gap: 9px;
 }
 
 @media screen and (max-width: 1280px) {
@@ -3734,6 +4040,7 @@ label {
   border: 1px solid #D9D9D9;
   padding: 39px 28px;
   transition: all 0.4s;
+  margin: 9px 9px 0 0;
 }
 
 @media screen and (max-width: 540px) {
@@ -4671,7 +4978,6 @@ label {
 
 .get-involved-popup-link {
   display: flex;
-  gap: 18px;
   align-items: center;
   font-weight: 600;
   text-decoration: none;
@@ -5441,7 +5747,7 @@ label {
 }
 
 .similar-products {
-  padding: 100px 0;
+  padding: 0 0 100px;
 }
 
 @media screen and (max-width: 992px) {
@@ -5579,7 +5885,7 @@ label {
 }
 
 .checkout-form .form-input {
-  margin: 0 0 29px 0;
+  margin: 0 0 29px 0 !important;
 }
 
 @media screen and (max-width: 991px) {
@@ -6311,6 +6617,12 @@ body {
   flex: 1 1 auto;
   margin-top: 118px;
   transition: filter 0.3s;
+}
+
+@media screen and (max-width: 560px) {
+  .main {
+    margin-top: 66px;
+  }
 }
 
 .container {

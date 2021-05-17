@@ -10485,17 +10485,21 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
 
 const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-slider', {
     // Optional parameters
-    // loop: true,
+    loop: true,
     slidesPerView: 3.5,
     touchRatio: 0.2,
     slideToClickedSlide: true,
     mousewheel: true,
-    freeMode: false,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
+    // freeMode: true,
+    // watchSlidesVisibility: true,
+    // watchSlidesProgress: true,
 
     hashNavigation: {
         watchState: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.projects-button-next',
     },
     breakpoints: {
         320: {
@@ -10540,10 +10544,10 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
         }
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.projects-button-next',
-    },
+    // // Navigation arrows
+    // navigation: {
+    //     nextEl: '.projects-button-next',
+    // },
 });
 
 const whatWeDoSlider = new Swiper('.what-we-do__slider', {
@@ -11848,5 +11852,38 @@ document.addEventListener('DOMContentLoaded', (event) => {
 mql.addEventListener('change', replaceElements);
 
 //===============================
+
+function initQuantity(){
+
+	jQuery(document).on('click','.quantity__button', function(){
+		for (let index = 0; index < jQuery(this).length; index++) {
+			const quantityButton = jQuery(this)[index];
+			quantityButton.addEventListener("click", function (e) {
+				let value = parseInt(quantityButton.closest('.quantity').querySelector('input').value);
+				if (quantityButton.classList.contains('quantity__button_plus')) {
+					value++;
+				} else {
+					value = value - 1;
+					if (value < 1) {
+						value = 1
+					}
+				}
+				quantityButton.closest('.quantity').querySelector('input').value = value;
+
+				jQuery.ajax({
+					type: 'POST',
+					dataType: 'json',
+					url: admin.url,
+					data: {action : 'update_item_from_cart', 'cart_item_key' : quantityButton.closest('.quantity').querySelector('input').id, 'qty' : value,  },
+					success: function (data) {
+						jQuery(document.body).trigger('wc_fragment_refresh');
+					}
+
+				});
+			});
+		}
+	});
+
+}
 
 //# sourceMappingURL=../maps/script.js.map
