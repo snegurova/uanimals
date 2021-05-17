@@ -10490,12 +10490,16 @@ const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-sl
     touchRatio: 0.2,
     slideToClickedSlide: true,
     mousewheel: true,
-    freeMode: false,
-    watchSlidesVisibility: true,
-    watchSlidesProgress: true,
+    // freeMode: true,
+    // watchSlidesVisibility: true,
+    // watchSlidesProgress: true,
 
     hashNavigation: {
         watchState: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: '.projects-button-next',
     },
     breakpoints: {
         320: {
@@ -10540,10 +10544,10 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
         }
     },
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.projects-button-next',
-    },
+    // // Navigation arrows
+    // navigation: {
+    //     nextEl: '.projects-button-next',
+    // },
 });
 
 const whatWeDoSlider = new Swiper('.what-we-do__slider', {
