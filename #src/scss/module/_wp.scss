@@ -255,3 +255,14 @@ a.woocommerce-button.button.view {
   border: 2px solid #60CAE5 !important;
 }
 
+@media screen and (max-width: 560px) {
+  .video-popup__text {
+    bottom: 15px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .video-popup__wrapper .video-popup-link img {
+    max-width: 80%;
+    height: auto;
+  }
+}
