@@ -3873,12 +3873,12 @@ a.woocommerce-button.button.view {
   }
 }
 
-.titles-control-slider__slide.swiper-slide-thumb-active {
+.titles-control-slider__slide.swiper-slide-active {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 992px) {
-  .titles-control-slider__slide.swiper-slide-thumb-active {
+  .titles-control-slider__slide.swiper-slide-active {
     background-color: #F6F6F8;
     opacity: 1;
     color: #60CAE5;

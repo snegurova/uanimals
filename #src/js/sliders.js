@@ -154,14 +154,11 @@ const projectsHomeSlider = new Swiper('.projects__slider', {
 const projectsControlsSlider = new Swiper('.progects-detailed__titles-control-slider', {
     // Optional parameters
     loop: true,
-    slidesPerView: 3.5,
+    // slidesPerView: 4,
     touchRatio: 0.2,
     slideToClickedSlide: true,
     mousewheel: true,
-    // freeMode: true,
-    // watchSlidesVisibility: true,
-    // watchSlidesProgress: true,
-
+    loopAdditionalSlides: 4,
     hashNavigation: {
         watchState: true,
     },
@@ -201,9 +198,6 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
     hashNavigation: {
         watchState: true,
     },
-    thumbs: {
-        swiper: projectsControlsSlider,
-    },
     pagination: {
         el: '.progects-detailed-scrollbar',
         type: 'custom',
@@ -212,17 +206,14 @@ const projectsBodySlider = new Swiper('.progects-detailed__body-slider', {
         }
     },
 
-    // // Navigation arrows
-    // navigation: {
-    //     nextEl: '.projects-button-next',
-    // },
 });
+
+
 
 const whatWeDoSlider = new Swiper('.what-we-do__slider', {
     // Optional parameters
     loop: true,
     slidesPerView: 1,
-    // effect: 'fade',
 
     // If we need pagination
     pagination: {
