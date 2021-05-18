@@ -1252,7 +1252,6 @@ button:hover {
 
 .breadcrumbs li {
   color: #000;
-  white-space: nowrap;
   margin-right: 8px;
 }
 
@@ -3568,6 +3567,19 @@ a.woocommerce-button.button.view {
   border: 2px solid #60CAE5 !important;
 }
 
+@media screen and (max-width: 560px) {
+  .video-popup__text {
+    bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .video-popup__wrapper .video-popup-link img {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
 .home {
   min-height: 100vh;
   margin: 0;
@@ -3861,12 +3873,12 @@ a.woocommerce-button.button.view {
   }
 }
 
-.titles-control-slider__slide.swiper-slide-thumb-active {
+.titles-control-slider__slide.swiper-slide-active {
   opacity: 0.7;
 }
 
 @media screen and (max-width: 992px) {
-  .titles-control-slider__slide.swiper-slide-thumb-active {
+  .titles-control-slider__slide.swiper-slide-active {
     background-color: #F6F6F8;
     opacity: 1;
     color: #60CAE5;
