@@ -1613,7 +1613,8 @@ Sliders
   height: 84px;
   border-radius: 50%;
   background-color: #fff;
-  background-image: url("../img/arrow-right-hover-slider-icon.svg");
+  background-image: url("../img/magnifying-glass.svg");
+  background-size: 50%;
   background-position: center;
   background-repeat: no-repeat;
 }
