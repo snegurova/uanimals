@@ -552,9 +552,9 @@ button:hover {
   position: relative;
   text-decoration: none;
   color: #000;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
-  line-height: 49px;
+  line-height: 0.9;
   transition: color 0.5s;
   letter-spacing: -0.830409px;
 }
@@ -592,8 +592,6 @@ button:hover {
 
 @media screen and (max-width: 560px) {
   .header .burger-menu__icon {
-    width: 19px;
-    height: 12px;
     margin-left: 21px;
   }
 }

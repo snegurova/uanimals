@@ -146,9 +146,9 @@
         position: relative;
         text-decoration: none;
         color: $main-font-color;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 800;
-        line-height: 49px;
+        line-height: 0.9;
         transition: color 0.5s;
         letter-spacing: -0.830409px;
         &:hover {
@@ -176,8 +176,8 @@
     cursor: pointer;
     margin-left: 52px;
     @media screen and (max-width: 560px) {
-      width: 19px;
-      height: 12px;
+      //width: 19px;
+      //height: 12px;
       margin-left: 21px;
     }
   }
