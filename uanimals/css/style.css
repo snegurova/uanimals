@@ -851,6 +851,11 @@ button:hover {
   z-index: 3;
 }
 
+.header .cart_regular {
+  background-image: url("../img/heart-filled-icon.svg");
+  background-size: 60%;
+}
+
 .translucent {
   position: absolute;
   top: 0;
