@@ -1190,13 +1190,13 @@ button:hover {
   text-decoration: underline;
 }
 
-.scroll-down-link__btn {
+.scroll-down-link__btn.btn {
   width: 52px;
   height: 52px;
   background-image: url("../img/arrow-btn-scroll-down.svg");
   margin-right: 21px;
-  background-color: transparent;
-  border: 1px solid #9F9F9F;
+  background-color: transparent !important;
+  border: 1px solid #9F9F9F !important;
 }
 
 .secondary-navigation {

@@ -8,12 +8,12 @@
   &:hover {
     text-decoration: underline;
   }
-  &__btn {
+  &__btn.btn {
     width: 52px;
     height: 52px;
     background-image: url("../img/arrow-btn-scroll-down.svg");
     margin-right: 21px;
-    background-color: transparent;
-    border: 1px solid $secondary-font-color-light;
+    background-color: transparent !important;
+    border: 1px solid $secondary-font-color-light !important;
   }
 }
